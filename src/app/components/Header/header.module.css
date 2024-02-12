@@ -1,0 +1,33 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+
+.headerText {
+  font-size: 300px;
+  font-family: Bernase Roman;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.character {
+  position: relative;
+  display: inline-block;
+}
+
+.character:nth-child(n + 3) {
+  animation: spin 5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

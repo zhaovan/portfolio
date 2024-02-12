@@ -1,0 +1,14 @@
+.projectContainer {
+  gap: 2rem;
+  border: 1px solid black;
+}
+
+.thumbnailContainer {
+  width: 256px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+}

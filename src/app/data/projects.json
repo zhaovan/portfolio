@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Convo",
+    "description": "a playful handwritten typeface",
+    "slug": "convo",
+    "thumbnail": "/thumbnails/convo.png",
+    "tags": ["graphic design", "development"]
+  },
+  {
+    "name": "Telescopic Text",
+    "description": "adding detail to your writing",
+    "slug": "telescopic",
+    "thumbnail": "/thumbnails/telescopic.gif",
+    "tags": ["development"]
+  },
+
+  {
+    "name": "A world of space",
+    "description": "browser based interactive fiction",
+    "slug": "a-world-of-space",
+    "thumbnail": "/thumbnails/aworldofspace.gif",
+    "tags": ["development"]
+  },
+  {
+    "name": "Mod",
+    "description": "everyone's favorite modular typeface",
+    "slug": "mod",
+    "thumbnail": "/thumbnails/mod.png",
+    "tags": ["graphic design"]
+  },
+
+  {
+    "name": "Blackout Poetry Generator",
+    "description": "generate poems using markov models",
+    "slug": "blackout-poetry",
+    "thumbnail": "/thumbnails/poetry.gif",
+    "tags": ["development", "featured"]
+  },
+
+  {
+    "name": "Hangouts",
+    "description": "facilitating hangouts in discord",
+    "slug": "hangouts",
+    "thumbnail": "/thumbnails/hangouts.png",
+    "tags": ["development"]
+  },
+  {
+    "name": "Holotable",
+    "description": "speculative design on tech and furniture",
+    "slug": "holotable",
+    "thumbnail": "/thumbnails/holotable.gif",
+    "tags": ["3d modeling", "development", "featured"]
+  },
+
+  {
+    "name": "Info Design Infographics",
+    "description": "infographics on various topics",
+    "slug": "infographics",
+    "thumbnail": "/thumbnails/infoviz.png",
+    "tags": ["graphic design", "featured"]
+  },
+  {
+    "name": "Watcher",
+    "description": "memex of my brain",
+    "slug": "watcher",
+    "thumbnail": "/thumbnails/watcher.png",
+    "tags": ["development", "ui/ux", "featured"]
+  },
+
+  {
+    "name": "Amazon Spheres Model",
+    "description": "3d models of amazon spheres",
+    "slug": "spheres",
+    "tags": ["3d modeling"],
+    "thumbnail": "/thumbnails/amazon-spheres.png"
+  },
+  {
+    "name": "Roll Call",
+    "description": "mobile app for informed election voting",
+    "slug": "roll-call",
+    "thumbnail": "/thumbnails/roll-call.png",
+    "tags": ["development"]
+  },
+  {
+    "name": "Tea Time",
+    "description": "speaker series for the queer college community",
+    "slug": "tea-time",
+    "thumbnail": "/thumbnails/teatime.png",
+    "tags": ["diversity"]
+  },
+  {
+    "name": "Tarrey Town Audio",
+    "description": "interactive audio experience on a quest from Zelda",
+    "slug": "tarrey-town",
+    "thumbnail": "/thumbnails/tarrey.png",
+    "tags": ["development", "ui/ux"]
+  },
+  {
+    "name": "Optical Music Recognition",
+    "description": "DL model on music sheet recognition",
+    "slug": "omr",
+    "thumbnail": "/thumbnails/omr.png",
+    "tags": ["development", "featured"]
+  },
+  {
+    "name": "Rhyme Time",
+    "description": "poem generator with lstms",
+    "slug": "rhyme-time",
+    "thumbnail": "/thumbnails/rhymetime.png",
+    "tags": ["development"]
+  }
+]

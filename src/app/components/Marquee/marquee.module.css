@@ -1,0 +1,31 @@
+.marquee {
+  animation: move-left 20s linear infinite;
+  font-size: 48px;
+  text-wrap: nowrap;
+  font-family: Bernice;
+  display: flex;
+  gap: 1rem;
+}
+
+.marqueeText {
+  text-transform: uppercase;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+.marqueeContainer {
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  bottom: 0px;
+  user-select: none;
+  color: white;
+  background-color: #00171f;
+}

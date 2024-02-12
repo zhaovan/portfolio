@@ -1,95 +1,83 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import styles from "./page.module.css";
+import Marquee from "./components/Marquee/Marquee";
+import { useRef } from "react";
+import Layout from "./components/Layout/Layout";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  // useEffect(() => {
+  //   if (document) {
+  //     const scroll = new LocomotiveScroll({
+  //       el: document.getElementsByClassName("container")[0],
+  //       smooth: true,
+  //       multiplier: 1,
+  //     });
+  //     console.log(scroll);
+  //   }
+  // });
+  // const containerRef = useRef(null);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <Layout>
+      <main className={styles.container}>
+        <div className={styles.bodyContainer}>
+          <div className={styles.grid}>
+            <h1 className={styles.firstName}>
+              {"Ivan".split("").map((char, idx) => {
+                return <span key={idx}>{char}</span>;
+              })}
+            </h1>
+            <h1 className={styles.lastName}>
+              {"Zhao".split("").map((char, idx) => {
+                return <span key={idx}>{char}</span>;
+              })}
+            </h1>
+            <h1 className={styles.chineseName}>
+              {"赵艾文".split("").map((char, idx) => {
+                return <span key={idx}>{char}</span>;
+              })}
+            </h1>
+
+            <div className={styles.quote}>
+              <h1 className={styles.quoteText}>
+                While the soul, after all, is only a window, and the opening of
+                the window no more difficult than the wakening from a little
+                sleep
+              </h1>
+              <p className={styles.quoteName}>Mary Oliver</p>
+            </div>
+            <p className={styles.symbol}>
+              <motion.span whileHover={{ rotate: [0, 30, -30, 0] }}>
+                ℑ
+              </motion.span>
+            </p>
+            <p className={styles.symbol}>
+              <motion.span
+                transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+                animate={{ rotate: "360deg" }}
+              >
+                ✾
+              </motion.span>
+            </p>
+            <div className={styles.image} />
+            <p className={styles.symbol}>
+              <motion.span
+                animate={{ x: [0, -20, 40, -10, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  times: [0, 0.2, 0.3, 0.5, 0.8],
+                  duration: 2,
+                }}
+              >
+                ✑
+              </motion.span>
+            </p>
+          </div>
+
+          <Marquee />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </main>
+    </Layout>
+  );
 }
