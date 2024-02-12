@@ -45,11 +45,6 @@ body {
 }
 
 @font-face {
-  font-family: Astloch;
-  src: url("/fonts/Astloch-Regular.ttf");
-}
-
-@font-face {
   font-family: Stroke;
   src: url("/fonts/Stroke.ttf");
 }
