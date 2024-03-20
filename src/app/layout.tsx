@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "./globals.css";
+import Layout from "./components/Layout/Layout";
 
 export const metadata: Metadata = {
   title: "Ivan Zhao",

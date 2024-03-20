@@ -1,0 +1,224 @@
+{
+  "education": [
+    {
+      "organization": "Type West",
+      "title": "Type Design",
+      "date": "01-2023",
+      "endDate": "01-2024"
+    },
+    {
+      "organization": "Brown University",
+      "title": "Math/Computer Science",
+      "date": "09-2018",
+      "endDate": "05-2022"
+    }
+  ],
+  "experiences": [
+    {
+      "organization": "Freelance",
+      "title": "Design Engineer",
+      "date": "08-2022",
+      "endDate": "present",
+      "website": ""
+    },
+    {
+      "organization": "Galileo AI",
+      "title": "Design Engineer",
+      "date": "06-2023",
+      "endDate": "02-2024",
+      "website": "https://www.usegalileo.ai/"
+    },
+    {
+      "organization": "Reboot",
+      "title": "Designer + Creative Director",
+      "date": "08-2021",
+      "endDate": "09-2023",
+      "website": "https://reboothq.substack.com/"
+    },
+    {
+      "organization": "Blend Labs",
+      "title": "Software Engineering Intern",
+      "website": "https://blend.com/",
+      "date": "06-2021",
+      "endDate": "08-2021"
+    },
+    {
+      "organization": "Ask Iggy",
+      "title": "Web Engineer",
+      "website": "https://askiggy.com/",
+      "date": "01-2021",
+      "endDate": "06-2021"
+    }
+  ],
+
+  "exhibitions & performances": [
+    {
+      "date": "02-2024",
+      "title": "Pride in Panels",
+      "organization": "Silver Sprocket",
+      "website": "https://www.silversprocket.net/pride-in-panels/"
+    },
+    {
+      "date": "02-2024",
+      "title": "Graduate Show",
+      "organization": "Type West",
+      "website": "https://letterformarchive.org/shop/type-west-2023-graduation-exhibition/"
+    },
+    {
+      "date": "10-2023",
+      "title": "Hot Takes with Kernel Magazine",
+      "organization": "Litquake + Litcrawl",
+      "website": "https://tockify.com/litcrawl/detail/84/1697938200000"
+    },
+    {
+      "date": "09-2023",
+      "title": "Type West Open House",
+      "organization": "Letterform Archive",
+      "website": "https://letterformarchive.org/shop/type-west-2024-virtual-open-house/"
+    },
+    {
+      "date": "06-2023",
+      "title": "Ink & Pixels: A Student Typeface Exhibition",
+      "organization": "Type West",
+      "website": "https://letterformarchive.org/"
+    },
+    {
+      "date": "06-2023",
+      "title": "Soft Defiance",
+      "organization": "Harvey Milk Art Center",
+      "website": "https://www.harveymilkphotocenter.org/exhibits/art-pride-2023-soft-defiance/"
+    },
+    {
+      "date": "05-2023",
+      "title": "Inspect Elements",
+      "organization": "thehtml.review",
+      "website": "https://www.culturehub.org/events/inspect-elements"
+    },
+    {
+      "date": "10-2022",
+      "title": "Apature",
+      "organization": "Kearny Street Workshop",
+      "website": "https://www.kearnystreet.org/events-blog/2021/9/15/apature-2021-visual-arts-agazf-r5drt",
+      "location": "San Francisco, CA"
+    },
+    {
+      "date": "05-2022",
+      "title": "Would That",
+      "organization": "Providence Public Library",
+      "website": "https://www.provlib.org/programs-exhibitions/community-exhibitions/",
+      "location": "Providence, RI"
+    }
+  ],
+  "writing & webart": [
+    {
+      "organization": "Persephone's Lit",
+      "title": "After Atlas",
+      "date": "upcoming",
+      "website": ""
+    },
+    {
+      "organization": "The New River",
+      "title": "YOU JUST GOT LAID OFF",
+      "date": "05-2023",
+      "website": "https://thenewriver.us/youjustgotlaidoff/"
+    },
+    {
+      "organization": "Taper",
+      "title": "ten as in sky",
+      "date": "05-2023",
+      "website": "https://taper.badquar.to/10/ten_as_in_sky.html"
+    },
+
+    {
+      "organization": "thehtml.review",
+      "title": "a world of space",
+      "website": "https://aworldof.space",
+      "date": "04-2023"
+    },
+    {
+      "organization": "chill subs",
+      "title": "reaching for the moon",
+      "website": "https://www.chillsubs.com/blog/reaching-for-the-moon",
+      "date": "01-2023"
+    },
+    {
+      "organization": "Silver Sprocket",
+      "title": "Autopathing",
+      "website": "https://www.silversprocket.net/",
+      "date": "10-2022"
+    },
+    {
+      "organization": "Kernel",
+      "title": "on days like today i dream of futures past",
+      "website": "https://www.kernelmag.io/2/dreams-of-futures-past",
+      "date": "09-2022"
+    },
+
+    {
+      "organization": "reboot",
+      "title": "Venturing Toward Progress",
+      "website": "https://joinreboot.org/p/venture",
+      "date": "06-2021"
+    },
+    {
+      "organization": "Visions",
+      "title": "Family Dreams",
+      "website": "https://issuu.com/visions.brown/docs/spring2021layoutfinalsingles",
+      "date": "03-2021"
+    }
+  ],
+  "fellowships & awards": [
+    {
+      "date": "08-2023",
+      "title": "Albertina Tholakele Dube Scholarship",
+      "organization": "MCWC",
+      "website": "https://mcwc.org/blog/2023/4/21/2023-scholarship-winners"
+    },
+    {
+      "date": "06-2022",
+      "title": "Engineering Fellow",
+      "organization": "Kleiner Perkins",
+      "website": "https://fellows.kleinerperkins.com/"
+    },
+    {
+      "date": "06-2021",
+      "title": "Fellow",
+      "organization": "8VC",
+      "website": "https://www.8vc.com/fellowships"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "06-2023",
+      "title": "Naive Weekly",
+      "organization": "Kristoffer Tjalve",
+      "website": "https://www.naiveweekly.com/p/syros"
+    },
+    {
+      "date": "06-2022",
+      "title": "Pride in STEM",
+      "organization": "IEEE Computing Society",
+      "website": "https://www.computer.org/publications/tech-news/build-your-career/pride-in-stem-ivan-zhao"
+    },
+    {
+      "date": "04-2022",
+      "title": "Guest",
+      "organization": "DRF Office Hours",
+      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
+    }
+  ],
+  "research": [
+    {
+      "date": "04-2022",
+      "title": "Designing the Metaverse",
+      "organization": "Future Technologies",
+      "website": "https://blog.cs.brown.edu/2022/01/10/exploring-rise-metaverse-final-projects-browns-csci-1951c-designing-humanity-centered-robots/"
+    },
+    {
+      "date": "05-2018",
+      "title": "Venturing into Startups",
+      "organization": "High School Capstone",
+      "website": "/research_paper.pdf"
+    }
+  ]
+}

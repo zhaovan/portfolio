@@ -1,23 +1,24 @@
 import React from "react";
 import styles from "./index.module.css";
-import Image from "next/image";
 
-export default function Project({ project }) {
+import { ProjectProps } from "@/app/projects/page";
+import Link from "next/link";
+
+interface IndividualProject {
+  project: ProjectProps;
+  onHover: () => void;
+}
+
+export default function Project({ project, onHover }: IndividualProject) {
   return (
-    <div className={styles.projectContainer}>
-      <div className={styles.thumbnailContainer}>
-        <Image
-          src={project.thumbnail}
-          width={400}
-          height={300}
-          alt=""
-          className={styles.thumbnail}
-        />
+    <Link href={`/projects/${project.slug}`}>
+      <div className={styles.projectContainer} onMouseEnter={onHover}>
+        <p className={styles.projectName}>{project.name}</p>
+        <div className={styles.tagContainer}>
+          <p className={styles.tag}>{project.tag}</p>
+          <p className={styles.year}>{project.year}</p>
+        </div>
       </div>
-      <div>
-        <h1>{project.name}</h1>
-        <p>{project.description}</p>
-      </div>
-    </div>
+    </Link>
   );
 }

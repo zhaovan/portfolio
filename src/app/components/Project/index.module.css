@@ -1,6 +1,18 @@
 .projectContainer {
-  gap: 2rem;
-  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: rgb(var(--text-primary));
+}
+
+.projectContainer > p {
+  font-family: VG, monospace;
+}
+
+.projectContainer > div > p {
+  font-family: VG, monospace;
 }
 
 .thumbnailContainer {
@@ -11,4 +23,22 @@
   width: 100%;
   height: 100%;
   aspect-ratio: 4/3;
+}
+
+.projectName {
+  width: calc(45% - 1rem);
+  text-transform: capitalize;
+}
+
+.tagContainer {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.tag {
+  text-transform: capitalize;
+}
+.year {
+  font-variant-numeric: tabular-nums;
 }

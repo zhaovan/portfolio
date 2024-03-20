@@ -23,9 +23,9 @@
 .marqueeContainer {
   display: flex;
   gap: 1rem;
-  position: fixed;
-  bottom: 0px;
+  /* position: fixed; */
+  /* bottom: 0px; */
   user-select: none;
   color: white;
-  background-color: #00171f;
+  background-color: #191919;
 }

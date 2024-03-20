@@ -1,19 +1,32 @@
-import React from "react";
-import styles from "./navbar.module.css";
+"use client";
+import React, { useState } from "react";
+import styles from "./index.module.css";
 import Link from "next/link";
 
-const navLinks: Record<string, string> = {
-  work: "/work",
+export const navLinks: Record<string, string> = {
   projects: "/projects",
-  writing: "/writing",
+  experiments: "/experiments",
+  // writing: "/writing",
   about: "/about",
 };
 
-export default function Navbar() {
+type NavbarProps = {
+  row: boolean;
+};
+
+export default function Navbar({ row = true }: NavbarProps) {
+  const [darkMode, setDarkMode] = useState();
   return (
     <div className={styles.navbarContainer}>
-      <h1 className={styles.navbarName}>zhaovan</h1>
-      <div className={styles.navbarLinksContainer}>
+      {row && (
+        <Link href="/">
+          <h1 className={styles.navbarName}>zhaovan</h1>
+        </Link>
+      )}
+      <div
+        className={styles.navbarLinksContainer}
+        style={{ flexDirection: row ? "row" : "column" }}
+      >
         {Object.keys(navLinks).map((key, idx) => {
           const href = navLinks[key];
           return (
@@ -22,6 +35,7 @@ export default function Navbar() {
             </Link>
           );
         })}
+        {/* <p>DARK MODE</p> */}
       </div>
     </div>
   );
