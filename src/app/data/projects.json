@@ -5,12 +5,13 @@
     "slug": "convo",
     "thumbnail": "/thumbnails/convo.gif",
     "tag": "typeface",
+
     "year": 2024
   },
   {
     "name": "EQTY Labs",
     "description": "components for data governance on chain",
-    "slug": "eqty-design-system",
+    "slug": "eqty-ds",
     "thumbnail": "/thumbnails/eqty-ds.png",
     "tag": "Design system",
     "year": 2023
@@ -19,7 +20,7 @@
     "name": "YOU JUST GOT LAID OFF",
     "description": "dasdas",
     "slug": "laid-off",
-    "thumbnail": "/thumbnails/laid-off.gif",
+    "thumbnail": "/thumbnails/laid-off.mov",
     "tag": "webart",
     "year": 2023
   },
@@ -68,7 +69,7 @@
     "name": "A world of space",
     "description": "browser based interactive fiction",
     "slug": "a-world-of-space",
-    "thumbnail": "/thumbnails/aworldofspace.gif",
+    "thumbnail": "/thumbnails/aworldofspace.mov",
     "tag": "Interactive Fiction",
     "year": 2023
   },
@@ -164,6 +165,6 @@
     "tag": "webart",
     "year": 2022,
     "slug": "qa",
-    "thumbnail": "/thumbnails/qa.gif"
+    "thumbnail": "/thumbnails/qa.mp4"
   }
 ]

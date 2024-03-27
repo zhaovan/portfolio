@@ -78,6 +78,11 @@ body {
   src: url("/fonts/Bobohei.ttf");
 }
 
+@font-face {
+  font-family: Mod;
+  src: url("/fonts/Mod.ttf");
+}
+
 /* @font-face {
   font-family: WangHanZhong;
   src: url("/fonts/WangHanZhong.ttf");
@@ -91,11 +96,6 @@ body {
   font-family: VG;
   src: url("/fonts/VG.woff2");
 }
-
-/* @font-face {
-  font-family: Selectric;
-  src: url("/fonts/SLC.ttf");
-} */
 
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
@@ -178,4 +178,10 @@ html.has-scroll-dragging {
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
+}
+
+.mod {
+  font-family: Mod;
+  font-size: 6rem;
+  text-align: center;
 }

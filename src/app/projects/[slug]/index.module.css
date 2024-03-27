@@ -18,47 +18,63 @@
 }
 
 .projectTag {
+  font-size: 2rem;
 }
 
 .projectName {
-  /* position: absolute; */
+  font-size: 3rem;
 }
 
 .headerContainer {
   position: relative;
-
-  /* display: flex; */
-  /* justify-content: center; */
-  /* background-color: black; */
-  /* padding-top: 7vh; */
 }
 
 .tagContainer {
   position: absolute;
   bottom: 2rem;
-  left: 30vw;
-  /* background-color: black; */
-  /* padding: 1rem; */
-  /* transform: translate(-50%, 0); */
+  left: 20vw;
+  z-index: 5;
 }
 
 .headerImage {
   min-height: 66vh;
+  max-height: 66vh;
   width: 100%;
   object-fit: cover;
-  /* width: 40vw;
-  height: 30vw; */
+  object-position: 50% 20%;
+}
+
+.imageMask {
+  background: linear-gradient(180deg, transparent, black) no-repeat;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.imageContainer {
+  position: relative;
 }
 
 .contentContainer {
-  width: 40vw;
+  width: 60vw;
   margin: auto;
-  padding: 2rem 0;
+  padding: 2rem 0 10rem 0;
   display: flex;
-  flex-direction: column;
   gap: 2rem;
+  flex-direction: column;
+}
+/* 
+.contentContainer > *:first-child() {
+  flex: 1;
 }
 
+.contentContainer > *:nth-child(2) {
+  flex: 1;
+} */
 .contentContainer > img {
   width: 100%;
 }

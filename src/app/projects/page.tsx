@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectList from "../data/projects.json";
 import Project from "../components/Project/Project";
 import styles from "./index.module.css";
 import Layout from "../components/Layout/Layout";
 import Image from "next/image";
+import { checkURL } from "../helpers";
 
 export type ProjectProps = {
   name: string;
@@ -16,14 +17,22 @@ export type ProjectProps = {
 };
 
 export default function Projects() {
-  const [hoveredProject, setHoveredProject] = useState("");
+  const [hoveredProjectThumbnailUrl, setHoveredProjectThumbnailUrl] =
+    useState("");
+  const [isImage, setIsImage] = useState(false);
+
   const allProjects: ProjectProps[] = ProjectList;
+
+  useEffect(() => {
+    setIsImage(checkURL(hoveredProjectThumbnailUrl));
+  }, [hoveredProjectThumbnailUrl]);
+
   return (
     <Layout>
       <div className={styles.container} data-scroll-section>
         <div
           className={styles.projectContainer}
-          onMouseLeave={() => setHoveredProject("")}
+          onMouseLeave={() => setHoveredProjectThumbnailUrl("")}
         >
           {allProjects
             .sort((projectA, projectB) => projectB.year - projectA.year)
@@ -32,21 +41,33 @@ export default function Projects() {
                 <Project
                   key={idx}
                   project={project}
-                  onHover={() => setHoveredProject(project.thumbnail)}
+                  onHover={() =>
+                    setHoveredProjectThumbnailUrl(project.thumbnail)
+                  }
                 />
               );
             })}
         </div>
       </div>
-      {hoveredProject && (
+      {hoveredProjectThumbnailUrl && (
         <div className={styles.lightbox}>
-          <Image
-            src={hoveredProject}
-            className={styles.lightboxImage}
-            alt="thumbnail"
-            width="600"
-            height="400"
-          />
+          {isImage ? (
+            <Image
+              src={hoveredProjectThumbnailUrl}
+              className={styles.lightboxImage}
+              alt="thumbnail"
+              width="600"
+              height="400"
+            />
+          ) : (
+            <video
+              src={hoveredProjectThumbnailUrl}
+              className={styles.lightboxImage}
+              autoPlay
+              muted
+              loop
+            />
+          )}
         </div>
       )}
     </Layout>
