@@ -18,7 +18,9 @@ export default function Experiments() {
     <Layout>
       <div className={styles.container}>
         {experiments.map((exp, idx) => {
-          return <Image src={exp.link} width="160" height="90" alt="" />;
+          return (
+            <Image key={idx} src={exp.link} width="160" height="90" alt="" />
+          );
         })}
       </div>
     </Layout>

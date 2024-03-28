@@ -9,7 +9,6 @@ import { checkURL } from "../helpers";
 
 export type ProjectProps = {
   name: string;
-  description: string;
   slug: string;
   thumbnail: string;
   tag: string;
