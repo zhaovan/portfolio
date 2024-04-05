@@ -7,7 +7,7 @@ import { checkURLIsImage } from "../helpers";
 import { CONTENTFUL_BASE_API_URL } from "../constants";
 
 export default function Experiments() {
-  const [experiments, setExperiments] = useState<Array<Object>>([]);
+  const [experiments, setExperiments] = useState<Array<any>>([]);
   useEffect(() => {
     async function getData() {
       const FETCH_URL =
