@@ -1,10 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import Marquee from "./components/Marquee/Marquee";
-import { useRef } from "react";
-import Layout from "./components/Layout/Layout";
 import { motion } from "framer-motion";
-import Navbar from "./components/Navbar/Navbar";
 import NavbarVertical from "./components/Navbar/NavbarVertical";
 
 export default function Home() {
@@ -31,17 +28,11 @@ export default function Home() {
 
           <div className={styles.quote}>
             <NavbarVertical />
-            {/* <h2 className={styles.quoteText}>
-              While the soul, after all, is only a window, and the opening of
-              the window no more difficult than the wakening from a little sleep
-            </h2>
-            <p className={styles.quoteName}>Mary Oliver</p> */}
           </div>
           <p className={styles.symbol}>
             <motion.span
               whileHover={{ rotate: [0, 30, -20, 5, -2.5, 0, 0] }}
               transition={{ duration: 1.5 }}
-              // whileTap={{ rotate: [0, 30, -30, 0] }}
             >
               ℑ
             </motion.span>

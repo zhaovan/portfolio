@@ -6,24 +6,20 @@ The shop is hosted on Printful, an ondemand printing platform that handles shipp
 
 ## Exploration of Typeface for discourse brunch
 
-<img src="/projects/reboot-merch/sketch.png" width="50%" >
+<img src="/projects/reboot-merch/images/sketch.png" >
 
 ## Photoshoot and Mockups
 
-<div class="image-gallery">
+<img src="/projects/reboot-merch/images/hat.jpeg"  >
 
-<img src="/projects/reboot-merch/hat.jpeg" width="100%" >
+<img src="/projects/reboot-merch/images/bag.jpeg"  >
 
-<img src="/projects/reboot-merch/bag.jpeg" width="100%" >
+<img src="/projects/reboot-merch/images/person+hat.jpg"  >
 
-<img src="/projects/reboot-merch/person+hat.jpg" width="100%" >
+<img src="/projects/reboot-merch/images/sweater1.jpg"  >
 
-<img src="/projects/reboot-merch/sweater1.jpg" width="100%" >
+<img src="/projects/reboot-merch/images/poster2.png"  >
 
-<img src="/projects/reboot-merch/poster2.png" width="100%" >
+<img src="/projects/reboot-merch/images/poster1.png"  >
 
-<img src="/projects/reboot-merch/poster1.png" width="100%" >
-
-<img src="/projects/reboot-merch/stickers2.png" width="100%" >
-
-</div>
+<img src="/projects/reboot-merch/images/stickers2.png"  >

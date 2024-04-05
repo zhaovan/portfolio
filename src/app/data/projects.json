@@ -5,7 +5,6 @@
     "slug": "convo",
     "thumbnail": "/thumbnails/convo.gif",
     "tag": "typeface",
-
     "year": 2024
   },
   {
@@ -52,7 +51,7 @@
     "name": "Byrne",
     "description": "workhorse serif inspired by math-y visuals",
     "slug": "byrne",
-    "thumbnail": "/thumbnails/byrne.png",
+    "thumbnail": "/thumbnails/byrne.mov",
     "tag": "typeface",
     "year": 2023
   },
@@ -158,7 +157,7 @@
     "tag": "webart",
     "year": 2022,
     "slug": "ten-sky",
-    "thumbnail": "/thumbnails/ten-sky.gif"
+    "thumbnail": "/thumbnails/ten-sky.mov"
   },
   {
     "name": "Questions and Answers",

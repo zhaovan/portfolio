@@ -1,21 +1,23 @@
 :root {
-  --background-primary: 240, 240, 240;
+  --background-primary: 240, 230, 231;
   --text-primary: 30, 30, 30;
 
   --background-accent-red: 245, 131, 97;
-  --text-red: 245, 131, 97;
+  --text-red: 197, 42, 42;
+  --text-light: 234, 234, 234;
 
   --text-dark: 20, 20, 20;
+
+  --blog-width: 50vw;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-primary: 20, 20, 20;
-    --text-primary: 227, 227, 227;
-    --background-accent-red: 245, 131, 97;
-    --text-red: 245, 131, 97;
-    --text-dark: 20, 20, 20;
-  }
+[data-theme="dark"] {
+  --background-primary: 20, 20, 20;
+  --text-primary: 234, 234, 234;
+  --background-accent-red: 245, 131, 97;
+  --text-red: 245, 131, 97;
+  --text-dark: 20, 20, 20;
+  --text-light: 234, 234, 234;
 }
 
 * {
@@ -30,6 +32,8 @@ body::-webkit-scrollbar {
 
 body {
   -ms-overflow-style: none; /* IE and Edge */
+  font-family: Bricolage Grotesque;
+  min-height: 100vh;
 }
 
 a {
@@ -47,7 +51,11 @@ p {
   font-family: Bricolage Grotesque, sans-serif;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: VG, "Times New Roman", Times, serif;
 }
 
@@ -184,4 +192,10 @@ html.has-scroll-dragging {
   font-family: Mod;
   font-size: 6rem;
   text-align: center;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }

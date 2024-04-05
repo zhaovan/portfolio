@@ -7,7 +7,7 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import projects from "@/app/data/projects.json";
 import Image from "next/image";
-import { checkURL } from "@/app/helpers";
+import { checkURLIsImage } from "@/app/helpers";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -24,14 +24,11 @@ export default function Page({ params }: { params: { slug: string } }) {
     fetchPost();
   }, [slug, mdx]);
 
-  const isImage = checkURL(project.thumbnail);
+  const isImage = checkURLIsImage(project.thumbnail);
 
-  //   const response = await fetch(`/public/projects/${slug}.md`);
-  //   const data = await response.text();
-
-  //   if (!mdx) {
-  //     return <Layout />;
-  //   }
+  if (!mdx) {
+    return <></>;
+  }
 
   return (
     <Layout>

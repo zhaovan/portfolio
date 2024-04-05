@@ -5,7 +5,7 @@ import Project from "../components/Project/Project";
 import styles from "./index.module.css";
 import Layout from "../components/Layout/Layout";
 import Image from "next/image";
-import { checkURL } from "../helpers";
+import { checkURLIsImage } from "../helpers";
 
 export type ProjectProps = {
   name: string;
@@ -23,7 +23,7 @@ export default function Projects() {
   const allProjects: ProjectProps[] = ProjectList;
 
   useEffect(() => {
-    setIsImage(checkURL(hoveredProjectThumbnailUrl));
+    setIsImage(checkURLIsImage(hoveredProjectThumbnailUrl));
   }, [hoveredProjectThumbnailUrl]);
 
   return (
@@ -62,6 +62,8 @@ export default function Projects() {
             <video
               src={hoveredProjectThumbnailUrl}
               className={styles.lightboxImage}
+              width="600"
+              height="400"
               autoPlay
               muted
               loop

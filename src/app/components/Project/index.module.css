@@ -28,6 +28,8 @@
 .projectName {
   width: calc(45% - 1rem);
   text-transform: capitalize;
+  position: relative;
+  z-index: 60;
 }
 
 .tagContainer {

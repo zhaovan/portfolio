@@ -1,7 +1,11 @@
 .navbarContainer,
 .navbarVerticalContainer {
   display: flex;
-  font-family: Bernice;
+  font-family: Bricolage Grotesque;
+}
+
+.navbarItem {
+  font-weight: 500;
 }
 
 .navbarContainer {
@@ -21,6 +25,7 @@
 .navbarLinksContainer {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 @media (min-width: 768px) {

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "./globals.css";
 import Layout from "./components/Layout/Layout";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Ivan Zhao",
@@ -16,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
