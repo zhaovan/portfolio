@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Marquee from "./components/Marquee/Marquee";
 import { motion } from "framer-motion";
 import NavbarVertical from "./components/Navbar/NavbarVertical";
+import Image from "next/image";
 
 export default function Home() {
   return (
