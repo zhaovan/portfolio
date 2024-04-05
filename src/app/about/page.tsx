@@ -36,6 +36,9 @@ export default function About() {
             <Image
               src={portrait}
               alt="Photo of ivan taken on a film camera with grain"
+              width="600"
+              height="400"
+              priority
               className={styles.portrait}
             />
             <div className={styles.bioContainer}>
