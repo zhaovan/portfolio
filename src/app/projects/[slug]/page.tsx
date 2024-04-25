@@ -26,10 +26,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const isImage = checkURLIsImage(project.thumbnail);
 
-  if (!mdx) {
-    return <></>;
-  }
-
   return (
     <Layout>
       <div className={styles.container}>

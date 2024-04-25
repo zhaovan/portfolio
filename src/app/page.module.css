@@ -97,7 +97,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-2);
 }
 
 .quoteText {
@@ -117,5 +117,4 @@
 .image {
   background-image: url("/images/holder.jpg");
   object-fit: cover;
-  /* padding: 0; */
 }

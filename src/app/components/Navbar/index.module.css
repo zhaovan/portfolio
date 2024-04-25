@@ -24,7 +24,7 @@
 
 .navbarLinksContainer {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2);
   align-items: center;
 }
 

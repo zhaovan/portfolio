@@ -4,7 +4,7 @@
   text-wrap: nowrap;
   font-family: Bernice;
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2);
 }
 
 .marqueeText {
@@ -22,7 +22,7 @@
 
 .marqueeContainer {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2);
   /* position: fixed; */
   /* bottom: 0px; */
   user-select: none;

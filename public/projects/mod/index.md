@@ -1,5 +1,3 @@
-<a href="https://ivanzhao.gumroad.com/l/mod" target="_blank">Gumroad Link</a>
-
 <h1 class="mod">This is mod</h1>
 
 Mod (named after Modular), is a typeface made during Type West 2023 as an exercise in building typefaces from various components. In this specific exercises, we were given a semi circle, a quarter circle, a square, and a triangle. While there were many different ways to approach this, I was interested in the geometric nature of the various shapes and wanted to make a typeface that respected the original form.
@@ -12,3 +10,7 @@ If you want to use it, feel free to download it through Gumroad (with a suggeste
 
 <img src="/projects/mod/images/color1.png" width="100%">
 <img src="/projects/mod/images/color2.png" width="100%">
+
+# Links
+
+<a href="https://ivanzhao.gumroad.com/l/mod" target="_blank">Font File</a>

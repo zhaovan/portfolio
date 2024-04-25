@@ -44,7 +44,7 @@
     "description": "speaker series and community for queer students in venture",
     "slug": "prism",
     "thumbnail": "/thumbnails/prism.png",
-    "tag": "Community Programming",
+    "tag": "Community",
     "year": 2022
   },
   {
@@ -84,7 +84,7 @@
     "name": "Blackout Poetry Generator",
     "description": "generate poems using markov models",
     "slug": "blackout-poetry",
-    "thumbnail": "/thumbnails/poetry.gif",
+    "thumbnail": "/thumbnails/poetry.mov",
     "tag": "writing tools",
     "year": 2023
   },
@@ -125,7 +125,7 @@
     "description": "speaker series for the queer college community",
     "slug": "tea-time",
     "thumbnail": "/thumbnails/teatime.png",
-    "tag": "Community Programming",
+    "tag": "Community",
     "year": 2020
   },
   {

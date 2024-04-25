@@ -50,8 +50,7 @@
       "endDate": "06-2021"
     }
   ],
-
-  "exhibitions & performances": [
+  "exhibitions & shows": [
     {
       "date": "02-2024",
       "title": "Pride in Panels",
@@ -187,13 +186,27 @@
       "website": "https://www.8vc.com/fellowships"
     }
   ],
-  "appearances": [
+  "speaking": [
+    {
+      "date": "upcoming",
+      "title": "TBA",
+      "organization": "11ty Conference",
+      "website": "TBA"
+    },
     {
       "date": "03-2024",
       "title": "The poetics of computation",
       "organization": "Causal Islands LA",
       "website": "https://fission.codes/blog/causal-islands-la-community-edition/"
     },
+    {
+      "date": "04-2022",
+      "title": "Guest",
+      "organization": "DRF Office Hours",
+      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
+    }
+  ],
+  "appearances": [
     {
       "date": "06-2023",
       "title": "Naive Weekly",
@@ -205,12 +218,6 @@
       "title": "Pride in STEM",
       "organization": "IEEE Computing Society",
       "website": "https://www.computer.org/publications/tech-news/build-your-career/pride-in-stem-ivan-zhao"
-    },
-    {
-      "date": "04-2022",
-      "title": "Guest",
-      "organization": "DRF Office Hours",
-      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
     }
   ],
   "research": [

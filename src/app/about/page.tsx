@@ -14,8 +14,9 @@ type BioKey =
   | "experiences"
   | "fellowships & awards"
   | "appearances"
-  | "exhibitions & performances"
+  | "exhibitions & shows"
   | "writing & webart"
+  | "speaking"
   | "research";
 
 type BioItem = {
@@ -28,6 +29,7 @@ type BioItem = {
 
 export default function About() {
   const bio = aboutData as Record<BioKey, BioItem[]>;
+
   return (
     <Layout>
       <div className={styles.container} data-scroll-section>
@@ -63,7 +65,7 @@ export default function About() {
                               >
                                 {item.title}
                               </Link>
-                              <i>{item.organization}</i>
+                              <i className={styles.org}>{item.organization}</i>
                             </span>
                           </p>
                         );
