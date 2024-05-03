@@ -22,10 +22,17 @@
       "website": ""
     },
     {
+      "organization": "Hotplate",
+      "title": "Frontend Engineer",
+      "date": "05-2024",
+      "endDate": "present",
+      "website": "https://www.hotplate.com/"
+    },
+    {
       "organization": "Galileo AI",
       "title": "Design Engineer",
       "date": "06-2023",
-      "endDate": "02-2024",
+      "endDate": "04-2024",
       "website": "https://www.usegalileo.ai/"
     },
     {
@@ -110,10 +117,16 @@
   ],
   "writing & webart": [
     {
+      "organization": "Prism International",
+      "title": "(9/3) dishes I want to eat again",
+      "date": "upcoming",
+      "website": "https://prismmagazine.ca/"
+    },
+    {
       "organization": "Persephone's Lit",
       "title": "After Atlas",
       "date": "upcoming",
-      "website": ""
+      "website": "https://persephonesfruit.com/"
     },
     {
       "organization": "The New River",
@@ -168,6 +181,13 @@
   ],
   "fellowships & awards": [
     {
+      "date": "06-2024",
+      "title": "Galway Kinnell Scholarship",
+      "organization": "community of writers",
+      "website": "https://communityofwriters.org"
+    },
+
+    {
       "date": "08-2023",
       "title": "Albertina Tholakele Dube Scholarship",
       "organization": "MCWC",
@@ -188,10 +208,10 @@
   ],
   "speaking": [
     {
-      "date": "upcoming",
-      "title": "TBA",
+      "date": "05-2024",
+      "title": "Chinese Type Systems",
       "organization": "11ty Conference",
-      "website": "TBA"
+      "website": "https://conf.11ty.dev/2024/chinese-type-systems/"
     },
     {
       "date": "03-2024",

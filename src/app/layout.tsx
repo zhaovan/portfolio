@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "./globals.css";
-import Layout from "./components/Layout/Layout";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {

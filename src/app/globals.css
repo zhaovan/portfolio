@@ -1,12 +1,13 @@
 :root {
-  --background-primary: 240, 230, 231;
-  --text-primary: 30, 30, 30;
+  --background-primary: 227, 212, 210;
 
+  --background-dark: 20, 20, 20;
   --background-accent-red: 245, 131, 97;
-  --text-red: 197, 42, 42;
-  --text-light: 234, 234, 234;
 
+  --text-primary: 30, 30, 30;
+  --text-light: 234, 234, 234;
   --text-dark: 20, 20, 20;
+  --text-red: 197, 42, 42;
 
   --blog-width: 50vw;
 
@@ -18,11 +19,16 @@
 
 [data-theme="dark"] {
   --background-primary: 20, 20, 20;
-  --text-primary: 234, 234, 234;
+  --background-dark: 2, 2, 2;
   --background-accent-red: 245, 131, 97;
-  --text-red: 245, 131, 97;
-  --text-dark: 20, 20, 20;
+  --background-accent-gradient-yellow: 255, 255, 51;
+  --background-accent-gradient-white: 227, 212, 210;
+  --background-accent-gradient-orange: 244, 165, 88;
+
+  --text-primary: 234, 234, 234;
   --text-light: 234, 234, 234;
+  --text-dark: 20, 20, 20;
+  --text-red: 245, 131, 97;
 }
 
 * {
@@ -205,4 +211,16 @@ button {
   border: none;
   background-color: inherit;
   cursor: pointer;
+}
+
+.links {
+  display: flex;
+}
+
+.links > *::after {
+  content: "*";
+}
+
+.links > *:last-child::after {
+  content: none !important;
 }

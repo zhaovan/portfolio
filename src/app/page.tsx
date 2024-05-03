@@ -1,11 +1,28 @@
 "use client";
 import styles from "./page.module.css";
 import Marquee from "./components/Marquee/Marquee";
-import { motion } from "framer-motion";
-import NavbarVertical from "./components/Navbar/NavbarVertical";
-import Image from "next/image";
+import Symbol from "./components/Symbol/Symbol";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [lanternOn, setLanternOn] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  function handleTheme(resolvedTheme: string) {
+    if (resolvedTheme === "light") {
+      return styles.chineseName;
+    } else if (lanternOn) {
+      return styles.chineseNameDark;
+    } else {
+      return styles.chineseNameDarkLantern;
+    }
+  }
+
+  if (!resolvedTheme) {
+    return;
+  }
+
   return (
     <div className={styles.container} data-scroll-section>
       <Marquee />
@@ -21,44 +38,21 @@ export default function Home() {
               return <span key={idx}>{char}</span>;
             })}
           </h1>
-          <h1 className={styles.chineseName}>
+
+          <h1
+            className={handleTheme(resolvedTheme)}
+            onClick={() => setLanternOn(!lanternOn)}
+          >
             {"赵艾文".split("").map((char, idx) => {
               return <span key={idx}>{char}</span>;
             })}
           </h1>
 
-          <div className={styles.quote}>
-            <NavbarVertical />
-          </div>
-          <p className={styles.symbol}>
-            <motion.span
-              whileHover={{ rotate: [0, 30, -20, 5, -2.5, 0, 0] }}
-              transition={{ duration: 1.5 }}
-            >
-              ℑ
-            </motion.span>
-          </p>
-          <p className={styles.symbol}>
-            <motion.span
-              transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
-              animate={{ rotate: "360deg" }}
-            >
-              ✾
-            </motion.span>
-          </p>
+          <Symbol type="experiments" />
+          <Symbol type="projects" />
+
+          <Symbol type="about" />
           <div className={styles.image} />
-          <p className={styles.symbol}>
-            <motion.span
-              animate={{ x: [0, -20, 40, -10, 0] }}
-              transition={{
-                repeat: Infinity,
-                times: [0, 0.2, 0.3, 0.5, 0.8],
-                duration: 2,
-              }}
-            >
-              ✑
-            </motion.span>
-          </p>
         </div>
       </div>
       <Marquee offset />
