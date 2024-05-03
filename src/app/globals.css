@@ -212,15 +212,3 @@ button {
   background-color: inherit;
   cursor: pointer;
 }
-
-.links {
-  display: flex;
-}
-
-.links > *::after {
-  content: "*";
-}
-
-.links > *:last-child::after {
-  content: none !important;
-}
