@@ -47,6 +47,8 @@ body {
   font-family: Bricolage Grotesque;
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -206,9 +208,12 @@ html.has-scroll-dragging {
   font-size: 5rem;
   text-align: center;
 }
-
 button {
   border: none;
   background-color: inherit;
   cursor: pointer;
+}
+
+h3 {
+  letter-spacing: 0.1rem;
 }

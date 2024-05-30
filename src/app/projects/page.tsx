@@ -26,6 +26,8 @@ export default function Projects() {
     setIsImage(checkURLIsImage(hoveredProjectThumbnailUrl));
   }, [hoveredProjectThumbnailUrl]);
 
+  const formattedThumbnail = `/thumbnails/${hoveredProjectThumbnailUrl}`;
+
   return (
     <Layout>
       <div className={styles.container} data-scroll-section>
@@ -52,7 +54,7 @@ export default function Projects() {
         <div className={styles.lightbox}>
           {isImage ? (
             <Image
-              src={hoveredProjectThumbnailUrl}
+              src={formattedThumbnail}
               className={styles.lightboxImage}
               alt="thumbnail"
               width="600"
@@ -60,7 +62,7 @@ export default function Projects() {
             />
           ) : (
             <video
-              src={hoveredProjectThumbnailUrl}
+              src={formattedThumbnail}
               className={styles.lightboxImage}
               width="600"
               height="400"

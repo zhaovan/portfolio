@@ -8,6 +8,7 @@ import rehypeRaw from "rehype-raw";
 import projects from "@/app/data/projects.json";
 import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
+import Link from "next/link";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -25,6 +26,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   }, [slug, mdx]);
 
   const isImage = checkURLIsImage(project.thumbnail);
+  const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
 
   return (
     <Layout>
@@ -38,7 +40,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div className={styles.imageContainer}>
               {isImage ? (
                 <Image
-                  src={project.thumbnail}
+                  src={formattedThumbnail}
                   width={800}
                   height={600}
                   priority
@@ -47,7 +49,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 />
               ) : (
                 <video
-                  src={project.thumbnail}
+                  src={formattedThumbnail}
                   className={styles.headerImage}
                   loop
                   autoPlay
@@ -57,7 +59,25 @@ export default function Page({ params }: { params: { slug: string } }) {
               <div className={styles.imageMask} />
             </div>
           </div>
+
           <div className={styles.contentContainer} suppressHydrationWarning>
+            <div className={styles.overviewContainer}>
+              <div>
+                <h3>Affiliation</h3>
+                <hr />
+                <p>{project.organization}</p>
+                <h3>Year</h3>
+                <hr />
+                <p>{project.year}</p>
+              </div>
+              <div>
+                <h3>Links</h3>
+                <hr />
+                {project.links.map((link) => {
+                  return <Link href={link.link}>{link.type}</Link>;
+                })}
+              </div>
+            </div>
             <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
           </div>
         </div>

@@ -3,10 +3,10 @@ import styles from "./page.module.css";
 import Marquee from "./components/Marquee/Marquee";
 import Symbol from "./components/Symbol/Symbol";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
-  const [lanternOn, setLanternOn] = useState(false);
+  const [lanternOn, setLanternOn] = useState(true);
   const { resolvedTheme } = useTheme();
 
   function handleTheme(resolvedTheme: string) {

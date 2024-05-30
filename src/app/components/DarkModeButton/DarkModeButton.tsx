@@ -35,7 +35,7 @@ export default function DarkModeButton() {
   }
 
   return (
-    <button onClick={handleDarkModeSwap}>
+    <button onClick={handleDarkModeSwap} className={styles.button}>
       <motion.div animate={controls}>
         {resolvedTheme === Theme.DARK ? (
           <Moon className={styles.icon} fill="currentColor" size={20} />

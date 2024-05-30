@@ -3,55 +3,70 @@
     "name": "Convo",
     "description": "a playful handwritten typeface",
     "slug": "convo",
-    "thumbnail": "/thumbnails/convo.gif",
+    "thumbnail": "convo.gif",
     "tag": "typeface",
-    "year": 2024
+    "year": 2024,
+    "organization": "Type West",
+    "links": [{ "type": "specimen site", "link": "https://convo.design" }]
   },
   {
-    "name": "EQTY Labs",
+    "name": "Generating Web UI",
+    "slug": "web-ui",
+    "thumbnail": "web-ui.mp4",
+    "tag": "Product Feature",
+    "year": 2023,
+    "organization": "Galileo AI"
+  },
+  {
+    "name": "Web3 Design System",
     "description": "components for data governance on chain",
     "slug": "eqty-ds",
-    "thumbnail": "/thumbnails/eqty-ds.png",
+    "thumbnail": "eqty-ds.png",
     "tag": "Design system",
-    "year": 2023
+    "year": 2023,
+    "organization": "EQTY Labs"
   },
   {
     "name": "YOU JUST GOT LAID OFF",
     "description": "dasdas",
     "slug": "laid-off",
-    "thumbnail": "/thumbnails/laid-off.mov",
+    "thumbnail": "laid-off.mov",
     "tag": "webart",
-    "year": 2023
+    "year": 2023,
+    "organization": "self"
   },
   {
     "name": "Reboot Merch",
     "description": "Get your swag on!",
     "slug": "reboot-merch",
-    "thumbnail": "/thumbnails/reboot-merch.png",
+    "thumbnail": "reboot-merch.png",
     "tag": "merch & illustration",
-    "year": 2022
+    "year": 2022,
+    "organization": "Reboot"
   },
   {
     "name": "Kernel Magazine",
     "description": "literary magazine on tech, society, and power",
     "slug": "kernel",
-    "thumbnail": "/thumbnails/KernelMagCover.png",
+    "thumbnail": "KernelMagCover.jpeg",
     "tag": "Web, Print, and Brand",
-    "year": 2023
+    "year": 2023,
+    "organization": "Kernel"
   },
   {
     "name": "Prism Investor Track",
     "description": "speaker series and community for queer students in venture",
     "slug": "prism",
-    "thumbnail": "/thumbnails/prism.png",
+    "thumbnail": "prism.png",
     "tag": "Community",
-    "year": 2022
+    "year": 2022,
+    "organization": "Dorm Room Fund"
   },
   {
     "name": "Byrne",
     "description": "workhorse serif inspired by math-y visuals",
     "slug": "byrne",
-    "thumbnail": "/thumbnails/byrne.mov",
+    "thumbnail": "byrne.mov",
     "tag": "typeface",
     "year": 2023
   },
@@ -59,7 +74,7 @@
     "name": "Telescopic Text",
     "description": "adding detail to your writing",
     "slug": "telescopic",
-    "thumbnail": "/thumbnails/telescopic.gif",
+    "thumbnail": "telescopic.gif",
     "tag": "webart",
     "year": 2023
   },
@@ -68,7 +83,7 @@
     "name": "A world of space",
     "description": "browser based interactive fiction",
     "slug": "a-world-of-space",
-    "thumbnail": "/thumbnails/aworldofspace.mov",
+    "thumbnail": "aworldofspace.mov",
     "tag": "Interactive Fiction",
     "year": 2023
   },
@@ -76,7 +91,7 @@
     "name": "Mod",
     "description": "everyone's favorite modular typeface",
     "slug": "mod",
-    "thumbnail": "/thumbnails/mod.png",
+    "thumbnail": "mod.png",
     "tag": "typeface",
     "year": 2023
   },
@@ -84,7 +99,7 @@
     "name": "Blackout Poetry Generator",
     "description": "generate poems using markov models",
     "slug": "blackout-poetry",
-    "thumbnail": "/thumbnails/poetry.mov",
+    "thumbnail": "poetry.mov",
     "tag": "writing tools",
     "year": 2023
   },
@@ -92,7 +107,7 @@
     "name": "Reboot Fellowship Zine",
     "description": "",
     "slug": "reboot-zine",
-    "thumbnail": "/thumbnails/reboot-zine.png",
+    "thumbnail": "reboot-zine.png",
     "tag": "book design",
     "year": 2022
   },
@@ -100,7 +115,7 @@
     "name": "Holotable",
     "description": "speculative design on tech and furniture",
     "slug": "holotable",
-    "thumbnail": "/thumbnails/holotable.gif",
+    "thumbnail": "holotable.gif",
     "tag": "3D Model & Animation",
     "year": 2022
   },
@@ -108,7 +123,7 @@
     "name": "Info Design Infographics",
     "description": "infographics on various topics",
     "slug": "infographics",
-    "thumbnail": "/thumbnails/infoviz.png",
+    "thumbnail": "infoviz.png",
     "tag": "Infographics",
     "year": 2022
   },
@@ -116,7 +131,7 @@
     "name": "Watcher",
     "description": "memex of my brain",
     "slug": "watcher",
-    "thumbnail": "/thumbnails/watcher.png",
+    "thumbnail": "watcher.png",
     "tag": "App Development",
     "year": 2021
   },
@@ -124,7 +139,7 @@
     "name": "Tea Time",
     "description": "speaker series for the queer college community",
     "slug": "tea-time",
-    "thumbnail": "/thumbnails/teatime.png",
+    "thumbnail": "teatime.png",
     "tag": "Community",
     "year": 2020
   },
@@ -132,7 +147,7 @@
     "name": "Tarrey Town Interactive",
     "description": "interactive audio experience on a quest from Zelda",
     "slug": "tarrey-town",
-    "thumbnail": "/thumbnails/tarrey.png",
+    "thumbnail": "tarrey.png",
     "tag": "Interactive Piece",
     "year": 2020
   },
@@ -140,7 +155,7 @@
     "name": "Optical Music Recognition",
     "description": "DL model on music sheet recognition",
     "slug": "omr",
-    "thumbnail": "/thumbnails/omr.png",
+    "thumbnail": "omr.png",
     "tag": "Old Project",
     "year": 2020
   },
@@ -148,7 +163,7 @@
     "name": "Rhyme Time",
     "description": "poem generator with lstms",
     "slug": "rhyme-time",
-    "thumbnail": "/thumbnails/rhymetime.png",
+    "thumbnail": "rhymetime.png",
     "tag": "Old Project",
     "year": 2020
   },
@@ -157,13 +172,13 @@
     "tag": "webart",
     "year": 2022,
     "slug": "ten-sky",
-    "thumbnail": "/thumbnails/ten-sky.mov"
+    "thumbnail": "ten-sky.mov"
   },
   {
     "name": "Questions and Answers",
     "tag": "webart",
     "year": 2022,
     "slug": "qa",
-    "thumbnail": "/thumbnails/qa.mp4"
+    "thumbnail": "qa.mp4"
   }
 ]
