@@ -73,9 +73,14 @@ export default function Page({ params }: { params: { slug: string } }) {
               <div>
                 <h3>Links</h3>
                 <hr />
-                {project.links.map((link) => {
-                  return <Link href={link.link}>{link.type}</Link>;
-                })}
+                {project.links &&
+                  project?.links.map((link, idx) => {
+                    return (
+                      <Link href={link.link} key={idx}>
+                        {link.type}
+                      </Link>
+                    );
+                  })}
               </div>
             </div>
             <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
