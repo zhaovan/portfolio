@@ -21,13 +21,7 @@
       "endDate": "present",
       "website": ""
     },
-    {
-      "organization": "Hotplate",
-      "title": "Frontend Engineer",
-      "date": "05-2024",
-      "endDate": "present",
-      "website": "https://www.hotplate.com/"
-    },
+
     {
       "organization": "Galileo AI",
       "title": "Design Engineer",
@@ -44,7 +38,7 @@
     },
     {
       "organization": "Blend Labs",
-      "title": "Software Engineering Intern",
+      "title": "Software Engineer",
       "website": "https://blend.com/",
       "date": "06-2021",
       "endDate": "08-2021"
@@ -121,6 +115,12 @@
       "title": "(9/3) dishes I want to eat again",
       "date": "upcoming",
       "website": "https://prismmagazine.ca/"
+    },
+    {
+      "organization": "godz rising #1",
+      "title": "paper crane",
+      "date": "upcoming",
+      "website": "https://linktr.ee/godzrising"
     },
     {
       "organization": "Persephone's Lit",

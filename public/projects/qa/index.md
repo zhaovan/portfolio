@@ -1,3 +1,1 @@
-Questions and Answers is an experiment in community forums in a different manner. In it, the viewer is asked
-
-<img src="/thumbnails/qa.gif">
+Questions and Answers is an experiment in community forums. When I was processing the internet, I wondered if there was a way in which we could require users to respond to something

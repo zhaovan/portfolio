@@ -7,7 +7,7 @@
     "tag": "typeface",
     "year": 2024,
     "organization": "Type West",
-    "links": [{ "type": "specimen site", "link": "https://convo.design" }]
+    "links": [{ "type": "Specimen", "link": "https://convo.design" }]
   },
   {
     "name": "Generating Web UI",
@@ -15,7 +15,8 @@
     "thumbnail": "web-ui.mp4",
     "tag": "Product Feature",
     "year": 2023,
-    "organization": "Galileo AI"
+    "organization": "Galileo AI",
+    "links": [{ "type": "Product", "link": "https://www.usegalileo.ai/" }]
   },
   {
     "name": "Web3 Design System",
@@ -24,7 +25,14 @@
     "thumbnail": "eqty-ds.png",
     "tag": "Design system",
     "year": 2023,
-    "organization": "EQTY Labs"
+    "organization": "EQTY Labs",
+    "links": [
+      {
+        "type": "Documentation",
+        "link": "https://component-ui.eqtylab.io/?path=/docs/introduction--page"
+      },
+      { "type": "Website", "link": "https://www.eqtylab.io/" }
+    ]
   },
   {
     "name": "YOU JUST GOT LAID OFF",
@@ -33,7 +41,8 @@
     "thumbnail": "laid-off.mov",
     "tag": "webart",
     "year": 2023,
-    "organization": "self"
+    "organization": "Personal Project",
+    "links": [{ "type": "Website", "link": "https://layoff-site.vercel.app/" }]
   },
   {
     "name": "Reboot Merch",
@@ -42,7 +51,8 @@
     "thumbnail": "reboot-merch.png",
     "tag": "merch & illustration",
     "year": 2022,
-    "organization": "Reboot"
+    "organization": "Reboot",
+    "links": [{ "type": "Shop", "link": "https://shop.kernelmag.io/" }]
   },
   {
     "name": "Kernel Magazine",
@@ -51,7 +61,12 @@
     "thumbnail": "KernelMagCover.jpeg",
     "tag": "Web, Print, and Brand",
     "year": 2023,
-    "organization": "Kernel"
+    "organization": "Reboot / Kernel",
+    "links": [
+      { "type": "Website", "link": "https://www.kernelmag.io/" },
+      { "type": "Shop", "link": "https://shop.kernelmag.io/" },
+      { "type": "Newsletter", "link": "https://reboothq.substack.com/" }
+    ]
   },
   {
     "name": "Prism Investor Track",
@@ -60,7 +75,14 @@
     "thumbnail": "prism.png",
     "tag": "Community",
     "year": 2022,
-    "organization": "Dorm Room Fund"
+    "organization": "Dorm Room Fund",
+    "links": [
+      { "type": "Website", "link": "https://dormroomfund.com/opportunities" },
+      {
+        "type": "Old code",
+        "link": "https://github.com/zhaovan/prism-landing-page"
+      }
+    ]
   },
   {
     "name": "Byrne",
@@ -68,7 +90,8 @@
     "slug": "byrne",
     "thumbnail": "byrne.mov",
     "tag": "typeface",
-    "year": 2023
+    "year": 2023,
+    "organization": "Type West"
   },
   {
     "name": "Telescopic Text",
@@ -76,7 +99,19 @@
     "slug": "telescopic",
     "thumbnail": "telescopic.gif",
     "tag": "webart",
-    "year": 2023
+    "year": 2023,
+    "organization": "Open Source",
+    "links": [
+      {
+        "type": "NPM Package",
+        "link": "https://www.npmjs.com/package/react-telescopic-text"
+      },
+      { "type": "Site", "link": "https://telescopic-text.vercel.app/" },
+      {
+        "type": "Github",
+        "link": "https://github.com/zhaovan/telescopic-text"
+      }
+    ]
   },
 
   {
@@ -85,7 +120,16 @@
     "slug": "a-world-of-space",
     "thumbnail": "aworldofspace.mov",
     "tag": "Interactive Fiction",
-    "year": 2023
+    "year": 2023,
+    "organization": "Personal Project",
+    "links": [
+      { "type": "html.review link", "link": "https://thehtml.review/02/" },
+      { "type": "Site", "link": "https://www.aworldof.space/" },
+      {
+        "type": "Github",
+        "link": "https://github.com/zhaovan/a-world-of-space"
+      }
+    ]
   },
   {
     "name": "Mod",
@@ -93,7 +137,11 @@
     "slug": "mod",
     "thumbnail": "mod.png",
     "tag": "typeface",
-    "year": 2023
+    "year": 2023,
+    "organization": "Type West",
+    "links": [
+      { "type": "Buy it!", "link": "https://ivanzhao.gumroad.com/l/mod" }
+    ]
   },
   {
     "name": "Blackout Poetry Generator",
@@ -101,7 +149,8 @@
     "slug": "blackout-poetry",
     "thumbnail": "poetry.mov",
     "tag": "writing tools",
-    "year": 2023
+    "year": 2023,
+    "organization": "Personal Project"
   },
   {
     "name": "Reboot Fellowship Zine",
@@ -109,7 +158,8 @@
     "slug": "reboot-zine",
     "thumbnail": "reboot-zine.png",
     "tag": "book design",
-    "year": 2022
+    "year": 2022,
+    "organization": "Reboot"
   },
   {
     "name": "Holotable",
@@ -117,7 +167,8 @@
     "slug": "holotable",
     "thumbnail": "holotable.gif",
     "tag": "3D Model & Animation",
-    "year": 2022
+    "year": 2022,
+    "organization": "Personal Project"
   },
   {
     "name": "Info Design Infographics",
@@ -125,7 +176,8 @@
     "slug": "infographics",
     "thumbnail": "infoviz.png",
     "tag": "Infographics",
-    "year": 2022
+    "year": 2022,
+    "organization": "Personal Project"
   },
   {
     "name": "Watcher",
@@ -133,7 +185,8 @@
     "slug": "watcher",
     "thumbnail": "watcher.png",
     "tag": "App Development",
-    "year": 2021
+    "year": 2021,
+    "organization": "Personal Project"
   },
   {
     "name": "Tea Time",
@@ -141,7 +194,8 @@
     "slug": "tea-time",
     "thumbnail": "teatime.png",
     "tag": "Community",
-    "year": 2020
+    "year": 2020,
+    "organization": "Tea Time"
   },
   {
     "name": "Tarrey Town Interactive",
@@ -149,7 +203,8 @@
     "slug": "tarrey-town",
     "thumbnail": "tarrey.png",
     "tag": "Interactive Piece",
-    "year": 2020
+    "year": 2020,
+    "organization": "Personal Project"
   },
   {
     "name": "Optical Music Recognition",
@@ -157,7 +212,8 @@
     "slug": "omr",
     "thumbnail": "omr.png",
     "tag": "Old Project",
-    "year": 2020
+    "year": 2020,
+    "organization": "Personal Project"
   },
   {
     "name": "Rhyme Time",
@@ -165,20 +221,26 @@
     "slug": "rhyme-time",
     "thumbnail": "rhymetime.png",
     "tag": "Old Project",
-    "year": 2020
+    "year": 2020,
+    "organization": "Personal Project"
   },
   {
     "name": "Ten as in Sky",
     "tag": "webart",
     "year": 2022,
     "slug": "ten-sky",
-    "thumbnail": "ten-sky.mov"
+    "thumbnail": "ten-sky.mov",
+    "organization": "Personal Project"
   },
   {
     "name": "Questions and Answers",
     "tag": "webart",
-    "year": 2022,
+    "year": 2021,
     "slug": "qa",
-    "thumbnail": "qa.mp4"
+    "thumbnail": "qa.mp4",
+    "organization": "Personal Project",
+    "links": [
+      { "type": "Website", "link": "https://www.questionsandanswers.app/" }
+    ]
   }
 ]

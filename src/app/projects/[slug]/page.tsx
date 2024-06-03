@@ -9,6 +9,7 @@ import projects from "@/app/data/projects.json";
 import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
 import Link from "next/link";
+import SectionHeader from "../components/SectionHeader";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -62,26 +63,12 @@ export default function Page({ params }: { params: { slug: string } }) {
 
           <div className={styles.contentContainer} suppressHydrationWarning>
             <div className={styles.overviewContainer}>
-              <div>
-                <h3>Affiliation</h3>
-                <hr />
-                <p>{project.organization}</p>
-                <h3>Year</h3>
-                <hr />
-                <p>{project.year}</p>
-              </div>
-              <div>
-                <h3>Links</h3>
-                <hr />
-                {project.links &&
-                  project?.links.map((link, idx) => {
-                    return (
-                      <Link href={link.link} key={idx}>
-                        {link.type}
-                      </Link>
-                    );
-                  })}
-              </div>
+              <SectionHeader
+                title="Affiliation"
+                description={project.organization}
+              />
+              <SectionHeader title="Year" description={project.year} />
+              <SectionHeader title="Links" links={project.links} />
             </div>
             <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
           </div>

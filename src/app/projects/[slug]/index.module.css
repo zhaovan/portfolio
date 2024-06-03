@@ -78,3 +78,8 @@
 .contentContainer > p {
   line-height: 150%;
 }
+
+.overviewContainer {
+  display: flex;
+  justify-content: space-between;
+}

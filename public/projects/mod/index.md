@@ -10,7 +10,3 @@ If you want to use it, feel free to download it through Gumroad (with a suggeste
 
 <img src="/projects/mod/images/color1.png" width="100%">
 <img src="/projects/mod/images/color2.png" width="100%">
-
-# Links
-
-<a href="https://ivanzhao.gumroad.com/l/mod" target="_blank">Font File</a>
