@@ -50,7 +50,7 @@ export default function Projects() {
             })}
         </div>
       </div>
-      {hoveredProjectThumbnailUrl && (
+      {/* {hoveredProjectThumbnailUrl && (
         <div className={styles.lightbox}>
           {isImage ? (
             <Image
@@ -72,7 +72,7 @@ export default function Projects() {
             />
           )}
         </div>
-      )}
+      )} */}
     </Layout>
   );
 }

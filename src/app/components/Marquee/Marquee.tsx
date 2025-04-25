@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import styles from "./marquee.module.css";
 
 const texts: Array<String> = [
-  "eating hotpot",
   "animating sites",
   "baking bread",
   "designing type",
   "waxing poetically",
+  "sleeping in",
 ];
 
 type MarqueeProps = {

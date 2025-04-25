@@ -4,6 +4,7 @@ import Marquee from "./components/Marquee/Marquee";
 import Symbol from "./components/Symbol/Symbol";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [lanternOn, setLanternOn] = useState(true);
@@ -55,7 +56,6 @@ export default function Home() {
           <div className={styles.image} />
         </div>
       </div>
-      <Marquee offset />
     </div>
   );
 }

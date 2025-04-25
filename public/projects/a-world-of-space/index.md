@@ -1,10 +1,3 @@
-A world of space is an interactive game about finding yourself on the internet, the black infinity of space, fathers, and understanding yourself as the child of someone else. I had the honor of working with [Maxwell Neely-Cohen](https://www.maxy.world/) who graciously served as an editor, friend, and supporter throughout the whole process. This piece was published as part of v2 of the [thehtml.review](https://thehtml.review/) but can be found at at it's own link [here](https://www.aworldof.space/).
+A world of space is an interactive game about finding yourself on the internet, the black infinity of space, fathers, and understanding yourself as the child of someone else. I had the honor of working with [Maxwell Neely-Cohen](https://www.maxy.world/) who graciously served as an editor, friend, and supporter throughout the whole process. This piece was published as part of v2 of the [thehtml.review](https://thehtml.review/) which I will be eternally grateful for.
 
-### Process
-
-In it's early infancy, I was interested in creating a game that investigated agency on the web. To be online but be transported into a different world. To use sonic qualities are immersion. And to question whether our choices on the web mean anything.
-
-<p class="links">
-  <a href="https://www.aworldof.space/">Link</a>
-  <a href="https://github.com/zhaovan/a-world-of-space">Github</a>
-</p>
+In it's early infancy, I was interested in creating a game that investigated agency on the web. To be online but be transported into a different world. To use sonic qualities as immersion. And to question whether our choices on the web mean anything. Throughout the creation of this, I realized that a majority of this game aims to look at the ways in which the interactive fiction form can be used to subvert expectations. In the piece, the player interacts with a disembodied voice that talks to them through the screen. The text comes in waves, as a back and forth dialog between the user and this voice. I used the dialog sounds from Undertale which was drawn as a large piece of inspiration for this game which was used every time the animation was running.

@@ -50,17 +50,25 @@
 .chineseNameDark {
   position: relative;
   z-index: 100;
-  opacity: 1;
-  background: radial-gradient(
-    rgb(var(--background-accent-gradient-white)) 0%,
-    rgb(var(--background-accent-gradient-yellow)) 5%,
-    rgb(var(--background-accent-gradient-orange)) 40%,
-    rgb(var(--background-accent-red)) 50%
-  );
-  box-shadow: 0 0 400px 8px rgb(var(--background-accent-red)),
-    0 0 500px 10px #fff;
-  animation: flicker 3s infinite;
-  animation-delay: 0.5s;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08) 0px,
+      rgba(0, 0, 0, 0.08) 3px,
+      transparent 3px,
+      transparent 6px
+    ),
+    radial-gradient(
+      ellipse at center,
+      #ffe066 0%,
+      /* soft yellow center */ #f28c28 30%,
+      /* warm orange transition */ #d84727 60%,
+      /* less saturated red */ #7a1e14 100% /* deep edge shadow */
+    );
+
+  box-shadow: 0 0 15px 5px rgba(255, 204, 0, 0.3),
+    0 0 50px 20px rgba(255, 102, 0, 0.3);
+  animation: flicker 4s ease-in-out infinite;
 }
 
 .chineseNameDarkLantern {
@@ -83,6 +91,9 @@
 .firstName,
 .lastName {
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(var(--text-red));
+  -webkit-text-stroke: 4px #f6d108;
+  background-color: #0a0a0a;
 }
 
 .lastName {
@@ -108,6 +119,19 @@
   letter-spacing: -16px;
 }
 
+.firstName > span:hover,
+.lastName > span:hover {
+  animation: textFlicker 3s linear infinite;
+}
+
+.firstName > span,
+.lastName > span {
+  text-shadow: 0 0 7px #aaa, 0 0 10px #aaa, 0 0 21px #aaa,
+    0 0 42px rgb(var(--text-red)), 0 0 82px rgb(var(--text-red)),
+    0 0 92px rgb(var(--text-red)), 0 0 102px rgb(var(--text-red)),
+    0 0 151px rgb(var(--text-red));
+}
+
 .image {
   background-image: url("/images/holder.jpg");
   object-fit: cover;
@@ -117,25 +141,57 @@
 
 @keyframes flicker {
   0% {
+    /* transform: scaleY(1) scaleX(1) translateY(0); */
+    filter: brightness(1);
     opacity: 1;
   }
-
-  10% {
-    opacity: 0.7;
+  20% {
+    /* transform: scaleY(1.05) scaleX(0.95) translateY(-1px); */
+    filter: brightness(1.1);
+    opacity: 0.95;
   }
-
-  30% {
-    opacity: 1;
-  }
-
   40% {
-    opacity: 0.8;
+    /* transform: scaleY(0.97) scaleX(1.03) translateY(1px); */
+    filter: brightness(0.9);
+    opacity: 0.9;
   }
-  70% {
-    opacity: 0.5;
+  60% {
+    /* transform: scaleY(1.03) scaleX(0.97) translateY(-1px); */
+    filter: brightness(1.05);
+    opacity: 0.92;
   }
+  80% {
+    /* transform: scaleY(0.98) scaleX(1.02) translateY(0); */
+    filter: brightness(0.95);
+    opacity: 0.93;
+  }
+  100% {
+    /* transform: scaleY(1) scaleX(1) translateY(0); */
+    filter: brightness(1);
+    opacity: 1;
+  }
+}
 
+@keyframes textFlicker {
+  0%,
+  19%,
+  22%,
+  62%,
+  64%,
+  70%,
   100% {
     opacity: 1;
+    text-shadow: 0 0 7px #aaa, 0 0 10px #aaa, 0 0 21px #aaa,
+      0 0 42px rgb(var(--text-red)), 0 0 82px rgb(var(--text-red)),
+      0 0 92px rgb(var(--text-red)), 0 0 102px rgb(var(--text-red)),
+      0 0 151px rgb(var(--text-red));
+  }
+  20%,
+  21%,
+  63%,
+  65%,
+  69.9% {
+    opacity: 0.4;
+    text-shadow: none;
   }
 }

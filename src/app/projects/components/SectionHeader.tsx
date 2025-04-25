@@ -10,7 +10,6 @@ type SectionHeaderProps = {
 
 export default function SectionHeader({
   title,
-
   description,
   links,
 }: SectionHeaderProps) {
@@ -25,7 +24,7 @@ export default function SectionHeader({
             links.map((link: Record<string, string>, idx: number) => {
               return (
                 <Link key={idx} href={link.link} target="_blank">
-                  {link.type}
+                  {link.text}
                 </Link>
               );
             })}

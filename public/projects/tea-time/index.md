@@ -1,7 +1,1 @@
-# Tea Time
-
-<img src="/thumbnails/teatime.png">
-
-Tea time was a a weekly chat with LGBTQ+ professionals in various disciplines and industries to build community.
-
-[Site](https://teatime.substack.com/)
+Started during COVID in 2020, Tea time was a a weekly chat with LGBTQ+ professionals in various disciplines and industries to build community. While it didn't run for very long, it reminded me of the importance of community in times of need.

@@ -1,5 +1,30 @@
 [
   {
+    "name": "Ask this website a question (unused)",
+    "description": "a website that answers your questions",
+    "slug": "ask-this-website-a-question",
+    "thumbnail": "question.mov",
+    "tag": "website",
+    "year": 2025,
+    "organization": "Personal Project",
+    "links": [
+      {
+        "text": "Website",
+        "link": "https://ask-this-website-a-question.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "Typeface Website",
+    "description": "a typeface design tool",
+    "slug": "typeface-website",
+    "thumbnail": "typeface.mov",
+    "tag": "marketing website",
+    "year": 2024,
+    "organization": "Typeface",
+    "links": [{ "text": "Website", "link": "https://typeface.ai/" }]
+  },
+  {
     "name": "Convo",
     "description": "a playful handwritten typeface",
     "slug": "convo",
@@ -7,42 +32,27 @@
     "tag": "typeface",
     "year": 2024,
     "organization": "Type West",
-    "links": [{ "type": "Specimen", "link": "https://convo.design" }]
+    "links": [{ "text": "Specimen", "link": "https://convo.design" }]
   },
   {
-    "name": "Generating Web UI",
+    "name": "Galileo AI",
     "slug": "web-ui",
     "thumbnail": "web-ui.mp4",
     "tag": "Product Feature",
     "year": 2023,
     "organization": "Galileo AI",
-    "links": [{ "type": "Product", "link": "https://www.usegalileo.ai/" }]
+    "links": [{ "text": "Product", "link": "https://www.usegalileo.ai/" }]
   },
-  {
-    "name": "Web3 Design System",
-    "description": "components for data governance on chain",
-    "slug": "eqty-ds",
-    "thumbnail": "eqty-ds.png",
-    "tag": "Design system",
-    "year": 2023,
-    "organization": "EQTY Labs",
-    "links": [
-      {
-        "type": "Documentation",
-        "link": "https://component-ui.eqtylab.io/?path=/docs/introduction--page"
-      },
-      { "type": "Website", "link": "https://www.eqtylab.io/" }
-    ]
-  },
+
   {
     "name": "YOU JUST GOT LAID OFF",
-    "description": "dasdas",
+
     "slug": "laid-off",
     "thumbnail": "laid-off.mov",
     "tag": "webart",
     "year": 2023,
     "organization": "Personal Project",
-    "links": [{ "type": "Website", "link": "https://layoff-site.vercel.app/" }]
+    "links": [{ "text": "Website", "link": "https://layoff-site.vercel.app/" }]
   },
   {
     "name": "Reboot Merch",
@@ -52,7 +62,7 @@
     "tag": "merch & illustration",
     "year": 2022,
     "organization": "Reboot",
-    "links": [{ "type": "Shop", "link": "https://shop.kernelmag.io/" }]
+    "links": [{ "text": "Shop", "link": "https://shop.kernelmag.io/" }]
   },
   {
     "name": "Kernel Magazine",
@@ -63,10 +73,18 @@
     "year": 2023,
     "organization": "Reboot / Kernel",
     "links": [
-      { "type": "Website", "link": "https://www.kernelmag.io/" },
-      { "type": "Shop", "link": "https://shop.kernelmag.io/" },
-      { "type": "Newsletter", "link": "https://reboothq.substack.com/" }
+      { "text": "Website", "link": "https://www.kernelmag.io/" },
+      { "text": "Shop", "link": "https://shop.kernelmag.io/" },
+      { "text": "Newsletter", "link": "https://reboothq.substack.com/" }
     ]
+  },
+  {
+    "name": "Sunflower Capital",
+    "slug": "sunflower-capital",
+    "organization": "Sunflower Capital",
+    "thumbnail": "sunflower-cards.png",
+    "tag": "Logo",
+    "year": 2023
   },
   {
     "name": "Prism Investor Track",
@@ -77,9 +95,9 @@
     "year": 2022,
     "organization": "Dorm Room Fund",
     "links": [
-      { "type": "Website", "link": "https://dormroomfund.com/opportunities" },
+      { "text": "Website", "link": "https://dormroomfund.com/opportunities" },
       {
-        "type": "Old code",
+        "text": "Github",
         "link": "https://github.com/zhaovan/prism-landing-page"
       }
     ]
@@ -103,12 +121,12 @@
     "organization": "Open Source",
     "links": [
       {
-        "type": "NPM Package",
+        "text": "NPM Package",
         "link": "https://www.npmjs.com/package/react-telescopic-text"
       },
-      { "type": "Site", "link": "https://telescopic-text.vercel.app/" },
+      { "text": "Site", "link": "https://telescopic-text.vercel.app/" },
       {
-        "type": "Github",
+        "text": "Github",
         "link": "https://github.com/zhaovan/telescopic-text"
       }
     ]
@@ -123,12 +141,12 @@
     "year": 2023,
     "organization": "Personal Project",
     "links": [
-      { "type": "html.review link", "link": "https://thehtml.review/02/" },
-      { "type": "Site", "link": "https://www.aworldof.space/" },
+      { "text": "Site", "link": "https://www.aworldof.space/" },
       {
-        "type": "Github",
+        "text": "Github",
         "link": "https://github.com/zhaovan/a-world-of-space"
-      }
+      },
+      { "text": "html.review", "link": "https://thehtml.review/02/" }
     ]
   },
   {
@@ -140,7 +158,7 @@
     "year": 2023,
     "organization": "Type West",
     "links": [
-      { "type": "Buy it!", "link": "https://ivanzhao.gumroad.com/l/mod" }
+      { "text": "Buy it!", "link": "https://ivanzhao.gumroad.com/l/mod" }
     ]
   },
   {
@@ -195,7 +213,13 @@
     "thumbnail": "teatime.png",
     "tag": "Community",
     "year": 2020,
-    "organization": "Tea Time"
+    "organization": "Tea Time",
+    "links": [
+      {
+        "text": "Website",
+        "link": "https://teatime.substack.com/"
+      }
+    ]
   },
   {
     "name": "Tarrey Town Interactive",
@@ -230,7 +254,13 @@
     "year": 2022,
     "slug": "ten-sky",
     "thumbnail": "ten-sky.mov",
-    "organization": "Personal Project"
+    "organization": "Personal Project",
+    "links": [
+      {
+        "text": "Website",
+        "link": "https://taper.badquar.to/10/ten_as_in_sky.html"
+      }
+    ]
   },
   {
     "name": "Questions and Answers",
@@ -240,7 +270,7 @@
     "thumbnail": "qa.mp4",
     "organization": "Personal Project",
     "links": [
-      { "type": "Website", "link": "https://www.questionsandanswers.app/" }
+      { "text": "Website", "link": "https://www.questionsandanswers.app/" }
     ]
   }
 ]

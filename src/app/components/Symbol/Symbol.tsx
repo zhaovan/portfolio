@@ -7,9 +7,14 @@ type SymbolProps = {
 };
 
 export default function Symbol({ type }: SymbolProps) {
-  const experimentVariant = {
+  const openInwardsLeft = {
     initial: {},
-    hover: { rotateY: "25deg", transition: { duration: 0.5 } },
+    hover: { rotateY: "25deg", transition: { duration: 0.3 } },
+  };
+
+  const openInwardsRight = {
+    initial: {},
+    hover: { rotateY: "-25deg", transition: { duration: 0.3 } },
   };
 
   const experimentChildVariant = {
@@ -48,7 +53,7 @@ export default function Symbol({ type }: SymbolProps) {
         <motion.a
           href="/experiments"
           className={styles.symbol}
-          variants={experimentVariant}
+          variants={openInwardsLeft}
           style={{ transformOrigin: "left" }}
         >
           <motion.p variants={experimentChildVariant}>ℑ</motion.p>
@@ -81,11 +86,16 @@ export default function Symbol({ type }: SymbolProps) {
     );
   } else if (type === "projects") {
     return (
-      <div className={`${styles.symbolContainer} ${styles.above} `}>
+      <motion.div
+        className={`${styles.symbolContainer} ${styles.above} `}
+        initial="initial"
+        whileHover="hover"
+      >
         <motion.a
           href="/projects"
           className={styles.symbol}
-          whileHover={{ scale: 1.2 }}
+          variants={openInwardsRight}
+          style={{ transformOrigin: "right" }}
         >
           <motion.p
             transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
@@ -94,7 +104,7 @@ export default function Symbol({ type }: SymbolProps) {
             ✾
           </motion.p>
         </motion.a>
-      </div>
+      </motion.div>
     );
   }
 }

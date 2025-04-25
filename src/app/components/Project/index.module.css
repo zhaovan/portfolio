@@ -1,6 +1,7 @@
 .projectContainer {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   cursor: pointer;
   padding: 0.5rem 0;
   font-size: 1.5rem;
@@ -15,8 +16,11 @@
   font-family: VG, monospace;
 }
 
-.thumbnailContainer {
-  width: 256px;
+.projectText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .thumbnail {
@@ -26,10 +30,10 @@
 }
 
 .projectName {
-  width: calc(45% - 1rem);
+  /* width: calc(45% - 1rem); */
   text-transform: capitalize;
-  position: relative;
-  z-index: 60;
+  /* position: relative; */
+  /* z-index: 60; */
 }
 
 .tagContainer {

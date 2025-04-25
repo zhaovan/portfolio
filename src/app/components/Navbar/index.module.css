@@ -12,14 +12,10 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 1rem 2rem;
   flex-direction: column;
   z-index: 10;
   position: relative;
-}
-
-.navbarName {
-  /* font-size: 48px; */
 }
 
 .navbarLinksContainer {

@@ -1,11 +1,11 @@
 .container {
-  margin: 6rem auto 4rem auto;
-  width: 80vw;
+  padding: 0 2rem;
 }
 
 .projectContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
 }
 
 .projectContainer > a {
@@ -13,10 +13,10 @@
   opacity: 1;
 }
 
-.projectContainer:hover > a:not(:hover) {
+/* .projectContainer:hover > a:not(:hover) {
   -webkit-filter: blur(4px);
   filter: blur(4px);
-}
+} */
 
 .lightbox {
   position: fixed;

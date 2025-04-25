@@ -11,7 +11,7 @@
 }
 
 .container {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .imageContainer {
@@ -33,7 +33,7 @@
 
 .info {
   display: flex;
-  gap: var(--gap-2);
+  gap: var(--gap-1);
   font-size: 14px;
 }
 
@@ -44,7 +44,8 @@
 
 .titleContainer {
   display: flex;
-  gap: var(--gap-2);
+  justify-content: space-between;
+  flex: 1;
 }
 
 .site {
@@ -54,7 +55,7 @@
 
 .bioContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(396px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -65,8 +66,8 @@
   gap: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .org {
     display: none;
   }
-}
+} */

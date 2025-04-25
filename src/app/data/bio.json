@@ -1,57 +1,78 @@
 {
   "education": [
     {
+      "date": "2024",
       "organization": "Type West",
-      "title": "Type Design",
-      "date": "01-2023",
-      "endDate": "01-2024"
+      "title": "Type Design"
     },
     {
+      "date": "2022",
       "organization": "Brown University",
-      "title": "Math/Computer Science",
-      "date": "09-2018",
-      "endDate": "05-2022"
+      "title": "Applied Math-Computer Science"
     }
   ],
   "experiences": [
     {
-      "organization": "Freelance",
-      "title": "Design Engineer",
-      "date": "08-2022",
+      "organization": "Persona",
+      "title": "Frontend Engineer",
+      "date": "2025",
       "endDate": "present",
-      "website": ""
+      "website": "https://withpersona.com"
     },
-
+    {
+      "organization": "Freelance",
+      "title": "Designer",
+      "date": "2022",
+      "endDate": "present",
+      "website": "https://ivanzhao.me"
+    },
+    {
+      "organization": "Typeface",
+      "title": "Design Engineer",
+      "date": "2024",
+      "endDate": "2024",
+      "website": "https://typeface.ai/"
+    },
     {
       "organization": "Galileo AI",
-      "title": "Design Engineer",
-      "date": "06-2023",
-      "endDate": "04-2024",
+      "title": "Founding Design Engineer",
+      "date": "2023",
+      "endDate": "2024",
       "website": "https://www.usegalileo.ai/"
     },
     {
-      "organization": "Reboot",
+      "organization": "Reboot + Kernel",
       "title": "Designer + Creative Director",
-      "date": "08-2021",
-      "endDate": "09-2023",
+      "date": "2021",
+      "endDate": "2023",
       "website": "https://reboothq.substack.com/"
-    },
-    {
-      "organization": "Blend Labs",
-      "title": "Software Engineer",
-      "website": "https://blend.com/",
-      "date": "06-2021",
-      "endDate": "08-2021"
-    },
-    {
-      "organization": "Ask Iggy",
-      "title": "Web Engineer",
-      "website": "https://askiggy.com/",
-      "date": "01-2021",
-      "endDate": "06-2021"
     }
   ],
-  "exhibitions & shows": [
+  "exhibitions, shows, & readings": [
+    {
+      "date": "06-2025",
+      "title": "DEMO FESTIVAL",
+      "organization": "New Inc",
+      "website": "https://www.demofestival.org/"
+    },
+    {
+      "date": "05-2025",
+      "title": "Foglifter 10.1 Launch",
+      "organization": "Foglifter Press",
+      "website": "https://www.foglifterjournal.com/"
+    },
+    {
+      "date": "09-2024",
+      "title": "62.3 Launch",
+      "organization": "Prism International",
+      "website": "https://www.eventbrite.ca/e/prism-international-launch-and-open-mic-issue-623-tickets-989404905707?aff=ebdsoporgprofile"
+    },
+    {
+      "date": "08-2024",
+      "title": "Workshop Showcase",
+      "organization": "Brooklyn Poets",
+      "website": "https://brooklynpoets.org/events/all/bpws-81924"
+    },
     {
       "date": "02-2024",
       "title": "Pride in Panels",
@@ -109,24 +130,12 @@
       "location": "Providence, RI"
     }
   ],
-  "writing & webart": [
+  "webart": [
     {
-      "organization": "Prism International",
-      "title": "(9/3) dishes I want to eat again",
-      "date": "upcoming",
-      "website": "https://prismmagazine.ca/"
-    },
-    {
-      "organization": "godz rising #1",
-      "title": "paper crane",
-      "date": "upcoming",
-      "website": "https://linktr.ee/godzrising"
-    },
-    {
-      "organization": "Persephone's Lit",
-      "title": "After Atlas",
-      "date": "upcoming",
-      "website": "https://persephonesfruit.com/"
+      "organization": "Crawlspace",
+      "title": "at the end of the earth, i find {}",
+      "date": "04-2025",
+      "website": "https://crawlspace.cool/"
     },
     {
       "organization": "The New River",
@@ -136,7 +145,7 @@
     },
     {
       "organization": "Taper",
-      "title": "ten as in sky",
+      "title": "ten (sky)",
       "date": "05-2023",
       "website": "https://taper.badquar.to/10/ten_as_in_sky.html"
     },
@@ -146,6 +155,26 @@
       "title": "a world of space",
       "website": "https://aworldof.space",
       "date": "04-2023"
+    }
+  ],
+  "poetry": [
+    {
+      "organization": "JAKE",
+      "title": "self portrait as chinese typewriter",
+      "date": "03-2025",
+      "website": "https://jakethemag.com/self-portrait-as-chinese-typewriter/"
+    },
+    {
+      "organization": "Prism International",
+      "title": "(9/3) dishes I want to eat again",
+      "date": "09-2024",
+      "website": "https://prism-epayments.sites.olt.ubc.ca/ubc-product/62-3-summer-2024/"
+    },
+    {
+      "organization": "godz rising #1",
+      "title": "paper crane",
+      "date": "07-2024",
+      "website": "https://linktr.ee/godzrising"
     },
     {
       "organization": "chill subs",
@@ -179,20 +208,26 @@
       "date": "03-2021"
     }
   ],
-  "fellowships & awards": [
+  "fellowships": [
+    {
+      "date": "01-2025",
+      "title": "Mentorship Program",
+      "organization": "Brooklyn Poets",
+      "website": "https://www.instagram.com/p/DFBKPsep4YE/?img_index=1"
+    },
+    {
+      "date": "09-2024",
+      "title": "Fellow (Art + Code)",
+      "organization": "New Inc",
+      "website": "newinc.org"
+    },
     {
       "date": "06-2024",
-      "title": "Galway Kinnell Scholarship",
-      "organization": "community of writers",
-      "website": "https://communityofwriters.org"
+      "title": "Summer Fellow",
+      "organization": "Brooklyn Poets",
+      "website": "https://mailchi.mp/brooklynpoets/summer-2024-fellows"
     },
 
-    {
-      "date": "08-2023",
-      "title": "Albertina Tholakele Dube Scholarship",
-      "organization": "MCWC",
-      "website": "https://mcwc.org/blog/2023/4/21/2023-scholarship-winners"
-    },
     {
       "date": "06-2022",
       "title": "Engineering Fellow",
@@ -204,9 +239,42 @@
       "title": "Fellow",
       "organization": "8VC",
       "website": "https://www.8vc.com/fellowships"
+    },
+    {
+      "date": "02-2019",
+      "title": "Fellow",
+      "organization": "IDEO Colab",
+      "website": "https://ideocolab.com/"
     }
   ],
-  "speaking": [
+  "awards": [
+    {
+      "date": "06-2024",
+      "title": "Galway Kinnell Scholarship",
+      "organization": "Community of Writers",
+      "website": "https://communityofwriters.org"
+    },
+
+    {
+      "date": "08-2023",
+      "title": "Albertina Tholakele Dube Scholarship",
+      "organization": "MCWC",
+      "website": "https://mcwc.org/blog/2023/4/21/2023-scholarship-winners"
+    }
+  ],
+  "talks": [
+    {
+      "date": "08-2024",
+      "organization": "!!con",
+      "title": "Making Chinese Typefaces! with Components!?",
+      "website": "https://bangbangcon.com/program.html"
+    },
+    {
+      "date": "08-2024",
+      "organization": "Causal Islands SF",
+      "title": "The Intimacies of Everyday Objects",
+      "website": "https://lu.ma/zmua2lsj"
+    },
     {
       "date": "05-2024",
       "title": "Chinese Type Systems",
@@ -215,15 +283,9 @@
     },
     {
       "date": "03-2024",
-      "title": "The poetics of computation",
+      "title": "The Poetics of Computation",
       "organization": "Causal Islands LA",
       "website": "https://fission.codes/blog/causal-islands-la-community-edition/"
-    },
-    {
-      "date": "04-2022",
-      "title": "Guest",
-      "organization": "DRF Office Hours",
-      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
     }
   ],
   "appearances": [
@@ -238,6 +300,12 @@
       "title": "Pride in STEM",
       "organization": "IEEE Computing Society",
       "website": "https://www.computer.org/publications/tech-news/build-your-career/pride-in-stem-ivan-zhao"
+    },
+    {
+      "date": "04-2022",
+      "title": "Guest",
+      "organization": "DRF Office Hours",
+      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
     }
   ],
   "research": [
@@ -246,12 +314,6 @@
       "title": "Designing the Metaverse",
       "organization": "Future Technologies",
       "website": "https://blog.cs.brown.edu/2022/01/10/exploring-rise-metaverse-final-projects-browns-csci-1951c-designing-humanity-centered-robots/"
-    },
-    {
-      "date": "05-2018",
-      "title": "Venturing into Startups",
-      "organization": "High School Capstone",
-      "website": "/research_paper.pdf"
     }
   ]
 }

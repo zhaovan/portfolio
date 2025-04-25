@@ -9,16 +9,6 @@ import aboutData from "../data/bio.json";
 import AboutText from "./about.md";
 import Markdown from "react-markdown";
 
-type BioKey =
-  | "education"
-  | "experiences"
-  | "fellowships & awards"
-  | "appearances"
-  | "exhibitions & shows"
-  | "writing & webart"
-  | "speaking"
-  | "research";
-
 type BioItem = {
   organization: string;
   date: string;
@@ -28,12 +18,15 @@ type BioItem = {
 };
 
 export default function About() {
-  const bio = aboutData as Record<BioKey, BioItem[]>;
+  const bio = aboutData as Record<string, BioItem[]>;
 
   return (
     <Layout>
       <div className={styles.container} data-scroll-section>
         <div className={styles.imageTextContainer}>
+          <div className={styles.textContainer}>
+            <Markdown>{AboutText as unknown as string}</Markdown>
+          </div>
           <div className={styles.imageContainer}>
             <Image
               src={portrait}
@@ -45,7 +38,7 @@ export default function About() {
             />
             <div className={styles.bioContainer}>
               {Object.keys(aboutData).map((bioKey, idx) => {
-                const newKey = bioKey as BioKey;
+                const newKey = bioKey;
                 return (
                   <div key={idx} className={styles.headingContainer}>
                     <h2>{bioKey}</h2>
@@ -53,10 +46,12 @@ export default function About() {
                       {bio[newKey].map((item: BioItem, secondIdx: number) => {
                         return (
                           <p className={styles.info} key={secondIdx}>
-                            <span className={styles.date}>
-                              {item.date}
-                              {item.endDate && " - " + item.endDate}
-                            </span>
+                            {item.date && (
+                              <span className={styles.date}>
+                                {item.date}
+                                {item.endDate && " - " + item.endDate}
+                              </span>
+                            )}
                             <span className={styles.titleContainer}>
                               <Link
                                 href={item.website || ""}
@@ -75,9 +70,6 @@ export default function About() {
                 );
               })}
             </div>
-          </div>
-          <div className={styles.textContainer}>
-            <Markdown>{AboutText as unknown as string}</Markdown>
           </div>
         </div>
       </div>

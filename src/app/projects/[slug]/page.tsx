@@ -34,10 +34,6 @@ export default function Page({ params }: { params: { slug: string } }) {
       <div className={styles.container}>
         <div className={styles.post}>
           <div className={styles.headerContainer}>
-            <div className={styles.tagContainer}>
-              <h1 className={styles.projectName}>{project.name}</h1>
-              <h2 className={styles.projectTag}>{project.tag}</h2>
-            </div>
             <div className={styles.imageContainer}>
               {isImage ? (
                 <Image
@@ -57,11 +53,15 @@ export default function Page({ params }: { params: { slug: string } }) {
                   muted
                 />
               )}
-              <div className={styles.imageMask} />
+              {/* <div className={styles.imageMask} /> */}
             </div>
           </div>
 
           <div className={styles.contentContainer} suppressHydrationWarning>
+            <div className={styles.tagContainer}>
+              <h1 className={styles.projectName}>{project.name}</h1>
+              <h2 className={styles.projectTag}>{project.tag}</h2>
+            </div>
             <div className={styles.overviewContainer}>
               <SectionHeader
                 title="Affiliation"
