@@ -1,0 +1,7 @@
+.typeInput {
+  background-color: inherit;
+  border: none;
+  width: 100%;
+  field-sizing: content;
+  font-size: 4rem;
+}

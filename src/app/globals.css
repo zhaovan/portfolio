@@ -8,6 +8,8 @@
   --text-secondary: 40, 40, 40;
   --text-light: 234, 234, 234;
   --text-dark: 20, 20, 20;
+
+  --text-gold: 246, 209, 8;
   --text-red: 197, 42, 42;
 
   --blog-width: 66vw;
@@ -25,6 +27,9 @@
   --background-accent-gradient-yellow: 255, 255, 51;
   --background-accent-gradient-white: 227, 212, 210;
   --background-accent-gradient-orange: 244, 165, 88;
+
+  --background-gold: 246, 209, 8;
+  --background-red: 197, 42, 42;
 
   --text-primary: 234, 234, 234;
   --text-secondary: 190, 190, 190;
@@ -83,21 +88,19 @@ body {
   color: rgb(var(--text-primary));
 }
 
+/* Marquee Serif */
 @font-face {
   font-family: Bernice;
   src: url("/fonts/bernice.otf");
 }
 
+/* Sans Serif */
 @font-face {
   font-family: Bricolage Grotesque;
   src: url("/fonts/BricolageGrotesque.ttf");
 }
 
-@font-face {
-  font-family: Bluu;
-  src: url("/fonts/Bluu.otf");
-}
-
+/* Chinese Font */
 @font-face {
   font-family: Bobohei;
   src: url("/fonts/Bobohei.ttf");
@@ -108,16 +111,53 @@ body {
   src: url("/fonts/Mod.ttf");
 }
 
-/* @font-face {
-  font-family: WangHanZhong;
-  src: url("/fonts/WangHanZhong.ttf");
-} */
+@font-face {
+  font-family: Convo Pixel;
+  src: url("/fonts/ConvoPixel.woff2");
+}
 
-/* @font-face {
-  font-family: GTPressura;
-  src: url("/fonts/GTPressuraMonoRegular.ttf");
-} */
+@font-face {
+  font-family: Convo;
+  weight: 700;
+  src: url("/fonts/Convo-Bold.otf");
+}
 
+@font-face {
+  font-family: Convo;
+  weight: 700;
+  src: url("/fonts/Convo-Bold-Italic.otf");
+}
+
+@font-face {
+  font-family: Convo;
+  weight: 400;
+  src: url("/fonts/Convo-Italic.otf");
+}
+
+@font-face {
+  font-family: "Convo";
+  weight: 400;
+  src: url("/fonts/Convo-Regular.otf");
+}
+
+@font-face {
+  font-family: Convo;
+  weight: 300;
+  src: url("/fonts/Convo-LightItalic.otf");
+}
+
+@font-face {
+  font-family: Convo;
+  weight: 300;
+  src: url("/fonts/Convo-Light.otf");
+}
+
+@font-face {
+  font-family: Convo Script;
+  src: url("/fonts/ConvoScript-Regular.otf");
+}
+
+/* Monospace */
 @font-face {
   font-family: VG;
   src: url("/fonts/VG.woff2");
@@ -126,7 +166,48 @@ body {
 .mod {
   font-family: Mod;
   font-size: 5rem;
-  text-align: center;
+}
+
+.convo-pixel {
+  font-family: "Convo Pixel";
+}
+
+.convo-script {
+  font-family: "Convo Script";
+}
+
+.convo,
+.convo-bold,
+.convo-italic,
+.convo-bold-italic,
+.convo-light,
+.convo-light-italic {
+  font-family: Convo;
+}
+
+.convo-bold {
+  font-weight: 700;
+}
+.convo-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.convo {
+  font-weight: 400;
+}
+
+.convo-italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.convo-light {
+  font-weight: 200;
+}
+.convo-light-italic {
+  font-weight: 200;
+  font-style: italic;
 }
 
 button {

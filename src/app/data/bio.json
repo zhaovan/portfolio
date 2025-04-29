@@ -308,6 +308,26 @@
       "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
     }
   ],
+  "retreats": [
+    {
+      "date": "06-2025",
+      "title": "Poetry",
+      "organization": "Abode Virtual Retreat",
+      "website": "https://www.abodepress.com/summer-retreat"
+    },
+    {
+      "date": "06-2024",
+      "title": "Poetry",
+      "organization": "Community of Writers",
+      "website": "https://communityofwriters.org"
+    },
+    {
+      "date": "08-2023",
+      "title": "Poetry",
+      "organization": "MCWC",
+      "website": "https://mcwc.org/"
+    }
+  ],
   "research": [
     {
       "date": "04-2022",

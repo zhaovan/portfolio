@@ -17,7 +17,7 @@
   {
     "name": "Typeface Website",
     "description": "a typeface design tool",
-    "slug": "typeface-website",
+    "slug": "typeface",
     "thumbnail": "typeface.mov",
     "tag": "marketing website",
     "year": 2024,
@@ -25,10 +25,20 @@
     "links": [{ "text": "Website", "link": "https://typeface.ai/" }]
   },
   {
+    "name": "The Type Fella Website",
+    "description": "a typeface design tool",
+    "slug": "type-fella",
+    "thumbnail": "type-fella.mov",
+    "tag": "website",
+    "year": 2024,
+    "organization": "The Type Fella",
+    "links": [{ "text": "Website", "link": "https://thetypefella.com/" }]
+  },
+  {
     "name": "Convo",
     "description": "a playful handwritten typeface",
     "slug": "convo",
-    "thumbnail": "convo.gif",
+    "thumbnail": "convo.mov",
     "tag": "typeface",
     "year": 2024,
     "organization": "Type West",
@@ -36,8 +46,8 @@
   },
   {
     "name": "Galileo AI",
-    "slug": "web-ui",
-    "thumbnail": "web-ui.mp4",
+    "slug": "galileo",
+    "thumbnail": "galileo.mp4",
     "tag": "Product Feature",
     "year": 2023,
     "organization": "Galileo AI",
@@ -87,15 +97,14 @@
     "year": 2023
   },
   {
-    "name": "Prism Investor Track",
+    "name": "Prism Summer Program",
     "description": "speaker series and community for queer students in venture",
     "slug": "prism",
-    "thumbnail": "prism.png",
+    "thumbnail": "prism.mov",
     "tag": "Community",
     "year": 2022,
     "organization": "Dorm Room Fund",
     "links": [
-      { "text": "Website", "link": "https://dormroomfund.com/opportunities" },
       {
         "text": "Github",
         "link": "https://github.com/zhaovan/prism-landing-page"

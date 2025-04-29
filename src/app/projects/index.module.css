@@ -4,8 +4,9 @@
 
 .projectContainer {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+  column-gap: 0.25rem;
 }
 
 .projectContainer > a {
@@ -17,7 +18,7 @@
   -webkit-filter: blur(4px);
   filter: blur(4px);
 } */
-
+/* 
 .lightbox {
   position: fixed;
   left: 50%;
@@ -32,4 +33,4 @@
   max-width: 100%;
 
   opacity: 0.85;
-}
+} */

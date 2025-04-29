@@ -8,8 +8,8 @@ import rehypeRaw from "rehype-raw";
 import projects from "@/app/data/projects.json";
 import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
-import Link from "next/link";
-import SectionHeader from "../components/SectionHeader";
+
+import SectionHeader from "./components/SectionHeader/SectionHeader";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;

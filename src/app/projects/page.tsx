@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ProjectList from "../data/projects.json";
-import Project from "../components/Project/Project";
+import Project from "./components/Project/Project";
 import styles from "./index.module.css";
 import Layout from "../components/Layout/Layout";
-import Image from "next/image";
 import { checkURLIsImage } from "../helpers";
 
 export type ProjectProps = {

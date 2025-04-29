@@ -1,7 +1,7 @@
 export const navLinks: Record<string, string> = {
   projects: "/projects",
   experiments: "/experiments",
-  type: "/type",
+  // type: "/type",
   about: "/about",
 };
 
