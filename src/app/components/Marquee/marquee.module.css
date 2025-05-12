@@ -1,8 +1,8 @@
 .marquee {
   animation: move-left 20s linear infinite;
-  font-size: 48px;
+  font-size: 3rem;
   text-wrap: nowrap;
-  font-family: Bernice;
+  font-family: Barnice;
   display: flex;
   gap: var(--gap-2);
 }

@@ -17,10 +17,16 @@ export default function Page({ params }: { params: { slug: string } }) {
   const project = projects.filter((project) => project.slug === slug)[0];
   const [mdx, setMdx] = useState<any>();
 
+  const [imageMdx, setImageMdx] = useState<any>();
+
   useEffect(() => {
     async function fetchPost() {
       const response = await fetch(`/projects/${slug}/index.md`);
       const data = await response.text();
+
+      const imageResponse = await fetch(`/projects/${slug}/images.md`);
+      const imageData = await imageResponse.text();
+      setImageMdx(imageData);
       setMdx(data);
     }
     fetchPost();
@@ -28,50 +34,45 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
-
+  console.log(formattedThumbnail);
   return (
     <Layout>
       <div className={styles.container}>
-        <div className={styles.post}>
-          <div className={styles.headerContainer}>
-            <div className={styles.imageContainer}>
-              {isImage ? (
-                <Image
-                  src={formattedThumbnail}
-                  width={800}
-                  height={600}
-                  priority
-                  className={styles.headerImage}
-                  alt={`thumbnail image for ${project.name}`}
-                />
-              ) : (
-                <video
-                  src={formattedThumbnail}
-                  className={styles.headerImage}
-                  loop
-                  autoPlay
-                  muted
-                />
-              )}
-              {/* <div className={styles.imageMask} /> */}
-            </div>
+        <div className={styles.mainContent}>
+          <div className={styles.tagContainer}>
+            <h1 className={styles.title}>{project.name}</h1>
+            <h2 className={styles.description}>{project.description}</h2>
           </div>
-
-          <div className={styles.contentContainer} suppressHydrationWarning>
-            <div className={styles.tagContainer}>
-              <h1 className={styles.projectName}>{project.name}</h1>
-              <h2 className={styles.projectTag}>{project.tag}</h2>
-            </div>
-            <div className={styles.overviewContainer}>
-              <SectionHeader
-                title="Affiliation"
-                description={project.organization}
-              />
-              <SectionHeader title="Year" description={project.year} />
+          <div className={styles.overviewContainer}>
+            <SectionHeader title="Year" description={project.year} />
+            {project.links && (
               <SectionHeader title="Links" links={project.links} />
-            </div>
-            <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
+            )}
           </div>
+          <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
+        </div>
+
+        <div className={styles.imageContainer}>
+          {isImage ? (
+            <Image
+              src={formattedThumbnail}
+              width={800}
+              height={600}
+              priority
+              className={styles.headerImage}
+              alt={`thumbnail image for ${project.name}`}
+            />
+          ) : (
+            <video
+              src={formattedThumbnail}
+              className={styles.headerImage}
+              loop
+              autoPlay
+              muted
+            />
+          )}
+
+          <Markdown rehypePlugins={[rehypeRaw]}>{imageMdx}</Markdown>
         </div>
       </div>
     </Layout>

@@ -2,6 +2,9 @@
 .navbarVerticalContainer {
   display: flex;
   font-family: Bricolage Grotesque;
+  height: 4rem;
+
+  top: 0;
 }
 
 .navbarItem {
@@ -11,11 +14,11 @@
 .navbarContainer {
   justify-content: space-between;
   align-items: center;
-
   padding: 1rem 2rem;
   flex-direction: column;
   z-index: 10;
-  position: relative;
+  position: sticky;
+  background-color: rgb(var(--background-primary));
 }
 
 .navbarLinksContainer {

@@ -10,8 +10,11 @@ export type ProjectProps = {
   name: string;
   slug: string;
   thumbnail: string;
+  ratio?: string;
   tag: string;
   year: number;
+  rowSpan?: number;
+  colSpan?: number;
 };
 
 export default function Projects() {
@@ -24,8 +27,6 @@ export default function Projects() {
   useEffect(() => {
     setIsImage(checkURLIsImage(hoveredProjectThumbnailUrl));
   }, [hoveredProjectThumbnailUrl]);
-
-  const formattedThumbnail = `/thumbnails/${hoveredProjectThumbnailUrl}`;
 
   return (
     <Layout>
@@ -49,29 +50,6 @@ export default function Projects() {
             })}
         </div>
       </div>
-      {/* {hoveredProjectThumbnailUrl && (
-        <div className={styles.lightbox}>
-          {isImage ? (
-            <Image
-              src={formattedThumbnail}
-              className={styles.lightboxImage}
-              alt="thumbnail"
-              width="600"
-              height="400"
-            />
-          ) : (
-            <video
-              src={formattedThumbnail}
-              className={styles.lightboxImage}
-              width="600"
-              height="400"
-              autoPlay
-              muted
-              loop
-            />
-          )}
-        </div>
-      )} */}
     </Layout>
   );
 }

@@ -4,9 +4,13 @@
 
 .projectContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
-  column-gap: 0.25rem;
+  grid-template-columns: repeat(6, minmax(0px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(5, minmax(0px, 1fr)); */
+  /* columns: 5; */
+
+  gap: 0.125rem;
 }
 
 .projectContainer > a {
@@ -14,23 +18,7 @@
   opacity: 1;
 }
 
-/* .projectContainer:hover > a:not(:hover) {
+.projectContainer:hover > a:not(:hover) {
   -webkit-filter: blur(4px);
   filter: blur(4px);
-} */
-/* 
-.lightbox {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-
-  pointer-events: none;
 }
-
-.lightboxImage {
-  max-width: 100%;
-
-  opacity: 0.85;
-} */

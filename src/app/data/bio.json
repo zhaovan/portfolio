@@ -56,7 +56,7 @@
       "website": "https://www.demofestival.org/"
     },
     {
-      "date": "05-2025",
+      "date": "06-2025",
       "title": "Foglifter 10.1 Launch",
       "organization": "Foglifter Press",
       "website": "https://www.foglifterjournal.com/"
@@ -289,6 +289,12 @@
     }
   ],
   "appearances": [
+    {
+      "date": "05-2025",
+      "title": "Inside 'Small Batch,' a farmers market for datasets",
+      "organization": "Phone Time",
+      "website": "https://www.phonetime.news/p/inside-small-batch-a-farmers-market"
+    },
     {
       "date": "06-2023",
       "title": "Naive Weekly",

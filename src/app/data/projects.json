@@ -1,18 +1,66 @@
 [
   {
-    "name": "Ask this website a question (unused)",
+    "name": "Ask this website a question",
     "description": "a website that answers your questions",
     "slug": "ask-this-website-a-question",
     "thumbnail": "question.mov",
     "tag": "website",
     "year": 2025,
     "organization": "Personal Project",
+    "rowSpan": 2,
+    "colSpan": 2,
     "links": [
       {
         "text": "Website",
         "link": "https://ask-this-website-a-question.vercel.app/"
       }
     ]
+  },
+  {
+    "name": "Print",
+    "slug": "letterpress",
+    "thumbnail": "WildBeast.mp4",
+    "tag": "poster",
+    "year": 2025,
+    "rowSpan": 2,
+    "colSpan": 2,
+    "organization": "Personal Project"
+  },
+  {
+    "name": "Print",
+    "slug": "letterpress",
+    "thumbnail": "scherezade.png",
+    "tag": "poster",
+    "year": 2025,
+    "organization": "Personal Project"
+  },
+  {
+    "name": "Print",
+    "slug": "letterpress",
+    "thumbnail": "Hope.jpg",
+    "tag": "poster",
+    "year": 2025,
+    "organization": "Personal Project"
+  },
+
+  {
+    "name": "Print",
+    "slug": "letterpress",
+    "thumbnail": "ThisIsJust.jpg",
+    "tag": "card",
+    "rowSpan": 2,
+    "colSpan": 2,
+    "year": 2025,
+    "organization": "Personal Project"
+  },
+  {
+    "name": "Print",
+    "slug": "letterpress",
+    "thumbnail": "Horses.jpg",
+    "tag": "card",
+    "year": 2024,
+    "organization": "Personal Project",
+    "ratio": "2/3"
   },
   {
     "name": "Typeface Website",
@@ -31,6 +79,8 @@
     "thumbnail": "type-fella.mov",
     "tag": "website",
     "year": 2024,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "The Type Fella",
     "links": [{ "text": "Website", "link": "https://thetypefella.com/" }]
   },
@@ -41,6 +91,8 @@
     "thumbnail": "convo.mov",
     "tag": "typeface",
     "year": 2024,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "Type West",
     "links": [{ "text": "Specimen", "link": "https://convo.design" }]
   },
@@ -53,7 +105,6 @@
     "organization": "Galileo AI",
     "links": [{ "text": "Product", "link": "https://www.usegalileo.ai/" }]
   },
-
   {
     "name": "YOU JUST GOT LAID OFF",
 
@@ -81,6 +132,8 @@
     "thumbnail": "KernelMagCover.jpeg",
     "tag": "Web, Print, and Brand",
     "year": 2023,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "Reboot / Kernel",
     "links": [
       { "text": "Website", "link": "https://www.kernelmag.io/" },
@@ -92,9 +145,12 @@
     "name": "Sunflower Capital",
     "slug": "sunflower-capital",
     "organization": "Sunflower Capital",
-    "thumbnail": "sunflower-cards.png",
+    "thumbnail": "sunflower.mov",
     "tag": "Logo",
-    "year": 2023
+    "rowSpan": 2,
+    "colSpan": 2,
+    "year": 2023,
+    "links": [{ "text": "Website", "link": "https://sunflowercapital.co/" }]
   },
   {
     "name": "Prism Summer Program",
@@ -127,7 +183,7 @@
     "thumbnail": "telescopic.gif",
     "tag": "webart",
     "year": 2023,
-    "organization": "Open Source",
+    "organization": "Package",
     "links": [
       {
         "text": "NPM Package",
@@ -148,6 +204,8 @@
     "thumbnail": "aworldofspace.mov",
     "tag": "Interactive Fiction",
     "year": 2023,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "Personal Project",
     "links": [
       { "text": "Site", "link": "https://www.aworldof.space/" },
@@ -165,6 +223,8 @@
     "thumbnail": "mod.png",
     "tag": "typeface",
     "year": 2023,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "Type West",
     "links": [
       { "text": "Buy it!", "link": "https://ivanzhao.gumroad.com/l/mod" }
@@ -194,6 +254,8 @@
     "slug": "holotable",
     "thumbnail": "holotable.gif",
     "tag": "3D Model & Animation",
+    "rowSpan": 2,
+    "colSpan": 2,
     "year": 2022,
     "organization": "Personal Project"
   },
@@ -223,12 +285,22 @@
     "tag": "Community",
     "year": 2020,
     "organization": "Tea Time",
+
     "links": [
       {
         "text": "Website",
         "link": "https://teatime.substack.com/"
       }
     ]
+  },
+  {
+    "name": "Wicked Poster",
+    "slug": "wicked-data-viz",
+    "thumbnail": "wicked.png",
+    "tag": "Data Visualization",
+    "year": 2022,
+    "organization": "Personal Project",
+    "ratio": "2/3"
   },
   {
     "name": "Tarrey Town Interactive",
@@ -258,12 +330,14 @@
     "organization": "Personal Project"
   },
   {
-    "name": "Ten as in Sky",
+    "name": "Ten",
     "tag": "webart",
     "year": 2022,
     "slug": "ten-sky",
     "thumbnail": "ten-sky.mov",
     "organization": "Personal Project",
+    "rowSpan": 2,
+    "colSpan": 2,
     "links": [
       {
         "text": "Website",

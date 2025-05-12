@@ -12,8 +12,6 @@
   --text-gold: 246, 209, 8;
   --text-red: 197, 42, 42;
 
-  --blog-width: 66vw;
-
   --gap-1: 0.5rem;
   --gap-2: 1rem;
   --gap-4: 2rem;
@@ -36,6 +34,35 @@
   --text-light: 234, 234, 234;
   --text-dark: 20, 20, 20;
   --text-red: 245, 131, 97;
+}
+
+@keyframes move-out {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes move-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Apply the custom animation to the old and new page states */
+::view-transition-old(root) {
+  animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.4s ease-in both move-in;
 }
 
 * {
@@ -90,14 +117,19 @@ body {
 
 /* Marquee Serif */
 @font-face {
-  font-family: Bernice;
-  src: url("/fonts/bernice.otf");
+  font-family: Barnice;
+  src: url("/fonts/barnice.otf");
 }
 
 /* Sans Serif */
 @font-face {
   font-family: Bricolage Grotesque;
   src: url("/fonts/BricolageGrotesque.ttf");
+}
+
+@font-face {
+  font-family: Tiempos;
+  src: url("/fonts/tiempos/tiempos-fine-bold.woff2");
 }
 
 /* Chinese Font */
@@ -218,4 +250,13 @@ button {
 
 .page {
   padding: var(--gap-4);
+}
+
+.two-column {
+  display: flex;
+  gap: 1rem;
+}
+
+.two-column > div > * {
+  width: 100%;
 }

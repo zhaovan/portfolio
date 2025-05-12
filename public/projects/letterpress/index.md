@@ -1,0 +1,1 @@
+A series of letterpress prints created during my core workshop classes at the SF Center for the Book. As a printmaker, I am interested in the inbetweeness of type, graphic design, and poetry, and playing with physical and material type on the page, to make beautiful objects.

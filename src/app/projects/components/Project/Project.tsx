@@ -8,45 +8,69 @@ import { checkURLIsImage } from "@/app/helpers";
 
 interface IndividualProject {
   project: ProjectProps;
+
   onHover: () => void;
+}
+
+const BASE_IMAGE_SIZE = 100;
+
+function calculateImageSize(ratio: string) {
+  const [width, height] = ratio.split("/").map(Number);
+
+  const newWidth = width * BASE_IMAGE_SIZE;
+  const newHeight = height * BASE_IMAGE_SIZE;
+  return { newWidth, newHeight };
 }
 
 export default function Project({ project, onHover }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
 
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
+  const ratio = project?.ratio;
+  const rowSpan = project.rowSpan ?? 1;
+  const colSpan = project?.ratio === "2/3" ? 2 : project.colSpan ?? 1;
+
+  const { newWidth, newHeight } = ratio
+    ? calculateImageSize(ratio)
+    : { newWidth: 400, newHeight: 300 };
+
   return (
-    <Link href={`/projects/${project.slug}`}>
-      <div className={styles.projectContainer} onMouseEnter={onHover}>
-        <div className={styles.projectText}>
-          <p className={styles.projectName}>{project.name}</p>
-
-          {/* <div className={styles.tagContainer}> */}
-          {/* <p className={styles.tag}>{project.tag}</p> */}
-          <p className={styles.year}>{project.year}</p>
-          {/* </div> */}
-        </div>
-
-        {isImage ? (
-          <Image
-            src={formattedThumbnail}
-            width={400}
-            height={300}
-            alt={"thumbnail"}
-            className={styles.thumbnail}
-          />
-        ) : (
-          <video
-            src={formattedThumbnail}
-            className={styles.thumbnail}
-            width="800"
-            height="600"
-            autoPlay
-            muted
-            loop
-          />
-        )}
+    <Link
+      href={`/projects/${project.slug}`}
+      className={styles.projectContainer}
+      style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
+      onMouseEnter={onHover}
+    >
+      <div className={styles.projectText}>
+        {/* <p className={styles.projectName}>{project.name}</p> */}
+        {/* <p className={styles.year}>{project.year}</p> */}
       </div>
+
+      {isImage ? (
+        <Image
+          src={formattedThumbnail}
+          alt={"thumbnail"}
+          width={newWidth}
+          height={newHeight}
+          style={{
+            aspectRatio: ratio || "4:3",
+          }}
+          className={styles.thumbnail}
+        />
+      ) : (
+        <video
+          src={formattedThumbnail}
+          className={styles.thumbnail}
+          style={{
+            aspectRatio: ratio || "4:3",
+          }}
+          width={newWidth}
+          height={newHeight}
+          autoPlay
+          muted
+          loop
+        />
+      )}
     </Link>
   );
 }
