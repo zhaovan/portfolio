@@ -19,6 +19,6 @@
 }
 
 .projectContainer:hover > a:not(:hover) {
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+  /* -webkit-filter: blur(4px); */
+  /* filter: blur(4px); */
 }

@@ -10,9 +10,10 @@ import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
 
 import SectionHeader from "./components/SectionHeader/SectionHeader";
+import { useParams } from "next/navigation";
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default function Page() {
+  const { slug } = useParams<{ slug: string }>();
 
   const project = projects.filter((project) => project.slug === slug)[0];
   const [mdx, setMdx] = useState<any>();
@@ -34,10 +35,10 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
-  console.log(formattedThumbnail);
+
   return (
     <Layout>
-      <div className={styles.container}>
+      <div className={styles.container} suppressHydrationWarning>
         <div className={styles.mainContent}>
           <div className={styles.tagContainer}>
             <h1 className={styles.title}>{project.name}</h1>
@@ -72,7 +73,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             />
           )}
 
-          <Markdown rehypePlugins={[rehypeRaw]}>{imageMdx}</Markdown>
+          {/* <Markdown rehypePlugins={[rehypeRaw]}>{imageMdx}</Markdown> */}
         </div>
       </div>
     </Layout>

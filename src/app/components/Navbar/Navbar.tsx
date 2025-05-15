@@ -20,7 +20,7 @@ export default function Navbar() {
             </Link>
           );
         })}
-        <DarkModeButton />
+        {/* <DarkModeButton /> */}
       </div>
     </div>
   );

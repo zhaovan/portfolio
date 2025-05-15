@@ -19,7 +19,7 @@
   {
     "name": "Print",
     "slug": "letterpress",
-    "thumbnail": "WildBeast.mp4",
+    "thumbnail": "WildBeast.mov",
     "tag": "poster",
     "year": 2025,
     "rowSpan": 2,
@@ -53,21 +53,15 @@
     "year": 2025,
     "organization": "Personal Project"
   },
-  {
-    "name": "Print",
-    "slug": "letterpress",
-    "thumbnail": "Horses.jpg",
-    "tag": "card",
-    "year": 2024,
-    "organization": "Personal Project",
-    "ratio": "2/3"
-  },
+
   {
     "name": "Typeface Website",
     "description": "a typeface design tool",
     "slug": "typeface",
     "thumbnail": "typeface.mov",
     "tag": "marketing website",
+    "rowSpan": 2,
+    "colSpan": 2,
     "year": 2024,
     "organization": "Typeface",
     "links": [{ "text": "Website", "link": "https://typeface.ai/" }]
@@ -102,6 +96,8 @@
     "thumbnail": "galileo.mp4",
     "tag": "Product Feature",
     "year": 2023,
+    "colSpan": 2,
+    "rowSpan": 2,
     "organization": "Galileo AI",
     "links": [{ "text": "Product", "link": "https://www.usegalileo.ai/" }]
   },
@@ -119,7 +115,7 @@
     "name": "Reboot Merch",
     "description": "Get your swag on!",
     "slug": "reboot-merch",
-    "thumbnail": "reboot-merch.png",
+    "thumbnail": "merch.mp4",
     "tag": "merch & illustration",
     "year": 2022,
     "organization": "Reboot",
@@ -185,14 +181,14 @@
     "year": 2023,
     "organization": "Package",
     "links": [
-      {
-        "text": "NPM Package",
-        "link": "https://www.npmjs.com/package/react-telescopic-text"
-      },
-      { "text": "Site", "link": "https://telescopic-text.vercel.app/" },
+      { "text": "Demo Site", "link": "https://telescopic-text.vercel.app/" },
       {
         "text": "Github",
         "link": "https://github.com/zhaovan/telescopic-text"
+      },
+      {
+        "text": "NPM Package",
+        "link": "https://www.npmjs.com/package/react-telescopic-text"
       }
     ]
   },
@@ -248,26 +244,27 @@
     "year": 2022,
     "organization": "Reboot"
   },
+
+  {
+    "name": "Portugal Poster",
+    "slug": "poster-portugal",
+    "thumbnail": "portugal.png",
+    "tag": "Infographic",
+    "year": 2022,
+    "organization": "Personal Project",
+    "ratio": "2/3"
+  },
   {
     "name": "Holotable",
     "description": "speculative design on tech and furniture",
     "slug": "holotable",
     "thumbnail": "holotable.gif",
     "tag": "3D Model & Animation",
-    "rowSpan": 2,
-    "colSpan": 2,
+
     "year": 2022,
     "organization": "Personal Project"
   },
-  {
-    "name": "Info Design Infographics",
-    "description": "infographics on various topics",
-    "slug": "infographics",
-    "thumbnail": "infoviz.png",
-    "tag": "Infographics",
-    "year": 2022,
-    "organization": "Personal Project"
-  },
+
   {
     "name": "Watcher",
     "description": "memex of my brain",
@@ -276,6 +273,17 @@
     "tag": "App Development",
     "year": 2021,
     "organization": "Personal Project"
+  },
+  {
+    "name": "How To: Croissants",
+    "description": "a recipe for croissants",
+    "slug": "croissants",
+    "thumbnail": "croissant.png",
+    "tag": "Infographic",
+    "year": 2022,
+    "organization": "Personal Project",
+    "rowSpan": 3,
+    "ratio": "12/3"
   },
   {
     "name": "Tea Time",
