@@ -15,6 +15,17 @@
   position: sticky;
   top: 4rem;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 50%;
+}
+
+.header,
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .projectName,
@@ -35,11 +46,7 @@
   border-radius: 0.5rem;
 }
 
-.imageContainer {
-  width: 100%;
-}
-
-.additionalImages > * {
+.additionalImages * {
   width: 100%;
   border-radius: 0.5rem;
 }
@@ -76,4 +83,8 @@
   font-family: Barnice;
   font-size: 4.5rem;
   text-transform: uppercase;
+}
+
+.textContent > ul {
+  padding-left: 2rem;
 }

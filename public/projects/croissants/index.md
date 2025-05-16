@@ -1,0 +1,1 @@
+Illustration and design for a poster during Doug Scott's Information Visualization at RISD 2022. The prompt was to design a poster that visualized the process of making anything, that required at least 10 total steps.

@@ -83,18 +83,24 @@ export default function Page() {
 
         <div className={styles.mainContent}>
           <div className={styles.content}>
-            <h1 className={styles.title}>
-              {project.name} - {project.description}
-            </h1>
-            <h2 className={styles.description}>{project.tag}</h2>
-
-            <div className={styles.overviewContainer}>
-              <SectionHeader title="Year" description={project.year} />
-              {project.links && (
-                <SectionHeader title="Links" links={project.links} />
-              )}
+            <div className={styles.header}>
+              <div>
+                <h1 className={styles.title}>
+                  {project.name} - {project.description}
+                </h1>
+                <h2 className={styles.description}>{project.tag}</h2>
+              </div>
+              <div className={styles.overviewContainer}>
+                <SectionHeader title="Year" description={project.year} />
+                {project.links && (
+                  <SectionHeader title="Links" links={project.links} />
+                )}
+              </div>
             </div>
-            <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
+
+            <div className={styles.textContent}>
+              <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
+            </div>
           </div>
 
           {imageMdx.length > 0 && (
