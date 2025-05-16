@@ -41,11 +41,6 @@ export default function Project({ project, onHover }: IndividualProject) {
       style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
       onMouseEnter={onHover}
     >
-      <div className={styles.projectText}>
-        {/* <p className={styles.projectName}>{project.name}</p> */}
-        {/* <p className={styles.year}>{project.year}</p> */}
-      </div>
-
       {isImage ? (
         <Image
           src={formattedThumbnail}
@@ -53,7 +48,7 @@ export default function Project({ project, onHover }: IndividualProject) {
           width={newWidth}
           height={newHeight}
           style={{
-            aspectRatio: ratio || "4:3",
+            aspectRatio: ratio || "16:9",
           }}
           className={styles.thumbnail}
         />

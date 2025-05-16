@@ -16,64 +16,95 @@ export default function Page() {
   const { slug } = useParams<{ slug: string }>();
 
   const project = projects.filter((project) => project.slug === slug)[0];
-  const [mdx, setMdx] = useState<any>();
+  const [mdx, setMdx] = useState<any>("");
+  const [loading, setLoading] = useState(true);
 
-  const [imageMdx, setImageMdx] = useState<any>();
+  const [imageMdx, setImageMdx] = useState<any>("");
 
   useEffect(() => {
     async function fetchPost() {
-      const response = await fetch(`/projects/${slug}/index.md`);
-      const data = await response.text();
+      try {
+        const response = await fetch(`/projects/${slug}/index.md`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch index.md: ${response.statusText}`);
+        }
+        const data = await response.text();
+        setMdx(data);
+      } catch (error) {
+        console.error("Error fetching the post:", error);
+      }
 
-      const imageResponse = await fetch(`/projects/${slug}/images.md`);
-      const imageData = await imageResponse.text();
-      setImageMdx(imageData);
-      setMdx(data);
+      try {
+        const imageResponse = await fetch(`/projects/${slug}/images.md`);
+        if (!imageResponse.ok) {
+          console.warn(`images.md not found for slug: ${slug}`);
+          setImageMdx(""); // Set to an empty string if the file doesn't exist
+          return;
+        }
+        const imageData = await imageResponse.text();
+        setImageMdx(imageData);
+      } catch (error) {
+        console.error("Error fetching the image post:", error);
+      }
+
+      setLoading(false);
     }
     fetchPost();
-  }, [slug, mdx]);
+  }, [slug]);
 
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
 
   return (
     <Layout>
-      <div className={styles.container} suppressHydrationWarning>
-        <div className={styles.mainContent}>
-          <div className={styles.tagContainer}>
-            <h1 className={styles.title}>{project.name}</h1>
-            <h2 className={styles.description}>{project.description}</h2>
-          </div>
-          <div className={styles.overviewContainer}>
-            <SectionHeader title="Year" description={project.year} />
-            {project.links && (
-              <SectionHeader title="Links" links={project.links} />
+      <div className={styles.container}>
+        <div className={styles.headerContainer}>
+          <div className={styles.imageContainer}>
+            {isImage ? (
+              <Image
+                src={formattedThumbnail}
+                width={800}
+                height={600}
+                priority
+                className={styles.headerImage}
+                alt={`thumbnail image for ${project.name}`}
+              />
+            ) : (
+              <video
+                src={formattedThumbnail}
+                className={styles.headerImage}
+                loop
+                autoPlay
+                muted
+              />
             )}
           </div>
-          <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
         </div>
 
-        <div className={styles.imageContainer}>
-          {isImage ? (
-            <Image
-              src={formattedThumbnail}
-              width={800}
-              height={600}
-              priority
-              className={styles.headerImage}
-              alt={`thumbnail image for ${project.name}`}
-            />
-          ) : (
-            <video
-              src={formattedThumbnail}
-              className={styles.headerImage}
-              loop
-              autoPlay
-              muted
-            />
-          )}
+        <div className={styles.mainContent}>
+          <div className={styles.content}>
+            <h1 className={styles.title}>
+              {project.name} - {project.description}
+            </h1>
+            <h2 className={styles.description}>{project.tag}</h2>
 
-          {/* <Markdown rehypePlugins={[rehypeRaw]}>{imageMdx}</Markdown> */}
+            <div className={styles.overviewContainer}>
+              <SectionHeader title="Year" description={project.year} />
+              {project.links && (
+                <SectionHeader title="Links" links={project.links} />
+              )}
+            </div>
+            <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
+          </div>
+
+          {imageMdx.length > 0 && (
+            <Markdown
+              rehypePlugins={[rehypeRaw]}
+              className={styles.additionalImages}
+            >
+              {imageMdx}
+            </Markdown>
+          )}
         </div>
       </div>
     </Layout>

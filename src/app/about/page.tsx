@@ -31,8 +31,8 @@ export default function About() {
             <Image
               src={portrait}
               alt="Photo of ivan taken on a film camera with grain"
-              width="600"
-              height="400"
+              width="1200"
+              height="800"
               priority
               className={styles.portrait}
             />
@@ -60,7 +60,9 @@ export default function About() {
                               >
                                 {item.title}
                               </Link>
-                              <i className={styles.org}>{item.organization}</i>
+                              <p className={styles.organization}>
+                                {item.organization}
+                              </p>
                             </span>
                           </p>
                         );
