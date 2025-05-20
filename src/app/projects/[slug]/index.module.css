@@ -43,7 +43,6 @@
 
 .headerImage {
   width: 100%;
-  height: calc(9 / 16 * 100vw);
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 0.5rem;

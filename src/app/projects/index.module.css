@@ -18,7 +18,6 @@
   opacity: 1;
 }
 
-.projectContainer:hover > a:not(:hover) {
-  /* -webkit-filter: blur(4px); */
-  /* filter: blur(4px); */
+.projectContainer:hover > a {
+  /* box-shadow: 0 0 0 2px rgb(var(--background-gold)); */
 }

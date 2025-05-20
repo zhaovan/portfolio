@@ -24,7 +24,9 @@ For our final design of the hologram table, we used the idea of the Pepper’s g
 
 ## Surprise End Usage
 
-While we initially intended our Hologram Table to be a table for workspace collaboration, by the end of two long days putting our table together, all we wanted to do was play a video of a fireplace and see what it would look like. The circular nature of the table, along with the cozyness of seeing a 3 dimensional table, quickly led to us hanging around, chatting, generally having a good time. By the end of the fireplace clip, we started putting in other music visualizers into the table, which provided both a great source of entertainment, aesthetic appreciation, and also helped our conversations flow easier.
+While we initially intended our Hologram Table to be a table for workspace collaboration, by the end of two long days putting our table together, all we wanted to do was play a video of a fireplace and see what it would look like. The circular nature of the table, along with the cozyness of seeing a 3 dimensional table, quickly led to us hanging around, chatting, generally having a good time.
+
+<!-- By the end of the fireplace clip, we started putting in other music visualizers into the table, which provided both a great source of entertainment, aesthetic appreciation, and also helped our conversations flow easier. -->
 
 ## Reflection and Future Directions
 

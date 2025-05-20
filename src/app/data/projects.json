@@ -56,7 +56,7 @@
     "name": "Williams Card",
     "slug": "letterpress-card",
     "medium": "Single Color 6x12 Card, Folded",
-    "thumbnail": "thisisjust.jpg",
+    "thumbnail": "say.jpg",
     "tag": "card",
     "rowSpan": 2,
     "colSpan": 2,
@@ -125,6 +125,8 @@
     "medium": "Website, Webart",
     "tag": "webart",
     "year": 2023,
+    "colSpan": 2,
+    "rowSpan": 2,
     "organization": "Personal Project",
     "links": [
       { "name": "Website", "website": "https://layoff-site.vercel.app/" }
@@ -134,7 +136,7 @@
     "name": "Reboot Merch",
     "medium": "Get your swag on!",
     "slug": "reboot-merch",
-    "thumbnail": "kern.mp4",
+    "thumbnail": "merch.png",
     "tag": "merch & illustration",
     "year": 2022,
     "organization": "Reboot",
@@ -230,7 +232,25 @@
       }
     ]
   },
-
+  {
+    "name": "Blackout Poetry Generator",
+    "medium": "Website",
+    "slug": "blackout-poetry",
+    "thumbnail": "poetry.mov",
+    "tag": "writing tools",
+    "year": 2023,
+    "organization": "Personal Project",
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://blackout-poetry.vercel.app/"
+      },
+      {
+        "name": "Github",
+        "website": "https://github.com/zhaovan/blackout-poetry-generator"
+      }
+    ]
+  },
   {
     "name": "A world of space",
     "medium": "Interactive fiction, game",
@@ -263,25 +283,7 @@
     "colSpan": 2,
     "organization": "Type West"
   },
-  {
-    "name": "Blackout Poetry Generator",
-    "medium": "Website",
-    "slug": "blackout-poetry",
-    "thumbnail": "poetry.mov",
-    "tag": "writing tools",
-    "year": 2023,
-    "organization": "Personal Project",
-    "links": [
-      {
-        "name": "Website",
-        "website": "https://blackout-poetry.vercel.app/"
-      },
-      {
-        "name": "Github",
-        "website": "https://github.com/zhaovan/blackout-poetry-generator"
-      }
-    ]
-  },
+
   {
     "name": "Reboot Fellowship Zine",
     "medium": "Zine",
@@ -361,7 +363,7 @@
   },
   {
     "name": "Wicked Poster",
-    "slug": "wicked-data-viz",
+    "slug": "poster-wicked",
     "thumbnail": "wicked.png",
     "tag": "Data Visualization",
     "year": 2022,

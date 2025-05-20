@@ -83,6 +83,10 @@ export default function Page() {
               width={1600}
               height={1200}
               priority
+              style={{
+                objectFit: project.ratio ? "scale-down" : "cover",
+                height: project.ratio ? "fit-content" : "",
+              }}
               className={styles.headerImage}
               alt={`thumbnail image for ${project.name}`}
             />
