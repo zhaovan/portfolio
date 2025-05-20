@@ -45,12 +45,12 @@ export default function About() {
                     <div>
                       {bio[newKey].map((item: BioItem, secondIdx: number) => {
                         return (
-                          <p className={styles.info} key={secondIdx}>
+                          <div className={styles.info} key={secondIdx}>
                             {item.date && (
-                              <span className={styles.date}>
+                              <p className={styles.date}>
                                 {item.date}
                                 {item.endDate && " - " + item.endDate}
-                              </span>
+                              </p>
                             )}
                             <span className={styles.titleContainer}>
                               <Link
@@ -64,7 +64,7 @@ export default function About() {
                                 {item.organization}
                               </p>
                             </span>
-                          </p>
+                          </div>
                         );
                       })}
                     </div>

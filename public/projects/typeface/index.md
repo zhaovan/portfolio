@@ -1,1 +1,3 @@
-Marketing website for Typeface, a series B generative AI startup
+Second design engineer hire for Typeface, a series B generative AI startup. During my time at Typeface, I contributed to a variety of projects across core product, design systems, and marketing website. While I was there, one of the largest projects I worked on was building out our canvas application, which allowed users to create dynamic and omnichannel brand and marketing systems for various platforms.
+
+I drove adoption of our design system, and reestablished all of the new primitives, including typography, color scales, iconography, and shadows. Shoutout to Phosphor for some beautiful icon sets.

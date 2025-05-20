@@ -15,20 +15,20 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>{title}</h3>
+      <h2 className={styles.title}>{title}</h2>
       {links === undefined ? (
-        <h3 className={styles.description}>{description}</h3>
+        <h2 className={styles.description}>{description}</h2>
       ) : (
-        <h3 className={styles.linkContainer}>
+        <h2 className={styles.linkContainer}>
           {links &&
             links.map((link: Record<string, string>, idx: number) => {
               return (
-                <Link key={idx} href={link.link} target="_blank">
-                  {link.text}
+                <Link key={idx} href={link.website} target="_blank">
+                  {link.name}
                 </Link>
               );
             })}
-        </h3>
+        </h2>
       )}
     </div>
   );

@@ -89,7 +89,6 @@
 
 .firstName,
 .lastName {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: rgb(var(--text-red));
   -webkit-text-stroke: 4px #f6d108;
   background-color: #0a0a0a;

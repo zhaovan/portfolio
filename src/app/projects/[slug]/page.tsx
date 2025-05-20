@@ -58,49 +58,48 @@ export default function Page() {
   return (
     <Layout>
       <div className={styles.container}>
-        <div className={styles.headerContainer}>
-          <div className={styles.imageContainer}>
-            {isImage ? (
-              <Image
-                src={formattedThumbnail}
-                width={800}
-                height={600}
-                priority
-                className={styles.headerImage}
-                alt={`thumbnail image for ${project.name}`}
-              />
-            ) : (
-              <video
-                src={formattedThumbnail}
-                className={styles.headerImage}
-                loop
-                autoPlay
-                muted
-              />
-            )}
-          </div>
+        <h1 className={styles.title}>{project.name}</h1>
+        <div className={styles.overviewContainer}>
+          <SectionHeader title="Medium" description={project.medium} />
+
+          <SectionHeader title="Year" description={project.year} />
+          {project.links && (
+            <SectionHeader title="Links" links={project.links} />
+          )}
+          {project.client && (
+            <SectionHeader title="Client" links={project.client} />
+          )}
+          {project.collaborators && (
+            <SectionHeader
+              title="Collaborators"
+              links={project.collaborators}
+            />
+          )}
+        </div>
+        <div className={styles.imageContainer}>
+          {isImage ? (
+            <Image
+              src={formattedThumbnail}
+              width={1600}
+              height={1200}
+              priority
+              className={styles.headerImage}
+              alt={`thumbnail image for ${project.name}`}
+            />
+          ) : (
+            <video
+              src={formattedThumbnail}
+              className={styles.headerImage}
+              loop
+              autoPlay
+              muted
+            />
+          )}
         </div>
 
-        <div className={styles.mainContent}>
-          <div className={styles.content}>
-            <div className={styles.header}>
-              <div>
-                <h1 className={styles.title}>
-                  {project.name} - {project.description}
-                </h1>
-                <h2 className={styles.description}>{project.tag}</h2>
-              </div>
-              <div className={styles.overviewContainer}>
-                <SectionHeader title="Year" description={project.year} />
-                {project.links && (
-                  <SectionHeader title="Links" links={project.links} />
-                )}
-              </div>
-            </div>
-
-            <div className={styles.textContent}>
-              <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
-            </div>
+        <div className={styles.content}>
+          <div className={styles.textContent}>
+            <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
           </div>
 
           {imageMdx.length > 0 && (

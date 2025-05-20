@@ -48,7 +48,7 @@ export default function Project({ project, onHover }: IndividualProject) {
           width={newWidth}
           height={newHeight}
           style={{
-            aspectRatio: ratio || "16:9",
+            aspectRatio: ratio || "4:3",
           }}
           className={styles.thumbnail}
         />

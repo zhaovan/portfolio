@@ -1,7 +1,7 @@
 [
   {
     "name": "Ask this website a question",
-    "description": "a website that answers your questions",
+    "medium": "Microsite",
     "slug": "ask-this-website-a-question",
     "thumbnail": "question.mov",
     "tag": "website",
@@ -11,14 +11,21 @@
     "colSpan": 2,
     "links": [
       {
-        "text": "Website",
-        "link": "https://ask-this-website-a-question.vercel.app/"
+        "name": "Website",
+        "website": "https://ask-this-website-a-question.vercel.app/"
+      }
+    ],
+    "client": [
+      {
+        "name": "Vicki Tan",
+        "website": "https://vickitan.com/"
       }
     ]
   },
   {
-    "name": "Print",
-    "slug": "letterpress",
+    "name": "Wild Beast Poster",
+    "slug": "letterpress-beast",
+    "medium": "2 color 12x15 Print",
     "thumbnail": "WildBeast.mov",
     "tag": "poster",
     "year": 2025,
@@ -27,16 +34,18 @@
     "organization": "Personal Project"
   },
   {
-    "name": "Print",
-    "slug": "letterpress",
-    "thumbnail": "scherezade.png",
+    "name": "Siken Broadside",
+    "slug": "letterpress-siken",
+    "medium": "2 color 8x10 Broadside",
+    "thumbnail": "scherezade.jpg",
     "tag": "poster",
     "year": 2025,
     "organization": "Personal Project"
   },
   {
-    "name": "Print",
-    "slug": "letterpress",
+    "name": "Dickinson Card Set",
+    "slug": "letterpress-cardset",
+    "medium": "2 color 6x12 Sheet, 4x6 Card, Envelope",
     "thumbnail": "Hope.jpg",
     "tag": "poster",
     "year": 2025,
@@ -44,9 +53,10 @@
   },
 
   {
-    "name": "Print",
-    "slug": "letterpress",
-    "thumbnail": "ThisIsJust.jpg",
+    "name": "Williams Card",
+    "slug": "letterpress-card",
+    "medium": "Single Color 6x12 Card, Folded",
+    "thumbnail": "thisisjust.jpg",
     "tag": "card",
     "rowSpan": 2,
     "colSpan": 2,
@@ -55,8 +65,8 @@
   },
 
   {
-    "name": "Typeface Website",
-    "description": "a typeface design tool",
+    "name": "Typeface",
+    "medium": "Marketing Website",
     "slug": "typeface",
     "thumbnail": "typeface.mov",
     "tag": "marketing website",
@@ -64,11 +74,11 @@
     "colSpan": 2,
     "year": 2024,
     "organization": "Typeface",
-    "links": [{ "text": "Website", "link": "https://typeface.ai/" }]
+    "links": [{ "name": "Website", "website": "https://typeface.ai/" }]
   },
   {
     "name": "The Type Fella Website",
-    "description": "a typeface design tool",
+    "medium": "Shopify Website",
     "slug": "type-fella",
     "thumbnail": "type-fella.mov",
     "tag": "website",
@@ -76,11 +86,17 @@
     "rowSpan": 2,
     "colSpan": 2,
     "organization": "The Type Fella",
-    "links": [{ "text": "Website", "link": "https://thetypefella.com/" }]
+    "links": [{ "name": "Website", "website": "https://thetypefella.com/" }],
+    "client": [
+      {
+        "name": "Joshua Diaz",
+        "website": "https://thetypefella.com/pages/about"
+      }
+    ]
   },
   {
     "name": "Convo",
-    "description": "a playful handwritten typeface",
+    "medium": "Typeface",
     "slug": "convo",
     "thumbnail": "convo.mov",
     "tag": "typeface",
@@ -88,42 +104,51 @@
     "rowSpan": 2,
     "colSpan": 2,
     "organization": "Type West",
-    "links": [{ "text": "Specimen", "link": "https://convo.design" }]
+    "links": [{ "name": "Specimen", "website": "https://convo.design" }]
   },
   {
     "name": "Galileo AI",
     "slug": "galileo",
     "thumbnail": "galileo.mp4",
-    "tag": "Product Feature",
+    "medium": "Websites, Design Systems",
+    "tag": "Job",
     "year": 2023,
     "colSpan": 2,
     "rowSpan": 2,
     "organization": "Galileo AI",
-    "links": [{ "text": "Product", "link": "https://www.usegalileo.ai/" }]
+    "links": [{ "name": "Product", "website": "https://www.usegalileo.ai/" }]
   },
   {
     "name": "YOU JUST GOT LAID OFF",
-
     "slug": "laid-off",
     "thumbnail": "laid-off.mov",
+    "medium": "Website, Webart",
     "tag": "webart",
     "year": 2023,
     "organization": "Personal Project",
-    "links": [{ "text": "Website", "link": "https://layoff-site.vercel.app/" }]
+    "links": [
+      { "name": "Website", "website": "https://layoff-site.vercel.app/" }
+    ]
   },
   {
     "name": "Reboot Merch",
-    "description": "Get your swag on!",
+    "medium": "Get your swag on!",
     "slug": "reboot-merch",
     "thumbnail": "kern.mp4",
     "tag": "merch & illustration",
     "year": 2022,
     "organization": "Reboot",
-    "links": [{ "text": "Shop", "link": "https://shop.kernelmag.io/" }]
+    "links": [{ "name": "Shop", "website": "https://shop.kernelmag.io/" }],
+    "client": [
+      {
+        "name": "Reboot",
+        "website": "https://reboothq.substack.com/"
+      }
+    ]
   },
   {
     "name": "Kernel Magazine",
-    "description": "literary magazine on tech, society, and power",
+    "medium": "literary magazine on tech, society, and power",
     "slug": "kernel",
     "thumbnail": "KernelMagCover.jpeg",
     "tag": "Web, Print, and Brand",
@@ -132,25 +157,36 @@
     "colSpan": 2,
     "organization": "Reboot / Kernel",
     "links": [
-      { "text": "Website", "link": "https://www.kernelmag.io/" },
-      { "text": "Shop", "link": "https://shop.kernelmag.io/" },
-      { "text": "Newsletter", "link": "https://reboothq.substack.com/" }
+      { "name": "Website", "website": "https://www.kernelmag.io/" },
+      { "name": "Shop", "website": "https://shop.kernelmag.io/" },
+      { "name": "Newsletter", "website": "https://reboothq.substack.com/" }
+    ],
+    "collaborators": [
+      {
+        "name": "Matthew Sun",
+        "website": "https://sunnymatt.com/research/"
+      },
+      {
+        "website": "https://www.magzipan.com/",
+        "name": "Maggie Pan"
+      }
     ]
   },
   {
     "name": "Sunflower Capital",
     "slug": "sunflower-capital",
     "organization": "Sunflower Capital",
+    "medium": "Wordmark, Icon",
     "thumbnail": "sunflower.mov",
     "tag": "Logo",
     "rowSpan": 2,
     "colSpan": 2,
     "year": 2023,
-    "links": [{ "text": "Website", "link": "https://sunflowercapital.co/" }]
+    "links": [{ "name": "Website", "website": "https://sunflowercapital.co/" }]
   },
   {
     "name": "Prism Summer Program",
-    "description": "speaker series and community for queer students in venture",
+    "medium": "Speaker Series, Community",
     "slug": "prism",
     "thumbnail": "prism.mov",
     "tag": "Community",
@@ -158,44 +194,46 @@
     "organization": "Dorm Room Fund",
     "links": [
       {
-        "text": "Github",
-        "link": "https://github.com/zhaovan/prism-landing-page"
+        "name": "Github",
+        "website": "https://github.com/zhaovan/prism-landing-page"
       }
     ]
   },
   {
     "name": "Byrne",
-    "description": "workhorse serif inspired by math-y visuals",
+    "medium": "Typeface (Sans Serif)",
     "slug": "byrne",
-    "thumbnail": "byrne.mov",
+    "thumbnail": "byrne.mp4",
     "tag": "typeface",
     "year": 2023,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "Type West"
   },
   {
     "name": "Telescopic Text",
-    "description": "adding detail to your writing",
+    "medium": "Open Source",
     "slug": "telescopic",
-    "thumbnail": "telescopic.gif",
+    "thumbnail": "telescopic.mov",
     "tag": "webart",
     "year": 2023,
     "organization": "Package",
     "links": [
-      { "text": "Demo Site", "link": "https://telescopic-text.vercel.app/" },
+      { "name": "Demo Site", "website": "https://telescopic-name.vercel.app/" },
       {
-        "text": "Github",
-        "link": "https://github.com/zhaovan/telescopic-text"
+        "name": "Github",
+        "website": "https://github.com/zhaovan/telescopic-name"
       },
       {
-        "text": "NPM Package",
-        "link": "https://www.npmjs.com/package/react-telescopic-text"
+        "name": "NPM Package",
+        "website": "https://www.npmjs.com/package/react-telescopic-name"
       }
     ]
   },
 
   {
     "name": "A world of space",
-    "description": "browser based interactive fiction",
+    "medium": "Interactive fiction, game",
     "slug": "a-world-of-space",
     "thumbnail": "aworldofspace.mov",
     "tag": "Interactive Fiction",
@@ -204,50 +242,60 @@
     "colSpan": 2,
     "organization": "Personal Project",
     "links": [
-      { "text": "Site", "link": "https://www.aworldof.space/" },
+      { "name": "Site", "website": "https://www.aworldof.space/" },
+      { "name": "html.review", "website": "https://thehtml.review/02/" }
+    ],
+    "collaborators": [
       {
-        "text": "Github",
-        "link": "https://github.com/zhaovan/a-world-of-space"
-      },
-      { "text": "html.review", "link": "https://thehtml.review/02/" }
+        "name": "Maxwell Neely-Cohen",
+        "website": "https://maxy.world/"
+      }
     ]
   },
   {
     "name": "Mod",
-    "description": "everyone's favorite modular typeface",
+    "medium": "Typeface",
     "slug": "mod",
     "thumbnail": "mod.png",
     "tag": "typeface",
     "year": 2023,
     "rowSpan": 2,
     "colSpan": 2,
-    "organization": "Type West",
-    "links": [
-      { "text": "Buy it!", "link": "https://ivanzhao.gumroad.com/l/mod" }
-    ]
+    "organization": "Type West"
   },
   {
     "name": "Blackout Poetry Generator",
-    "description": "generate poems using markov models",
+    "medium": "Website",
     "slug": "blackout-poetry",
     "thumbnail": "poetry.mov",
     "tag": "writing tools",
     "year": 2023,
-    "organization": "Personal Project"
+    "organization": "Personal Project",
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://blackout-poetry.vercel.app/"
+      },
+      {
+        "name": "Github",
+        "website": "https://github.com/zhaovan/blackout-poetry-generator"
+      }
+    ]
   },
   {
     "name": "Reboot Fellowship Zine",
-    "description": "",
+    "medium": "Zine",
     "slug": "reboot-zine",
     "thumbnail": "reboot-zine.png",
     "tag": "book design",
-    "year": 2022,
+    "year": 2023,
     "organization": "Reboot"
   },
 
   {
     "name": "Portugal Poster",
     "slug": "poster-portugal",
+    "medium": "Data Visualization Poster",
     "thumbnail": "portugal.png",
     "tag": "Infographic",
     "year": 2022,
@@ -256,7 +304,7 @@
   },
   {
     "name": "Holotable",
-    "description": "speculative design on tech and furniture",
+    "medium": "Projective table",
     "slug": "holotable",
     "thumbnail": "holotable.gif",
     "tag": "3D Model & Animation",
@@ -267,16 +315,26 @@
 
   {
     "name": "Watcher",
-    "description": "memex of my brain",
+    "medium": "Website (second brain memex)",
     "slug": "watcher",
     "thumbnail": "watcher.png",
     "tag": "App Development",
     "year": 2021,
-    "organization": "Personal Project"
+    "organization": "Personal Project",
+    "links": [
+      {
+        "name": "Github",
+        "website": "https://github.com/zhaovan/watcher"
+      },
+      {
+        "name": "Demo",
+        "website": "https://watcherapp.dev/"
+      }
+    ]
   },
   {
     "name": "How To: Croissants",
-    "description": "a recipe for croissants",
+    "medium": "Data Visaulization Poster",
     "slug": "croissants",
     "thumbnail": "croissant.png",
     "tag": "Infographic",
@@ -287,7 +345,7 @@
   },
   {
     "name": "Tea Time",
-    "description": "speaker series for the queer college community",
+    "medium": "Substack Community",
     "slug": "tea-time",
     "thumbnail": "teatime.png",
     "tag": "Community",
@@ -296,8 +354,8 @@
 
     "links": [
       {
-        "text": "Website",
-        "link": "https://teatime.substack.com/"
+        "name": "Website",
+        "website": "https://teatime.substack.com/"
       }
     ]
   },
@@ -312,16 +370,22 @@
   },
   {
     "name": "Tarrey Town Interactive",
-    "description": "interactive audio experience on a quest from Zelda",
+    "medium": "Interactive Website",
     "slug": "tarrey-town",
     "thumbnail": "tarrey.png",
     "tag": "Interactive Piece",
     "year": 2020,
-    "organization": "Personal Project"
+    "organization": "Personal Project",
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://tarrey-town.vercel.app/"
+      }
+    ]
   },
   {
     "name": "Optical Music Recognition",
-    "description": "DL model on music sheet recognition",
+    "medium": "DL model",
     "slug": "omr",
     "thumbnail": "omr.png",
     "tag": "Old Project",
@@ -330,7 +394,7 @@
   },
   {
     "name": "Rhyme Time",
-    "description": "poem generator with lstms",
+    "medium": "AI Model",
     "slug": "rhyme-time",
     "thumbnail": "rhymetime.png",
     "tag": "Old Project",
@@ -342,26 +406,28 @@
     "tag": "webart",
     "year": 2022,
     "slug": "ten-sky",
+    "medium": "Animated Website",
     "thumbnail": "ten-sky.mov",
     "organization": "Personal Project",
     "rowSpan": 2,
     "colSpan": 2,
     "links": [
       {
-        "text": "Website",
-        "link": "https://taper.badquar.to/10/ten_as_in_sky.html"
+        "name": "Website",
+        "website": "https://taper.badquar.to/10/ten_as_in_sky.html"
       }
     ]
   },
   {
     "name": "Questions and Answers",
+    "medium": "Website",
     "tag": "webart",
     "year": 2021,
     "slug": "qa",
     "thumbnail": "qa.mp4",
     "organization": "Personal Project",
     "links": [
-      { "text": "Website", "link": "https://www.questionsandanswers.app/" }
+      { "name": "Website", "website": "https://www.questionsandanswers.app/" }
     ]
   }
 ]

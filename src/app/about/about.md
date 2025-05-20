@@ -1,6 +1,6 @@
-# Ivan Zhao is a designer, programmer, & letters artist with a love of animations, comics, games, & type.
+# Ivan Zhao is a designer, programmer, & words artist with a love of animations, comics, games, & type.
 
-My progammatic interests revolve around creative tools, computational systems, and play. Specifically, I care about how computers, systems, and individuals create new affordances that push the boundaries of human capability, derive latent spaces, and reinterpret our finite understanding of the world. I am drawn to the process of creating, the interaction between human and machine, and the mathematical and mechanical language of creation.
+My progammatic interests revolve around creative tools, computational systems, and play. Specifically, I care about how computers, systems, and individuals create new affordances that push the boundaries of human capability, derive latent spaces, and reinterpret our finite understanding of the world. I am drawn to the permutations of forms and objects, the interaction between human and machine, and the mathematical and mechanical language of creation.
 
 My artistic work reckons with digital, diasporic, and queer identity through nonlinear narratives, forms, and mechanics. This manifests in a number of different manners, but my current practice is drawn towards the materiality of language, words, book objects, and games. Questions, such as: how do we, as humans, interrogate computational and individual agency, or the language and visualization of translation, characters, and silences?
 

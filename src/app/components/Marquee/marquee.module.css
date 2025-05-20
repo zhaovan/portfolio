@@ -2,7 +2,7 @@
   animation: move-left 20s linear infinite;
   font-size: 3rem;
   text-wrap: nowrap;
-  font-family: Barnice;
+  font-family: Fatface;
   display: flex;
   gap: var(--gap-2);
 }
@@ -23,8 +23,7 @@
 .marqueeContainer {
   display: flex;
   gap: var(--gap-2);
-  /* position: fixed; */
-  /* bottom: 0px; */
+
   user-select: none;
   color: white;
   background-color: #191919;

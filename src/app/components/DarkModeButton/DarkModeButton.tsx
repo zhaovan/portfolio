@@ -10,7 +10,7 @@ enum Theme {
 }
 export default function DarkModeButton() {
   const { setTheme, resolvedTheme } = useTheme();
-  // const [mounted, setMounted] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
   const controls = useAnimationControls();
 
   function handleDarkModeSwap() {
@@ -27,17 +27,17 @@ export default function DarkModeButton() {
     });
   }
 
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  // if (!mounted) {
-  //   return <div className={styles.placeholder} />;
-  // }
+  if (!mounted) {
+    return <div className={styles.placeholder} />;
+  }
 
   return (
     <button onClick={handleDarkModeSwap} className={styles.button}>
-      <motion.div animate={controls}>
+      <motion.div animate={controls} suppressHydrationWarning>
         {resolvedTheme === Theme.DARK ? (
           <Moon className={styles.icon} fill="currentColor" size={20} />
         ) : (

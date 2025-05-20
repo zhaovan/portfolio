@@ -12,7 +12,7 @@
 
 <img src="/projects/reboot-merch/images/sweater1.jpg"  >
 
-<div className="two-column">
+<div className="columns">
 <div>
 <img src="/projects/reboot-merch/images/poster2.png"  >
 </div>
@@ -21,7 +21,7 @@
 </div>
 </div>
 
-<div className="two-column">
+<div className="columns">
 <div>
 <img src="/projects/reboot-merch/images/stickers2.png"  >
 </div>

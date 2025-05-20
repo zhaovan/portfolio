@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
+import { ReactLenis } from "lenis/react";
 
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
-export const metadata: Metadata = {
-  title: "Ivan Zhao",
-  description:
-    "Ivan Zhao is a creative technologist with a love for the weird and wacky things in the world.",
-};
+// export const metadata: Metadata = {
+//   title: "Ivan Zhao",
+//   description:
+//     "Ivan Zhao is a creative technologist with a love for the weird and wacky things in the world.",
+// };
 
 export default function RootLayout({
   children,
@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ReactLenis root>
+          <ThemeProvider>{children}</ThemeProvider>
+        </ReactLenis>
       </body>
     </html>
   );

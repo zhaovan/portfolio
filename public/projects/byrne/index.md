@@ -1,10 +1,3 @@
-Byrne is a Caslon revival based off the typeface used in the book, <b>The first six books of the Elements of Euclid </b> by <i> Oliver Byrne</i>. Made during my time at Type West, this was the first ever typeface that I worked on to some level of completion. Below is a process book with some specimens made for class.
+Byrne is a Caslon revival based off the typeface used in the book, **The First Six Books of the Elements of Euclid** by _Oliver Byrne_. Made during my time at Type West in 2023, this was the first ever typeface that I worked on to some level of completion.
 
-<img src="/projects/byrne/images/1.png">
-<img src="/projects/byrne/images/2.png">
-<img src="/projects/byrne/images/3.png">
-<img src="/projects/byrne/images/4.png">
-<img src="/projects/byrne/images/5.png">
-<img src="/projects/byrne/images/6.png">
-<img src="/projects/byrne/images/7.png">
-<img src="/projects/byrne/images/8.png">
+The goal for this project was to learn some of the basics of type design, to think around the construction of the serif, and to make something that could be leaned towards, and used for, math-iar expressions. While I'm not sure it FULLY accomplishes that goal, I'm happy with what i learned for a first project, and was able to produce this corresponding process book, which is printed and stored in the archive.

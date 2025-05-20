@@ -4,7 +4,7 @@
 
 <img src="/thumbnails/Hope.jpg"/>
 
-<div className="two-column">
+<div className="columns">
 <div>
 <img src="/thumbnails/Dizzy.jpg"/>
 </div>
