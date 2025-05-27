@@ -1,4 +1,4 @@
-<h1 class="mod">Modular Bro</h1>
+<h1 class="mod">Modular</h1>
 
 Mod (named after Modular), is a typeface made during Type West 2023 as an exercise in building typefaces from various components. In this specific exercises, we were given a semi circle, a quarter circle, a square, and a triangle. While there were many different ways to approach this, I was interested in the geometric nature of the various shapes and wanted to make a typeface that respected the original form.
 

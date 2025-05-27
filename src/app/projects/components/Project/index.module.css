@@ -29,9 +29,8 @@
 }
 
 .projectName {
-  /* width: calc(45% - 1rem); */
   text-transform: capitalize;
-  border: 1px solid rgb(var(--background-gold));
+  border: 1px solid rgb(var(--color-gold));
 
   color: rgb(var(--text-primary));
 
@@ -51,7 +50,7 @@
 }
 .year {
   font-variant-numeric: tabular-nums;
-  border: 1px solid rgb(var(--background-gold));
+  border: 1px solid rgb(var(--color-gold));
   border-bottom: none;
   border-radius: 8px 8px 0 0;
   padding: 0.25rem 0.5rem;

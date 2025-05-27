@@ -4,9 +4,12 @@ import Marquee from "./components/Marquee/Marquee";
 import Symbol from "./components/Symbol/Symbol";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import Loader from "./components/Loader/Loader";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [lanternOn, setLanternOn] = useState(true);
+  const [loading, setLoading] = useState(true);
   const { resolvedTheme } = useTheme();
 
   function handleTheme(resolvedTheme: string) {
@@ -24,7 +27,10 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container} data-scroll-section>
+    <div className={styles.container}>
+      <AnimatePresence>
+        {loading && <Loader setLoading={setLoading} />}
+      </AnimatePresence>
       <Marquee offset />
       <div className={styles.bodyContainer}>
         <div className={styles.grid}>

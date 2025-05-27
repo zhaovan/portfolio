@@ -15,11 +15,11 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.title}>{title}</p>
       {links === undefined ? (
-        <h2 className={styles.description}>{description}</h2>
+        <p className={styles.description}>{description}</p>
       ) : (
-        <h2 className={styles.linkContainer}>
+        <p className={styles.linkContainer}>
           {links &&
             links.map((link: Record<string, string>, idx: number) => {
               return (
@@ -28,7 +28,7 @@ export default function SectionHeader({
                 </Link>
               );
             })}
-        </h2>
+        </p>
       )}
     </div>
   );

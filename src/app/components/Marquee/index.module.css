@@ -1,0 +1,33 @@
+.marquee {
+  animation: move-left 20s linear infinite;
+  font-size: 3rem;
+  text-wrap: nowrap;
+  font-family: Fatface;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding: 0.5rem 0;
+  gap: var(--gap-2);
+}
+
+.marqueeText {
+  text-transform: uppercase;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+.marqueeContainer {
+  display: flex;
+  gap: var(--gap-2);
+
+  user-select: none;
+  color: white;
+  background-color: #191919;
+}

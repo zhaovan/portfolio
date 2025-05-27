@@ -1,1 +1,1 @@
-<video src="/projects/reboot-zine/images/2.mp4" autoplay muted loop></video>
+<video src="/projects/reboot-zine/images/1.mp4" autoplay muted loop></video>

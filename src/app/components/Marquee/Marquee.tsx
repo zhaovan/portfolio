@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
-import styles from "./marquee.module.css";
+import styles from "./index.module.css";
 
 const texts: Array<String> = [
   "animating sites",
   "baking bread",
   "designing type",
   "waxing poetically",
+  "arranging words",
   "sleeping in",
 ];
 

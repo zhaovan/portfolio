@@ -59,61 +59,65 @@ export default function Page() {
     <Layout>
       <div className={styles.container}>
         <h1 className={styles.title}>{project.name}</h1>
-        <div className={styles.overviewContainer}>
-          <SectionHeader title="Medium" description={project.medium} />
 
-          <SectionHeader title="Year" description={project.year} />
-          {project.links && (
-            <SectionHeader title="Links" links={project.links} />
-          )}
-          {project.client && (
-            <SectionHeader title="Client" links={project.client} />
-          )}
-          {project.collaborators && (
-            <SectionHeader
-              title="Collaborators"
-              links={project.collaborators}
-            />
-          )}
-        </div>
-        <div className={styles.imageContainer}>
-          {isImage ? (
-            <Image
-              src={formattedThumbnail}
-              width={1600}
-              height={1200}
-              priority
-              style={{
-                objectFit: project.ratio ? "scale-down" : "cover",
-                height: project.ratio ? "fit-content" : "",
-              }}
-              className={styles.headerImage}
-              alt={`thumbnail image for ${project.name}`}
-            />
-          ) : (
-            <video
-              src={formattedThumbnail}
-              className={styles.headerImage}
-              loop
-              autoPlay
-              muted
-            />
-          )}
-        </div>
+        {isImage ? (
+          <Image
+            src={formattedThumbnail}
+            width={1600}
+            height={1200}
+            priority
+            style={{
+              objectFit: project.ratio ? "scale-down" : undefined,
+              height: project.ratio ? "fit-content" : "",
+            }}
+            className={styles.headerImage}
+            alt={`thumbnail image for ${project.name}`}
+          />
+        ) : (
+          <video
+            src={formattedThumbnail}
+            className={styles.headerImage}
+            loop
+            autoPlay
+            muted
+          />
+        )}
 
         <div className={styles.content}>
           <div className={styles.textContent}>
-            <Markdown rehypePlugins={[rehypeRaw]}>{mdx}</Markdown>
-          </div>
+            <div className={styles.overviewContainer}>
+              <SectionHeader title="Medium" description={project.medium} />
 
-          {imageMdx.length > 0 && (
+              <SectionHeader title="Year" description={project.year} />
+              {project.links && (
+                <SectionHeader title="Links" links={project.links} />
+              )}
+              {project.client && (
+                <SectionHeader title="Client" links={project.client} />
+              )}
+              {project.collaborators && (
+                <SectionHeader
+                  title="Collaborators"
+                  links={project.collaborators}
+                />
+              )}
+              {imageMdx.length > 0 && (
+                <Markdown
+                  rehypePlugins={[rehypeRaw]}
+                  className={styles.additionalImages}
+                >
+                  {imageMdx}
+                </Markdown>
+              )}
+            </div>
+
             <Markdown
               rehypePlugins={[rehypeRaw]}
-              className={styles.additionalImages}
+              className={styles.projectText}
             >
-              {imageMdx}
+              {mdx}
             </Markdown>
-          )}
+          </div>
         </div>
       </div>
     </Layout>

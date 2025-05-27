@@ -159,6 +159,12 @@
   ],
   "poetry": [
     {
+      "organization": "Yalobusha Review",
+      "title": "In Highly Connected Networks, There's Always a Loop",
+      "date": "forthcoming",
+      "website": "https://yr.olemiss.edu/"
+    },
+    {
       "organization": "Foglifter",
       "title": "ode to many things i could have become",
       "date": "forthcoming",
@@ -298,7 +304,7 @@
   "appearances": [
     {
       "date": "05-2025",
-      "title": "Inside 'Small Batch,' a farmers market for datasets",
+      "title": "Inside 'Small Batch'",
       "organization": "Phone Time",
       "website": "https://www.phonetime.news/p/inside-small-batch-a-farmers-market"
     },
@@ -322,6 +328,12 @@
     }
   ],
   "retreats": [
+    {
+      "date": "07-2025",
+      "title": "Poetry",
+      "organization": "Napa Writers Conference",
+      "website": "https://www.napawritersconference.org/"
+    },
     {
       "date": "06-2025",
       "title": "Poetry",

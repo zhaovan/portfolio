@@ -6,18 +6,10 @@
   display: grid;
 
   grid-template-columns: repeat(6, minmax(0px, 1fr));
-  /* display: grid;
-  grid-template-columns: repeat(5, minmax(0px, 1fr)); */
-  /* columns: 5; */
-
   gap: 0.125rem;
 }
 
 .projectContainer > a {
   transition: filter 0.25s ease-in-out;
   opacity: 1;
-}
-
-.projectContainer:hover > a {
-  /* box-shadow: 0 0 0 2px rgb(var(--background-gold)); */
 }

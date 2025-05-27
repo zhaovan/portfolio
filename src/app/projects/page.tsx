@@ -13,14 +13,21 @@ export type ProjectProps = {
   ratio?: string;
   tag: string;
   year: number;
+  medium?: string;
   rowSpan?: number;
   colSpan?: number;
 };
+
+enum LayoutType {
+  GRID = "grid",
+  LIST = "list",
+}
 
 export default function Projects() {
   const [hoveredProjectThumbnailUrl, setHoveredProjectThumbnailUrl] =
     useState("");
   const [isImage, setIsImage] = useState(false);
+  const [layout, setLayout] = useState(LayoutType.GRID);
 
   const allProjects: ProjectProps[] = ProjectList;
 

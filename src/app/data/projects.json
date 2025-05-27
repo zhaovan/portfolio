@@ -1,7 +1,7 @@
 [
   {
     "name": "Ask this website a question",
-    "medium": "Microsite",
+    "medium": "Website",
     "slug": "ask-this-website-a-question",
     "thumbnail": "question.mov",
     "tag": "website",
@@ -25,7 +25,7 @@
   {
     "name": "Wild Beast Poster",
     "slug": "letterpress-beast",
-    "medium": "2 color 12x15 Print",
+    "medium": "Letterpress Print",
     "thumbnail": "WildBeast.mov",
     "tag": "poster",
     "year": 2025,
@@ -36,7 +36,7 @@
   {
     "name": "Siken Broadside",
     "slug": "letterpress-siken",
-    "medium": "2 color 8x10 Broadside",
+    "medium": "Letterpress Broadside",
     "thumbnail": "scherezade.jpg",
     "tag": "poster",
     "year": 2025,
@@ -45,7 +45,7 @@
   {
     "name": "Dickinson Card Set",
     "slug": "letterpress-cardset",
-    "medium": "2 color 6x12 Sheet, 4x6 Card, Envelope",
+    "medium": "Lettperess Card, Sheet, Envelope",
     "thumbnail": "Hope.jpg",
     "tag": "poster",
     "year": 2025,
@@ -55,7 +55,7 @@
   {
     "name": "Williams Card",
     "slug": "letterpress-card",
-    "medium": "Single Color 6x12 Card, Folded",
+    "medium": "Letterpress Card",
     "thumbnail": "say.jpg",
     "tag": "card",
     "rowSpan": 2,
@@ -77,7 +77,7 @@
     "links": [{ "name": "Website", "website": "https://typeface.ai/" }]
   },
   {
-    "name": "The Type Fella Website",
+    "name": "The Type Fella",
     "medium": "Shopify Website",
     "slug": "type-fella",
     "thumbnail": "type-fella.mov",
@@ -110,7 +110,7 @@
     "name": "Galileo AI",
     "slug": "galileo",
     "thumbnail": "galileo.mp4",
-    "medium": "Websites, Design Systems",
+    "medium": "Product",
     "tag": "Job",
     "year": 2023,
     "colSpan": 2,
@@ -122,7 +122,7 @@
     "name": "YOU JUST GOT LAID OFF",
     "slug": "laid-off",
     "thumbnail": "laid-off.mov",
-    "medium": "Website, Webart",
+    "medium": "Website",
     "tag": "webart",
     "year": 2023,
     "colSpan": 2,
@@ -134,7 +134,7 @@
   },
   {
     "name": "Reboot Merch",
-    "medium": "Get your swag on!",
+    "medium": "Illustration, Posters, Clothes",
     "slug": "reboot-merch",
     "thumbnail": "merch.png",
     "tag": "merch & illustration",
@@ -150,7 +150,7 @@
   },
   {
     "name": "Kernel Magazine",
-    "medium": "literary magazine on tech, society, and power",
+    "medium": "Magazine, Website",
     "slug": "kernel",
     "thumbnail": "KernelMagCover.jpeg",
     "tag": "Web, Print, and Brand",
@@ -188,7 +188,7 @@
   },
   {
     "name": "Prism Summer Program",
-    "medium": "Speaker Series, Community",
+    "medium": "Speaker Series",
     "slug": "prism",
     "thumbnail": "prism.mov",
     "tag": "Community",
@@ -297,7 +297,7 @@
   {
     "name": "Portugal Poster",
     "slug": "poster-portugal",
-    "medium": "Data Visualization Poster",
+    "medium": "Digital Poster",
     "thumbnail": "portugal.png",
     "tag": "Infographic",
     "year": 2022,
@@ -306,7 +306,7 @@
   },
   {
     "name": "Holotable",
-    "medium": "Projective table",
+    "medium": "Projection table",
     "slug": "holotable",
     "thumbnail": "holotable.gif",
     "tag": "3D Model & Animation",
@@ -317,7 +317,7 @@
 
   {
     "name": "Watcher",
-    "medium": "Website (second brain memex)",
+    "medium": "Website",
     "slug": "watcher",
     "thumbnail": "watcher.png",
     "tag": "App Development",
@@ -336,7 +336,7 @@
   },
   {
     "name": "How To: Croissants",
-    "medium": "Data Visaulization Poster",
+    "medium": "Digital Poster",
     "slug": "croissants",
     "thumbnail": "croissant.png",
     "tag": "Infographic",
@@ -344,6 +344,17 @@
     "organization": "Personal Project",
     "rowSpan": 3,
     "ratio": "12/3"
+  },
+  {
+    "name": "Visiting Designer Talk",
+    "medium": "Poster",
+    "slug": "poster-designer",
+    "thumbnail": "poster-designer.png",
+    "tag": "Poster",
+    "year": 2022,
+    "organization": "RISD Graphic Design",
+
+    "ratio": "2/3"
   },
   {
     "name": "Tea Time",
@@ -366,13 +377,14 @@
     "slug": "poster-wicked",
     "thumbnail": "wicked.png",
     "tag": "Data Visualization",
+    "medium": "Digital Poster",
     "year": 2022,
     "organization": "Personal Project",
     "ratio": "2/3"
   },
   {
-    "name": "Tarrey Town Interactive",
-    "medium": "Interactive Website",
+    "name": "Tarrey Town",
+    "medium": "Website",
     "slug": "tarrey-town",
     "thumbnail": "tarrey.png",
     "tag": "Interactive Piece",

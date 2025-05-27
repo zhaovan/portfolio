@@ -22,11 +22,12 @@
   --background-primary: 20, 20, 20;
   --background-dark: 2, 2, 2;
   --background-accent-red: 245, 131, 97;
+
   --background-accent-gradient-yellow: 255, 255, 51;
   --background-accent-gradient-white: 227, 212, 210;
   --background-accent-gradient-orange: 244, 165, 88;
 
-  --background-gold: 246, 209, 8;
+  --color-gold: 246, 209, 8;
   --background-red: 197, 42, 42;
 
   --text-primary: 234, 234, 234;
@@ -250,7 +251,6 @@ button {
 }
 
 .columns > div > * {
-  width: 100%;
   border-radius: 8px;
 }
 

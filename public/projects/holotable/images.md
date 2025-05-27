@@ -26,11 +26,17 @@
 <div>
 <img src="https://miro.medium.com/max/1020/1*7PYSpZ9P3qEiTe-xb782ZQ.png" />
 </div>
+
 </div>
 
+<div class="columns">
+<div>
 <img src="https://miro.medium.com/max/680/1*gbKCq7oLgaC4KM2AcT8KGg.png" />
-
+</div>
+<div>
 <img src="https://miro.medium.com/max/1136/1*ZPPXtorNHZZZRnGJHOCdnQ.png" />
+</div>
+</div>
 
 <img src="https://miro.medium.com/max/1068/1*xwEvUFRz1gXjYhb68a2y5w.png" />
 

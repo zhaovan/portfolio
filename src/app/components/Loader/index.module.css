@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  display: grid;
+  background-color: rgb(var(--background-dark));
+}
+
+.percentage {
+  position: absolute;
+  z-index: 100;
+  bottom: 4rem;
+  right: 4rem;
+}
