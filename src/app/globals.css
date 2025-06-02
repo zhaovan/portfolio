@@ -1,15 +1,17 @@
 :root {
-  --background-primary: 227, 212, 210;
+  --background-primary: 232, 226, 191;
 
   --background-dark: 20, 20, 20;
+
   --background-accent-red: 245, 131, 97;
+  --background-dark-red: 122, 30, 20;
 
   --text-primary: 30, 30, 30;
   --text-secondary: 40, 40, 40;
   --text-light: 234, 234, 234;
   --text-dark: 20, 20, 20;
 
-  --text-gold: 246, 209, 8;
+  --color-gold: 246, 209, 8;
   --text-red: 197, 42, 42;
 
   --gap-1: 0.5rem;
@@ -23,12 +25,12 @@
   --background-dark: 2, 2, 2;
   --background-accent-red: 245, 131, 97;
 
+  --background-dark-red: 122, 30, 20;
   --background-accent-gradient-yellow: 255, 255, 51;
   --background-accent-gradient-white: 227, 212, 210;
   --background-accent-gradient-orange: 244, 165, 88;
 
   --color-gold: 246, 209, 8;
-  --background-red: 197, 42, 42;
 
   --text-primary: 234, 234, 234;
   --text-secondary: 190, 190, 190;
@@ -260,8 +262,9 @@ h3,
 h4,
 h5 {
   font-family: Tiempos;
-  /* letter-spacing: 2px; */
+  letter-spacing: 1px;
 }
+
 body,
 p {
   font-family: VG;

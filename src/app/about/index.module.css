@@ -1,16 +1,8 @@
-.imageTextContainer {
-  gap: 2rem;
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  .imageTextContainer {
-    flex-direction: row;
-  }
-}
-
 .container {
   padding: 0.5rem 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .imageContainer {
@@ -54,7 +46,7 @@
 
 .bioContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -67,4 +59,27 @@
 
 .organization {
   text-align: right;
+}
+
+@media (max-width: 580px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 1rem;
+  }
+}
+
+.title {
+  font-size: clamp(2rem, -2.4787rem + 18.9573vw, 7.5rem);
+  line-height: 1.1;
+  min-height: 90vh;
+}
+
+.imageTextContainer {
+  display: flex;
+  gap: 1rem;
 }

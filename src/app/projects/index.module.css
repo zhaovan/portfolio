@@ -6,10 +6,24 @@
   display: grid;
 
   grid-template-columns: repeat(6, minmax(0px, 1fr));
-  gap: 0.125rem;
+  /* gap: 0.125rem; */
+  gap: 1rem;
+  padding-bottom: 4rem;
 }
 
 .projectContainer > a {
-  transition: filter 0.25s ease-in-out;
+  /* transition: filter 0.25s ease-in-out; */
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .projectContainer {
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .projectContainer {
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+  }
 }

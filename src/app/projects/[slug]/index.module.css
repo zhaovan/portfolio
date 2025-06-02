@@ -84,7 +84,5 @@
 .title {
   font-size: clamp(2rem, -0.4746rem + 10.4746vw, 12rem);
   line-height: 90%;
-  min-height: 25vh;
-  display: flex;
-  align-items: end;
+  padding-top: 5rem;
 }

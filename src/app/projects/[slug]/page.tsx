@@ -11,13 +11,14 @@ import { checkURLIsImage } from "@/app/helpers";
 
 import SectionHeader from "./components/SectionHeader/SectionHeader";
 import { useParams } from "next/navigation";
+import Heading from "@/app/components/Heading/Heading";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const { slug } = useParams<{ slug: string }>();
 
   const project = projects.filter((project) => project.slug === slug)[0];
   const [mdx, setMdx] = useState<any>("");
-  const [loading, setLoading] = useState(true);
 
   const [imageMdx, setImageMdx] = useState<any>("");
 
@@ -46,8 +47,6 @@ export default function Page() {
       } catch (error) {
         console.error("Error fetching the image post:", error);
       }
-
-      setLoading(false);
     }
     fetchPost();
   }, [slug]);
@@ -58,32 +57,43 @@ export default function Page() {
   return (
     <Layout>
       <div className={styles.container}>
-        <h1 className={styles.title}>{project.name}</h1>
+        <Heading className={styles.title}>{project.name}</Heading>
 
-        {isImage ? (
-          <Image
-            src={formattedThumbnail}
-            width={1600}
-            height={1200}
-            priority
-            style={{
-              objectFit: project.ratio ? "scale-down" : undefined,
-              height: project.ratio ? "fit-content" : "",
-            }}
-            className={styles.headerImage}
-            alt={`thumbnail image for ${project.name}`}
-          />
-        ) : (
-          <video
-            src={formattedThumbnail}
-            className={styles.headerImage}
-            loop
-            autoPlay
-            muted
-          />
-        )}
+        <motion.div
+          initial={{ opacity: 0, y: "50px" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+        >
+          {isImage ? (
+            <Image
+              src={formattedThumbnail}
+              width={1600}
+              height={1200}
+              priority
+              style={{
+                objectFit: project.ratio ? "scale-down" : undefined,
+                height: project.ratio ? "fit-content" : "",
+              }}
+              className={styles.headerImage}
+              alt={`thumbnail image for ${project.name}`}
+            />
+          ) : (
+            <video
+              src={formattedThumbnail}
+              className={styles.headerImage}
+              loop
+              autoPlay
+              muted
+            />
+          )}
+        </motion.div>
 
-        <div className={styles.content}>
+        <motion.div
+          className={styles.content}
+          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
           <div className={styles.textContent}>
             <div className={styles.overviewContainer}>
               <SectionHeader title="Medium" description={project.medium} />
@@ -118,7 +128,7 @@ export default function Page() {
               {mdx}
             </Markdown>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Layout>
   );

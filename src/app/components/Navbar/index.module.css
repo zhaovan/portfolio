@@ -32,3 +32,13 @@
     flex-direction: row;
   }
 }
+
+.mobileNavbar {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobileNavbar {
+    display: flex;
+  }
+}

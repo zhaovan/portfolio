@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ReactLenis } from "lenis/react";
+import { motion } from "framer-motion";
 
 import "./globals.css";
 import { ThemeProvider } from "next-themes";

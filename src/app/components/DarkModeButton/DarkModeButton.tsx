@@ -1,4 +1,4 @@
-import { Moon, Sun } from "lucide-react";
+import { MoonStarsIcon, SunIcon } from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
 import styles from "./index.module.css";
 import { motion, useAnimationControls } from "framer-motion";
@@ -39,9 +39,9 @@ export default function DarkModeButton() {
     <button onClick={handleDarkModeSwap} className={styles.button}>
       <motion.div animate={controls} suppressHydrationWarning>
         {resolvedTheme === Theme.DARK ? (
-          <Moon className={styles.icon} fill="currentColor" size={20} />
+          <MoonStarsIcon className={styles.icon} weight="fill" size={20} />
         ) : (
-          <Sun className={styles.icon} size={20} fill="currentColor" />
+          <SunIcon className={styles.icon} size={20} weight="fill" />
         )}
       </motion.div>
     </button>

@@ -1,17 +1,6 @@
 .projectContainer {
   display: flex;
   flex-direction: column;
-
-  /* grid-row: span 2; */
-  /* grid-column: span 2; */
-}
-
-.projectContainer > p {
-  font-family: VG, monospace;
-}
-
-.projectContainer > div > p {
-  font-family: VG, monospace;
 }
 
 .projectText {
@@ -26,6 +15,7 @@
   height: 100%;
   aspect-ratio: 4/3;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .projectName {
@@ -54,4 +44,11 @@
   border-bottom: none;
   border-radius: 8px 8px 0 0;
   padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .projectContainer {
+    grid-row: span 1 !important;
+    grid-column: span 1 !important;
+  }
 }

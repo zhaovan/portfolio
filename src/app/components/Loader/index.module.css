@@ -4,7 +4,7 @@
   position: absolute;
   z-index: 100;
   display: grid;
-  background-color: rgb(var(--background-dark));
+  background-color: rgb(var(--background-primary));
 }
 
 .percentage {

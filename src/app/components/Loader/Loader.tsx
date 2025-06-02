@@ -30,7 +30,11 @@ export default function Loader({ setLoading }: LoaderProps) {
     const emptyGrid = makeEmptyGrid(rows.current, cols.current);
     setGrid(emptyGrid);
 
-    const animationSequence = getAnimationSequence(rows.current, cols.current);
+    const animationSequence = getAnimationSequence(
+      w,
+      rows.current,
+      cols.current
+    );
     let step = 0;
     let timeoutId: NodeJS.Timeout;
     const drawInterval = setInterval(() => {
@@ -76,7 +80,7 @@ export default function Loader({ setLoading }: LoaderProps) {
         transition: {
           y: {
             type: "spring",
-            duration: 2,
+            duration: 4,
           },
         },
       }}
@@ -148,95 +152,16 @@ function nextGen(grid: any[][]) {
   return newGrid;
 }
 
-// function seedWithIvanZhao(grid: any[][]) {
-//   const baseRow = 5;
-//   const baseCol = 5;
+function getAnimationSequence(
+  width: number,
 
-//   // Very rough pixel letters — each array is a small pattern for a letter
-//   const letters: Record<string, number[][]> = {
-//     I: [
-//       [1, 1, 1],
-//       [0, 1, 0],
-//       [0, 1, 0],
-//       [0, 1, 0],
-//       [1, 1, 1],
-//     ],
-//     V: [
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [0, 1, 0],
-//     ],
-//     A: [
-//       [0, 1, 0],
-//       [1, 0, 1],
-//       [1, 1, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//     ],
-//     N: [
-//       [1, 1, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//     ],
-//     Z: [
-//       [1, 1, 1],
-//       [0, 0, 1],
-//       [0, 1, 0],
-//       [1, 0, 0],
-//       [1, 1, 1],
-//     ],
-//     H: [
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 1, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//     ],
-//     O: [
-//       [1, 1, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 0, 1],
-//       [1, 1, 1],
-//     ],
-//     SPACE: [[]],
-//   };
-
-//   const lines = [
-//     ["I", "V", "A", "N"],
-//     ["Z", "H", "A", "O"],
-//   ];
-
-//   lines.forEach((line, lineIndex) => {
-//     let colOffset = baseCol;
-
-//     for (const char of line) {
-//       const pattern = letters[char] || [[]];
-//       for (let r = 0; r < pattern.length; r++) {
-//         for (let c = 0; c < pattern[r].length; c++) {
-//           const row = baseRow + lineIndex * (pattern.length + 1) + r; // stack vertically
-//           const col = colOffset + c;
-//           if (grid[row] && grid[row][col] !== undefined) {
-//             grid[row][col] = pattern[r][c];
-//           }
-//         }
-//       }
-
-//       colOffset += 4; // space between letters
-//     }
-//   });
-// }
-
-function getAnimationSequence(rows: number, cols: number): [number, number][] {
-  const grid = makeEmptyGrid(rows, cols);
+  rows: number,
+  cols: number
+): [number, number][] {
   const sequence: [number, number][] = [];
 
   const baseRow = 5;
-  const baseCol = 5;
+  const baseCol = width < 480 ? 3 : 5;
 
   const letters: Record<string, number[][]> = {
     I: [

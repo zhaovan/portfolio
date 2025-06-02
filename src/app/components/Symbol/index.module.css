@@ -9,8 +9,18 @@
   flex: 1;
 }
 
+.symbol:hover {
+  opacity: 1;
+}
+
 .symbolContainer {
   perspective: 500px;
   padding: 0 !important;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .symbol {
+    display: none;
+  }
 }

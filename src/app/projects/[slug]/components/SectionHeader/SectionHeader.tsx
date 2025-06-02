@@ -23,7 +23,12 @@ export default function SectionHeader({
           {links &&
             links.map((link: Record<string, string>, idx: number) => {
               return (
-                <Link key={idx} href={link.website} target="_blank">
+                <Link
+                  key={idx}
+                  href={link.website}
+                  target="_blank"
+                  className={styles.link}
+                >
                   {link.name}
                 </Link>
               );

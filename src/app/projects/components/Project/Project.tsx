@@ -5,6 +5,7 @@ import { ProjectProps } from "@/app/projects/page";
 import Link from "next/link";
 import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
+import { motion } from "framer-motion";
 
 interface IndividualProject {
   project: ProjectProps;
@@ -35,37 +36,40 @@ export default function Project({ project, onHover }: IndividualProject) {
     : { newWidth: 400, newHeight: 300 };
 
   return (
-    <Link
-      href={`/projects/${project.slug}`}
+    <motion.div
+      initial={{ opacity: 0, skewY: "10deg" }}
+      whileInView={{ opacity: 1, skewY: "0deg" }}
+      transition={{ duration: 0.5 }}
       className={styles.projectContainer}
       style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
-      onMouseEnter={onHover}
     >
-      {isImage ? (
-        <Image
-          src={formattedThumbnail}
-          alt={"thumbnail"}
-          width={newWidth}
-          height={newHeight}
-          style={{
-            aspectRatio: ratio || "4:3",
-          }}
-          className={styles.thumbnail}
-        />
-      ) : (
-        <video
-          src={formattedThumbnail}
-          className={styles.thumbnail}
-          style={{
-            aspectRatio: ratio || "4:3",
-          }}
-          width={newWidth}
-          height={newHeight}
-          autoPlay
-          muted
-          loop
-        />
-      )}
-    </Link>
+      <Link href={`/projects/${project.slug}`} onMouseEnter={onHover}>
+        {isImage ? (
+          <Image
+            src={formattedThumbnail}
+            alt={"thumbnail"}
+            width={newWidth}
+            height={newHeight}
+            style={{
+              aspectRatio: ratio || "4:3",
+            }}
+            className={styles.thumbnail}
+          />
+        ) : (
+          <video
+            src={formattedThumbnail}
+            className={styles.thumbnail}
+            style={{
+              aspectRatio: ratio || "4:3",
+            }}
+            width={newWidth}
+            height={newHeight}
+            autoPlay
+            muted
+            loop
+          />
+        )}
+      </Link>
+    </motion.div>
   );
 }

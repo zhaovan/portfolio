@@ -5,11 +5,16 @@ import Symbol from "./components/Symbol/Symbol";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 import Loader from "./components/Loader/Loader";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import Grain from "./components/Grain/Grain";
 
 export default function Home() {
   const [lanternOn, setLanternOn] = useState(true);
   const [loading, setLoading] = useState(true);
+
+  const [isDoorActive, setIsDoorActive] = useState(false);
+
   const { resolvedTheme } = useTheme();
 
   function handleTheme(resolvedTheme: string) {
@@ -26,13 +31,23 @@ export default function Home() {
     return;
   }
 
+  const doorVariants = {
+    closed: { x: 0 },
+    openLeft: { x: "-100%" },
+    openRight: { x: "100%" },
+  };
+
   return (
     <div className={styles.container}>
       <AnimatePresence>
         {loading && <Loader setLoading={setLoading} />}
       </AnimatePresence>
-      <Marquee offset />
-      <div className={styles.bodyContainer}>
+
+      <div
+        className={styles.bodyContainer}
+        style={{ opacity: loading ? 0 : 1 }}
+      >
+        <Marquee offset />
         <div className={styles.grid}>
           <h1 className={styles.firstName}>
             {"Ivan".split("").map((char, idx) => {
@@ -53,15 +68,59 @@ export default function Home() {
               return <span key={idx}>{char}</span>;
             })}
           </h1>
-
-          <Symbol type="experiments" />
-          <Symbol type="projects" />
-
+          <motion.div
+            className={styles.enter}
+            initial="closed"
+            whileHover="open"
+            onTap={(e) => {
+              e.stopPropagation();
+              setIsDoorActive(!isDoorActive);
+            }}
+            animate={isDoorActive ? "open" : "closed"}
+          >
+            <Link href="/projects">
+              <p className={styles.doorBehindText}>
+                Get to the meat and potatoes
+              </p>
+            </Link>
+            <motion.div
+              className={styles.door1}
+              variants={{
+                closed: doorVariants.closed,
+                open: doorVariants.openLeft,
+              }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
+              {new Array(9).fill(0).map((_, idx) => {
+                return (
+                  <div className={styles.doorContainer} key={idx}>
+                    <div className={styles.doorIcon} />
+                  </div>
+                );
+              })}
+            </motion.div>
+            <motion.div
+              className={styles.door2}
+              variants={{
+                closed: doorVariants.closed,
+                open: doorVariants.openRight,
+              }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
+              {new Array(9).fill(0).map((_, idx) => {
+                return (
+                  <div className={styles.doorContainer} key={idx}>
+                    <div className={styles.doorIcon} />
+                  </div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
           <Symbol type="about" />
           <div className={styles.image} />
         </div>
+        <Marquee />
       </div>
-      <Marquee />
     </div>
   );
 }
