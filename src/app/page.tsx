@@ -7,7 +7,6 @@ import { useState } from "react";
 import Loader from "./components/Loader/Loader";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Grain from "./components/Grain/Grain";
 
 export default function Home() {
   const [lanternOn, setLanternOn] = useState(true);
