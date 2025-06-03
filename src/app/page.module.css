@@ -27,7 +27,7 @@
 .chineseNameDark,
 .chineseNameDarkLantern {
   font-family: Bobohei;
-  font-size: clamp(8rem, 0.2881rem + 15.7119vw, 16rem);
+  font-size: clamp(7rem, 0.2881rem + 15.7119vw, 16rem);
   grid-column-start: 1;
   grid-row: 1 / span 3;
   display: flex;
@@ -254,7 +254,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  font-size: 4rem;
+  font-size: clamp(2rem, 0.2085rem + 7.5829vw, 4rem);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -312,10 +312,18 @@
 
   .lastName {
     grid-column: 1 / span 2;
-    grid-row: 3;
+    grid-row: 4;
   }
 
   .image {
+    display: none;
+  }
+  .enter {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .door1,
+  .door2 {
     display: none;
   }
 }

@@ -1,4 +1,5 @@
 export const navLinks: Record<string, string> = {
+  home: "/",
   projects: "/projects",
   // experiments: "/experiments",
   // type: "/type",

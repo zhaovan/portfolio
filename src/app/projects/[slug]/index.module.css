@@ -82,7 +82,29 @@
 }
 
 .title {
-  font-size: clamp(2rem, -0.4746rem + 10.4746vw, 12rem);
+  font-size: clamp(3rem, -0.4746rem + 10.4746vw, 12rem);
   line-height: 90%;
   padding-top: 5rem;
+}
+
+.mobileAdditionalImages {
+  display: none;
+}
+
+.mobileAdditionalImages * {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+@media (max-width: 480px) {
+  .additionalImages {
+    display: none;
+  }
+  .textContent {
+    flex-direction: column;
+  }
+  .mobileAdditionalImages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

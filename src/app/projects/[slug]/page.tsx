@@ -129,6 +129,14 @@ export default function Page() {
             </Markdown>
           </div>
         </motion.div>
+        {imageMdx.length > 0 && (
+          <Markdown
+            rehypePlugins={[rehypeRaw]}
+            className={styles.mobileAdditionalImages}
+          >
+            {imageMdx}
+          </Markdown>
+        )}
       </div>
     </Layout>
   );

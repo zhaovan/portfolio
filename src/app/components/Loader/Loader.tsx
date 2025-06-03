@@ -161,7 +161,7 @@ function getAnimationSequence(
   const sequence: [number, number][] = [];
 
   const baseRow = 5;
-  const baseCol = width < 480 ? 3 : 5;
+  const baseCol = width < 480 ? Math.floor(width / 200) : 5;
 
   const letters: Record<string, number[][]> = {
     I: [

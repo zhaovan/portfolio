@@ -1,5 +1,5 @@
 .symbol {
-  font-size: 196px;
+  font-size: clamp(8rem, -3.3898rem + 31.2796vw, 12.25rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,4 @@
 }
 
 @media (max-width: 768px) {
-  .symbol {
-    display: none;
-  }
 }

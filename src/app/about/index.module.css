@@ -33,7 +33,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-.titleContainer {
+.itemTitleContainer {
   display: flex;
   justify-content: space-between;
   flex: 1;
@@ -65,6 +65,9 @@
   .container {
     flex-direction: column;
   }
+  .imageTextContainer {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -74,8 +77,14 @@
 }
 
 .title {
-  font-size: clamp(2rem, -2.4787rem + 18.9573vw, 7.5rem);
+  font-size: clamp(2.5rem, -2.4787rem + 18.9573vw, 7.5rem);
   line-height: 1.1;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 90vh;
 }
 

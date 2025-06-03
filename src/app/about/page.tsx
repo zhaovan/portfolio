@@ -41,21 +41,22 @@ export default function About() {
   return (
     <Layout>
       <div className={styles.container} data-scroll-section>
-        <Heading className={styles.title}>
-          Ivan Zhao is a designer, programmer, & words artist with a love of
-          animations, comics, games, & type.
-        </Heading>
+        <div className={styles.titleContainer}>
+          <Heading className={styles.title}>
+            Ivan Zhao is a designer, programmer, & words artist with a love of
+            animations, comics, games, & type.
+          </Heading>
+        </div>
         <div className={styles.imageTextContainer}>
           <div className={styles.textContainer}>
             <Markdown>{aboutText}</Markdown>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: "50px" }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
-            className={styles.imageContainer}
-          >
-            <motion.div>
+          <div className={styles.imageContainer}>
+            <motion.div
+              initial={{ opacity: 0, y: "50px" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+            >
               <Image
                 src={portrait}
                 alt="Photo of ivan taken on a film camera with grain"
@@ -74,7 +75,7 @@ export default function About() {
                     className={styles.headingContainer}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.5, delay: 0.25 }}
                   >
                     <h2>{bioKey}</h2>
                     <div>
@@ -87,7 +88,7 @@ export default function About() {
                                 {item.endDate && " - " + item.endDate}
                               </p>
                             )}
-                            <span className={styles.titleContainer}>
+                            <span className={styles.itemTitleContainer}>
                               <Link
                                 href={item.website || ""}
                                 target="_blank"
@@ -107,7 +108,7 @@ export default function About() {
                 );
               })}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </Layout>
