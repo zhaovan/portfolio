@@ -5,6 +5,7 @@ import Project from "./components/Project/Project";
 import styles from "./index.module.css";
 import Layout from "../components/Layout/Layout";
 import { checkURLIsImage } from "../helpers";
+import HeadTitle from "../components/Head/Head";
 
 export type ProjectProps = {
   name: string;
@@ -37,6 +38,7 @@ export default function Projects() {
 
   return (
     <Layout>
+      <HeadTitle title="Ivan Zhao | Projects" />
       <div className={styles.container} data-scroll-section>
         <div
           className={styles.projectContainer}

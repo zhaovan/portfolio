@@ -159,6 +159,12 @@
   ],
   "poetry": [
     {
+      "organization": "Ensemble Park",
+      "title": "Epistolary Letters",
+      "date": "forthcoming",
+      "website": "https://www.ensemblepark.com/"
+    },
+    {
       "organization": "Yalobusha Review",
       "title": "In Highly Connected Networks, There's Always a Loop",
       "date": "forthcoming",
@@ -167,7 +173,7 @@
     {
       "organization": "Foglifter",
       "title": "ode to many things i could have become",
-      "date": "forthcoming",
+      "date": "06-2025",
       "website": "https://www.foglifterjournal.com/"
     },
 
