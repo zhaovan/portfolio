@@ -5,7 +5,12 @@ import DarkModeButton from "../DarkModeButton/DarkModeButton";
 import { navLinks } from "@/app/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { HamburgerIcon, PenNibIcon, XIcon } from "@phosphor-icons/react";
+import {
+  HamburgerIcon,
+  ListIcon,
+  PenNibIcon,
+  XIcon,
+} from "@phosphor-icons/react";
 import { useState } from "react";
 import Heading from "../Heading/Heading";
 
@@ -41,12 +46,12 @@ export default function Navbar() {
         })}
         <DarkModeButton />
       </div>
-      <div className={styles.mobileNavbar}>
-        <HamburgerIcon
-          className={styles.navbarItem}
-          onClick={() => setMobileNavbarOpen(true)}
-        />
-      </div>
+      <button
+        className={styles.mobileNavbar}
+        onClick={() => setMobileNavbarOpen(true)}
+      >
+        <ListIcon size={24} />
+      </button>
       <AnimatePresence>
         {mobileNavbarOpen && (
           <motion.div
