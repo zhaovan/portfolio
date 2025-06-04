@@ -50,6 +50,7 @@ export default function Project({ project, onHover }: IndividualProject) {
             alt={"thumbnail"}
             width={newWidth}
             height={newHeight}
+            priority={false}
             style={{
               aspectRatio: ratio || "4:3",
             }}
@@ -65,7 +66,7 @@ export default function Project({ project, onHover }: IndividualProject) {
             width={newWidth}
             height={newHeight}
             autoPlay
-            preload="metadata"
+            preload="auto"
             playsInline
             muted
             loop
