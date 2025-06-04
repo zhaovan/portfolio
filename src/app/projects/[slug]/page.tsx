@@ -13,6 +13,7 @@ import SectionHeader from "./components/SectionHeader/SectionHeader";
 import { useParams } from "next/navigation";
 import Heading from "@/app/components/Heading/Heading";
 import { motion } from "framer-motion";
+import { ArrowLeftIcon } from "@phosphor-icons/react";
 
 export default function Page() {
   const { slug } = useParams<{ slug: string }>();
@@ -57,6 +58,12 @@ export default function Page() {
   return (
     <Layout>
       <div className={styles.container}>
+        <button
+          onClick={() => window.history.back()}
+          className={styles.backButton}
+        >
+          <ArrowLeftIcon size={24} />
+        </button>
         <Heading className={styles.title}>{project.name}</Heading>
 
         <motion.div
@@ -84,6 +91,8 @@ export default function Page() {
               loop
               autoPlay
               muted
+              playsInline
+              preload="auto"
             />
           )}
         </motion.div>
@@ -92,6 +101,7 @@ export default function Page() {
           className={styles.content}
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
           <div className={styles.textContent}>

@@ -52,7 +52,7 @@ export default function Navbar() {
           <motion.div
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
-            exit={{ opacity: 0 }}
+            exit={{ y: "-100%" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className={styles.mobileNavbarContainer}
           >
@@ -64,7 +64,6 @@ export default function Navbar() {
             </button>
             {Object.keys(navLinks).map((path) => {
               const href = navLinks[path];
-              const selected = pathname === href;
               return (
                 <Link href={href} key={path}>
                   <Heading className={styles.mobileNavbarItem}>{path}</Heading>

@@ -24,6 +24,7 @@
 
 @media (max-width: 480px) {
   .projectContainer {
+    padding-top: 1rem;
     grid-template-columns: repeat(1, minmax(0px, 1fr));
   }
 }

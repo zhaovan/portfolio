@@ -65,6 +65,8 @@ export default function Project({ project, onHover }: IndividualProject) {
             width={newWidth}
             height={newHeight}
             autoPlay
+            preload="metadata"
+            playsInline
             muted
             loop
           />
