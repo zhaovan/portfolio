@@ -68,9 +68,30 @@
   .imageTextContainer {
     flex-direction: column;
   }
+
+  .titleContainer {
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 1rem 2rem;
+  }
   .title {
     line-height: 1.5 !important;
   }
+}
+
+@media (min-width: 581px) {
+  .titleContainer {
+    align-items: center;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+
+  min-height: 90vh;
 }
 
 @media (max-width: 768px) {
@@ -85,13 +106,6 @@
 .title {
   font-size: clamp(2.5rem, -2.4787rem + 18.9573vw, 7.5rem);
   line-height: 1.1;
-}
-
-.titleContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
 }
 
 .imageTextContainer {
