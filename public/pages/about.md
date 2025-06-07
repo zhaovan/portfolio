@@ -2,7 +2,7 @@ His progammatic interests revolve around creative tools, computational systems, 
 
 His artistic work reckons with digital, diasporic, and queer identity through nonlinear narratives, forms, and mechanics. His current practice is drawn towards the materiality of language, words, book objects, and games. Questions, such as: how do humans interrogate computational and individual agency, or the language and visualization of translation, characters, and silences?
 
-Some of Ivan's work has been exhibited in places such as _SF Public Library_, _Silver Sprocket_, _Kearny Street Workshop_, _Providence Place Library_, _Culture Hub_, _Letterform Archive_, and _Harvey Milk Photo Center_. My webart work can be found in _Taper_, _thehtml.review_,_The New River_, _Adjacent_, and _Crawlspace_. His poetry can be found in places such as _Prism_, _Foglifter_, _godz rising_, and _Kernel_.
+Some of his work has been exhibited in places such as _SF Public Library_, _Silver Sprocket_, _Kearny Street Workshop_, _Providence Place Library_, _Culture Hub_, _Letterform Archive_, and _Harvey Milk Photo Center_. His webart work can be found in _Taper_, _thehtml.review_,_The New River_, _Adjacent_, and _Crawlspace_. His poetry can be found in places such as _Prism_, _Foglifter_, _godz rising_, and _Kernel_.
 
 He is grateful to have been given the opportunity to speak at conferences such as [!!con](https://bangbangcon.com/speakers.html#ivan-zhao), [Causal Islands](https://fission.codes/blog/causal-islands-la-community-edition/), and has guest critiqued at SVA and elsewhere.
 
