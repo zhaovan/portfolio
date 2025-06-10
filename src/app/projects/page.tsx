@@ -5,7 +5,7 @@ import Project from "./components/Project/Project";
 import styles from "./index.module.css";
 import Layout from "../components/Layout/Layout";
 import { checkURLIsImage } from "../helpers";
-import HeadTitle from "../components/Head/Head";
+import Head from "../components/Head/Head";
 
 export type ProjectProps = {
   name: string;
@@ -25,37 +25,19 @@ enum LayoutType {
 }
 
 export default function Projects() {
-  const [hoveredProjectThumbnailUrl, setHoveredProjectThumbnailUrl] =
-    useState("");
-  const [isImage, setIsImage] = useState(false);
   const [layout, setLayout] = useState(LayoutType.GRID);
 
   const allProjects: ProjectProps[] = ProjectList;
 
-  useEffect(() => {
-    setIsImage(checkURLIsImage(hoveredProjectThumbnailUrl));
-  }, [hoveredProjectThumbnailUrl]);
-
   return (
     <Layout>
-      <HeadTitle title="Ivan Zhao | Projects" />
+      <Head title="Ivan Zhao | Projects" />
       <div className={styles.container} data-scroll-section>
-        <div
-          className={styles.projectContainer}
-          onMouseLeave={() => setHoveredProjectThumbnailUrl("")}
-        >
+        <div className={styles.projectContainer}>
           {allProjects
             .sort((projectA, projectB) => projectB.year - projectA.year)
             .map((project, idx) => {
-              return (
-                <Project
-                  key={idx}
-                  project={project}
-                  onHover={() =>
-                    setHoveredProjectThumbnailUrl(project.thumbnail)
-                  }
-                />
-              );
+              return <Project key={idx} project={project} />;
             })}
         </div>
       </div>

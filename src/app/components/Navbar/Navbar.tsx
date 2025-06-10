@@ -32,7 +32,10 @@ export default function Navbar() {
       <div className={styles.navbarLinksContainer}>
         {Object.keys(navLinks).map((path) => {
           const href = navLinks[path];
-          const selected = pathname === href;
+          const isExactMatch = pathname === href;
+          const isSubPath = pathname.startsWith(href + "/"); // ensures it only matches if there's a trailing slash
+          const selected = isExactMatch || isSubPath;
+
           return (
             <Link
               href={href}

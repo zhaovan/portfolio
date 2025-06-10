@@ -9,8 +9,6 @@ import { motion } from "framer-motion";
 
 interface IndividualProject {
   project: ProjectProps;
-
-  onHover: () => void;
 }
 
 const BASE_IMAGE_SIZE = 100;
@@ -23,7 +21,7 @@ function calculateImageSize(ratio: string) {
   return { newWidth, newHeight };
 }
 
-export default function Project({ project, onHover }: IndividualProject) {
+export default function Project({ project }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
 
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
@@ -43,7 +41,7 @@ export default function Project({ project, onHover }: IndividualProject) {
       className={styles.projectContainer}
       style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
     >
-      <Link href={`/projects/${project.slug}`} onMouseEnter={onHover}>
+      <Link href={`/projects/${project.slug}`}>
         {isImage ? (
           <Image
             src={formattedThumbnail}

@@ -14,6 +14,7 @@ import { useParams } from "next/navigation";
 import Heading from "@/app/components/Heading/Heading";
 import { motion } from "framer-motion";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
+import Head from "@/app/components/Head/Head";
 
 export default function Page() {
   const { slug } = useParams<{ slug: string }>();
@@ -57,6 +58,7 @@ export default function Page() {
 
   return (
     <Layout>
+      <Head title={`Ivan Zhao | ${project.name}`} />
       <div className={styles.container}>
         <button
           onClick={() => window.history.back()}

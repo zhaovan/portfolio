@@ -1,13 +1,7 @@
-import Head from "next/head";
-
-type HeadTitleProps = {
-  title: string;
-};
-
-export default function HeadTitle({ title }: HeadTitleProps) {
+export default function Head({ title }: { title: string }) {
   return (
-    <Head>
+    <>
       <title>{title}</title>
-    </Head>
+    </>
   );
 }

@@ -9,7 +9,7 @@ import aboutData from "../data/bio.json";
 import Markdown from "react-markdown";
 import { motion } from "framer-motion";
 import Heading from "../components/Heading/Heading";
-import HeadTitle from "../components/Head/Head";
+import Head from "../components/Head/Head";
 
 type BioItem = {
   organization: string;
@@ -41,7 +41,7 @@ export default function About() {
 
   return (
     <Layout>
-      <HeadTitle title="Ivan Zhao | About" />
+      <Head title="Ivan Zhao | About" />
       <div className={styles.container} data-scroll-section>
         <div className={styles.titleContainer}>
           <Heading className={styles.title}>
