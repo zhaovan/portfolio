@@ -37,7 +37,7 @@ export default function Projects() {
           {allProjects
             .sort((projectA, projectB) => projectB.year - projectA.year)
             .map((project, idx) => {
-              return <Project key={idx} project={project} />;
+              return <Project key={idx} idx={idx} project={project} />;
             })}
         </div>
       </div>
