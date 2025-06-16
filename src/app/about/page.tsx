@@ -50,9 +50,15 @@ export default function About() {
           </Heading>
         </div>
         <div className={styles.imageTextContainer}>
-          <div className={styles.textContainer}>
+          <motion.div
+            className={styles.textContainer}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+          >
             <Markdown>{aboutText}</Markdown>
-          </div>
+          </motion.div>
           <div className={styles.imageContainer}>
             <motion.div
               initial={{ opacity: 0, y: "50px" }}

@@ -98,10 +98,9 @@ a:hover {
   opacity: 0.4;
 }
 
-h html,
+html,
 body {
   background-color: rgb(var(--background-primary));
-
   color: rgb(var(--text-primary));
 }
 
@@ -111,15 +110,9 @@ body {
   src: url("/fonts/barnice.otf");
 }
 
-/* Sans Serif */
-@font-face {
-  font-family: Bricolage Grotesque;
-  src: url("/fonts/BricolageGrotesque.ttf");
-}
-
 @font-face {
   font-family: Tiempos;
-  src: url("/fonts/tiempos/tiempos-fine-bold.woff2");
+  src: url("/fonts/tiemposheadline-semibold.otf");
 }
 
 /* Chinese Font */
@@ -263,9 +256,14 @@ h4,
 h5 {
   font-family: Tiempos;
   letter-spacing: 1px;
+  font-feature-settings: "liga";
 }
 
 body,
 p {
   font-family: VG;
+}
+
+blockquote {
+  padding-left: 2rem;
 }

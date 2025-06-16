@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 interface IndividualProject {
   project: ProjectProps;
+  idx: number;
 }
 
 const BASE_IMAGE_SIZE = 100;
@@ -21,7 +22,7 @@ function calculateImageSize(ratio: string) {
   return { newWidth, newHeight };
 }
 
-export default function Project({ project }: IndividualProject) {
+export default function Project({ project, idx }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
 
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
@@ -48,7 +49,8 @@ export default function Project({ project }: IndividualProject) {
             alt={"thumbnail"}
             width={newWidth}
             height={newHeight}
-            priority={false}
+            priority={idx < 12}
+            loading={idx < 12 ? "eager" : "lazy"}
             style={{
               aspectRatio: ratio || "4:3",
             }}

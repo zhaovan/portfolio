@@ -1,5 +1,26 @@
 [
   {
+    "name": "At the end of the earth, I find {}",
+    "medium": "Multimedia Installation",
+    "slug": "end-of-earth",
+    "thumbnail": "end-of-earth.jpg",
+    "tag": "installation",
+    "year": 2025,
+    "organization": "Personal Project",
+    "colSpan": 2,
+    "rowSpan": 2,
+    "links": [
+      {
+        "name": "Crawlspace",
+        "website": "https://crawlspace.cool/at-the-end-of-the-earth-i-find"
+      },
+      {
+        "website": "https://itp.nyu.edu/adjacent/issue-12/at-the-end-of-the-earth-i-find/",
+        "name": "Adjacent Magazine"
+      }
+    ]
+  },
+  {
     "name": "Clock Sketch",
     "medium": "Animation",
     "slug": "clock-sketch",

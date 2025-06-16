@@ -23,6 +23,31 @@ const charVariants = {
   show: { opacity: 1, y: "0em" },
 };
 
+// known ligatures — you can extend this list
+const ligatures = ["ffi", "ffl", "ff", "fi", "fl"];
+
+// naive ligature-aware splitter
+function segmentWithLigatures(text: string): string[] {
+  const segments: string[] = [];
+  let i = 0;
+  while (i < text.length) {
+    let matched = false;
+    for (const lig of ligatures) {
+      if (text.slice(i, i + lig.length) === lig) {
+        segments.push(lig);
+        i += lig.length;
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) {
+      segments.push(text[i]);
+      i++;
+    }
+  }
+  return segments;
+}
+
 export default function Heading({
   children,
   className,
@@ -38,9 +63,7 @@ export default function Heading({
       initial="hidden"
       animate="show"
       className={className}
-      style={{
-        wordWrap: "break-word",
-      }}
+      style={{ wordWrap: "break-word" }}
     >
       {words.map((word, wordIndex) => (
         <motion.span
@@ -52,13 +75,11 @@ export default function Heading({
             marginRight: "0.25em",
           }}
         >
-          {word.split("").map((char, charIndex) => (
+          {segmentWithLigatures(word).map((char, charIndex) => (
             <motion.span
               key={charIndex}
               variants={charVariants}
-              style={{
-                display: "inline-block",
-              }}
+              style={{ display: "inline-block" }}
             >
               {char}
             </motion.span>
