@@ -76,9 +76,6 @@
   .container {
     padding: 1rem 2rem;
   }
-  .title {
-    line-height: 1.5 !important;
-  }
 }
 
 @media (min-width: 581px) {
