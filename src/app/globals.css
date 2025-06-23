@@ -104,15 +104,9 @@ body {
   color: rgb(var(--text-primary));
 }
 
-/* Marquee Serif */
-@font-face {
-  font-family: Barnice;
-  src: url("/fonts/barnice.otf");
-}
-
 @font-face {
   font-family: Tiempos;
-  src: url("/fonts/tiemposheadline-bold.otf");
+  src: url("/fonts/TiemposHeadline-Bold.otf");
 }
 
 /* Chinese Font */
@@ -150,7 +144,7 @@ body {
 }
 
 @font-face {
-  font-family: "Convo";
+  font-family: Convo;
   weight: 400;
   src: url("/fonts/Convo-Regular.otf");
 }
