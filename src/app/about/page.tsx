@@ -49,13 +49,26 @@ export default function About() {
             animations, comics, games, & type.
           </Heading>
         </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.375, duration: 0.5, ease: "easeOut" }}
+          className={styles.mobileTitleContainer}
+        >
+          <h1 className={styles.mobileTitle}>
+            Ivan Zhao is a designer, programmer, & words artist with a love of
+            animations, comics, games, & type.
+          </h1>
+        </motion.div>
+
         <div className={styles.imageTextContainer}>
           <motion.div
             className={styles.textContainer}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
           >
             <Markdown>{aboutText}</Markdown>
           </motion.div>

@@ -37,6 +37,7 @@
   display: flex;
   justify-content: space-between;
   flex: 1;
+  gap: 0.5rem;
 }
 
 .site {
@@ -76,6 +77,9 @@
   .container {
     padding: 1rem 2rem;
   }
+  .organization {
+    display: none;
+  }
 }
 
 @media (min-width: 581px) {
@@ -105,8 +109,24 @@
 
 .title {
   /* font-size: clamp(3rem, -2.4787rem + 18.9573vw, 7.5rem); */
-  font-size: clamp(2.5rem, -1.4041rem + 10.1761vw, 7.5rem);
+  font-size: clamp(2.5rem, 1.0714rem + 7.1429vw, 7.5rem);
   line-height: 1.1;
+}
+
+.mobileTitleContainer {
+  display: none;
+}
+
+.mobileTitle {
+  font-size: 1.25rem;
+}
+@media (max-width: 580px) {
+  .mobileTitleContainer {
+    display: block;
+  }
+  .titleContainer {
+    display: none;
+  }
 }
 
 .imageTextContainer {
