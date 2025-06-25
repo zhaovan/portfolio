@@ -175,6 +175,7 @@
       "date": "04-2023"
     }
   ],
+
   "poetry": [
     {
       "organization": "Ensemble Park",
@@ -232,12 +233,6 @@
       "date": "09-2022"
     },
 
-    {
-      "organization": "reboot",
-      "title": "Venturing Toward Progress",
-      "website": "https://joinreboot.org/p/venture",
-      "date": "06-2021"
-    },
     {
       "organization": "Visions",
       "title": "Family Dreams",
@@ -375,6 +370,14 @@
       "title": "Poetry",
       "organization": "MCWC",
       "website": "https://mcwc.org/"
+    }
+  ],
+  "longform": [
+    {
+      "organization": "reboot",
+      "title": "Venturing Toward Progress",
+      "website": "https://joinreboot.org/p/venture",
+      "date": "06-2021"
     }
   ],
   "research": [
