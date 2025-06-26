@@ -29,6 +29,6 @@
   gap: var(--gap-2);
 
   user-select: none;
-  color: white;
-  background-color: #191919;
+  color: rgb(var(--text-light));
+  background-color: rgb(var(--background-dark));
 }

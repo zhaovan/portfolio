@@ -1,6 +1,7 @@
 .projectContainer {
   display: flex;
   flex-direction: column;
+  will-change: skewY, opacity;
 }
 
 .projectText {
