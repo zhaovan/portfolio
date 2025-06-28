@@ -106,7 +106,14 @@ body {
 
 @font-face {
   font-family: Tiempos;
+  font-weight: 700;
   src: url("/fonts/TiemposHeadline-Bold.otf");
+}
+
+@font-face {
+  font-family: Tiempos;
+  font-weight: 600;
+  src: url("/fonts/TiemposHeadline-Semibold.otf");
 }
 
 /* Chinese Font */

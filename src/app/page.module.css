@@ -88,6 +88,7 @@
   background-color: rgb(var(--background-primary));
   position: relative;
   text-transform: uppercase;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,6 +248,9 @@
   height: 2rem;
   background-color: rgb(var(--color-gold));
   border-radius: 50%;
+}
+
+html[data-theme="dark"] .doorIcon {
   box-shadow: 0 0 10px rgb(var(--background-accent-red));
 }
 

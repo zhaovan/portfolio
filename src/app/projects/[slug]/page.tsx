@@ -27,7 +27,7 @@ export default function Page() {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const response = await fetch(`/projects/${slug}/index.md`);
+        const response = await fetch(`/project-info/${slug}/index.md`);
         if (!response.ok) {
           throw new Error(`Failed to fetch index.md: ${response.statusText}`);
         }
