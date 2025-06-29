@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
-
 import { ProjectProps } from "@/app/projects/page";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,15 +15,14 @@ const BASE_IMAGE_SIZE = 100;
 
 function calculateImageSize(ratio: string) {
   const [width, height] = ratio.split("/").map(Number);
-
-  const newWidth = width * BASE_IMAGE_SIZE;
-  const newHeight = height * BASE_IMAGE_SIZE;
-  return { newWidth, newHeight };
+  return {
+    newWidth: width * BASE_IMAGE_SIZE,
+    newHeight: height * BASE_IMAGE_SIZE,
+  };
 }
 
 export default function Project({ project, idx }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
-
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
   const ratio = project?.ratio;
   const rowSpan = project.rowSpan ?? 1;
@@ -53,20 +51,26 @@ export default function Project({ project, idx }: IndividualProject) {
             loading={idx < 12 ? "eager" : "lazy"}
             style={{
               aspectRatio: ratio || "4:3",
+              transition: "opacity 0.3s ease",
             }}
             className={styles.thumbnail}
           />
         ) : (
           <video
             src={formattedThumbnail}
+            poster={`/posters/${project.thumbnail.replace(
+              /\.\w+$/,
+              "-blur.jpg"
+            )}`}
             className={styles.thumbnail}
             style={{
               aspectRatio: ratio || "4:3",
+              transition: "opacity 0.3s ease",
             }}
             width={newWidth}
             height={newHeight}
             autoPlay
-            preload="auto"
+            preload="metadata"
             playsInline
             muted
             loop
