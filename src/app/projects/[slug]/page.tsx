@@ -4,11 +4,11 @@ import { Metadata } from "next";
 import projects from "@/app/data/projects.json";
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
 
   const project = projects.find((project) => project.slug === slug);
 
