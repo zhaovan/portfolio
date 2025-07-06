@@ -2,12 +2,12 @@ In spring 2022, I snuck into a class called Mapping Information at RISD in the G
 
 ## Process Project
 
-<img src="/projects/infographics/images/process.png">
+<img src="/project-info/infographics/images/process.png">
 
 ## Narrative Project
 
-<img src="/projects/infographics/images/narrative.png">
+<img src="/project-info/infographics/images/narrative.png">
 
 ## Country Project
 
-<img src="/projects/infographics/images/country.png">
+<img src="/project-info/infographics/images/country.png">

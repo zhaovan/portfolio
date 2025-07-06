@@ -4,8 +4,7 @@ import ProjectList from "../data/projects.json";
 import Project from "./components/Project/Project";
 import styles from "./index.module.css";
 import Layout from "../components/Layout/Layout";
-import { checkURLIsImage } from "../helpers";
-import Head from "../components/Head/Head";
+import Head from "next/head";
 
 export type ProjectProps = {
   name: string;
@@ -31,7 +30,9 @@ export default function Projects() {
 
   return (
     <Layout>
-      <Head title="Ivan Zhao | Projects" />
+      <Head>
+        <title>Ivan Zhao | Projects</title>
+      </Head>
       <div className={styles.container} data-scroll-section>
         <div className={styles.projectContainer}>
           {allProjects

@@ -5,10 +5,10 @@
 </div>
 
 <div class="image-gallery">
-<img src="/projects/spheres/top-view.png">
-<img src="/projects/spheres/front-view.png">
+<img src="/project-info/spheres/top-view.png">
+<img src="/project-info/spheres/front-view.png">
 
-<img src="/projects/spheres/back-view.png">
+<img src="/project-info/spheres/back-view.png">
 
 </div>
 

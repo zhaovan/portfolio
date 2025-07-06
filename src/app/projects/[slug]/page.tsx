@@ -1,155 +1,26 @@
-"use client";
-import styles from "./index.module.css";
-import Layout from "@/app/components/Layout/Layout";
-
-import { useEffect, useState } from "react";
-import Markdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import React from "react";
+import PageContent from "./PageContent";
+import { Metadata } from "next";
 import projects from "@/app/data/projects.json";
-import Image from "next/image";
-import { checkURLIsImage } from "@/app/helpers";
 
-import SectionHeader from "./components/SectionHeader/SectionHeader";
-import { useParams } from "next/navigation";
-import Heading from "@/app/components/Heading/Heading";
-import { motion } from "framer-motion";
-import { ArrowLeftIcon } from "@phosphor-icons/react";
-import Head from "@/app/components/Head/Head";
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-export default function Page() {
-  const { slug } = useParams<{ slug: string }>();
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
 
-  const project = projects.filter((project) => project.slug === slug)[0];
-  const [mdx, setMdx] = useState<any>("");
+  const project = projects.find((project) => project.slug === slug);
 
-  const [imageMdx, setImageMdx] = useState<any>("");
+  return {
+    title: `Ivan Zhao | ${project!.name}`,
+  };
+}
 
-  useEffect(() => {
-    async function fetchPost() {
-      try {
-        const response = await fetch(`/project-info/${slug}/index.md`);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch index.md: ${response.statusText}`);
-        }
-        const data = await response.text();
-        setMdx(data);
-      } catch (error) {
-        console.error("Error fetching the post:", error);
-      }
-
-      try {
-        const imageResponse = await fetch(`/projects/${slug}/images.md`);
-        if (!imageResponse.ok) {
-          console.warn(`images.md not found for slug: ${slug}`);
-          setImageMdx(""); // Set to an empty string if the file doesn't exist
-          return;
-        }
-        const imageData = await imageResponse.text();
-        setImageMdx(imageData);
-      } catch (error) {
-        console.error("Error fetching the image post:", error);
-      }
-    }
-    fetchPost();
-  }, [slug]);
-
-  const isImage = checkURLIsImage(project.thumbnail);
-  const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
-
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   return (
-    <Layout>
-      <Head title={`Ivan Zhao | ${project.name}`} />
-      <div className={styles.container}>
-        <button
-          onClick={() => window.history.back()}
-          className={styles.backButton}
-        >
-          <ArrowLeftIcon size={24} />
-        </button>
-        <Heading className={styles.title}>{project.name}</Heading>
-
-        <motion.div
-          initial={{ opacity: 0, y: "50px" }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
-        >
-          {isImage ? (
-            <Image
-              src={formattedThumbnail}
-              width={1600}
-              height={1200}
-              priority
-              style={{
-                objectFit: project.ratio ? "scale-down" : undefined,
-                height: project.ratio ? "fit-content" : "",
-              }}
-              className={styles.headerImage}
-              alt={`thumbnail image for ${project.name}`}
-            />
-          ) : (
-            <video
-              src={formattedThumbnail}
-              className={styles.headerImage}
-              loop
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-            />
-          )}
-        </motion.div>
-
-        <motion.div
-          className={styles.content}
-          whileInView={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-        >
-          <div className={styles.textContent}>
-            <div className={styles.overviewContainer}>
-              <SectionHeader title="Medium" description={project.medium} />
-
-              <SectionHeader title="Year" description={project.year} />
-              {project.links && (
-                <SectionHeader title="Links" links={project.links} />
-              )}
-              {project.client && (
-                <SectionHeader title="Client" links={project.client} />
-              )}
-              {project.collaborators && (
-                <SectionHeader
-                  title="Collaborators"
-                  links={project.collaborators}
-                />
-              )}
-              {imageMdx.length > 0 && (
-                <Markdown
-                  rehypePlugins={[rehypeRaw]}
-                  className={styles.additionalImages}
-                >
-                  {imageMdx}
-                </Markdown>
-              )}
-            </div>
-
-            <Markdown
-              rehypePlugins={[rehypeRaw]}
-              className={styles.projectText}
-            >
-              {mdx}
-            </Markdown>
-          </div>
-        </motion.div>
-        {imageMdx.length > 0 && (
-          <Markdown
-            rehypePlugins={[rehypeRaw]}
-            className={styles.mobileAdditionalImages}
-          >
-            {imageMdx}
-          </Markdown>
-        )}
-      </div>
-    </Layout>
+    <div>
+      <PageContent />
+    </div>
   );
 }

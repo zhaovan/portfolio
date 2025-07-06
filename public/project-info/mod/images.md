@@ -1,1 +1,1 @@
-<img src="/projects/mod/images/color1.png">
+<img src="/project-info/mod/images/color1.png">

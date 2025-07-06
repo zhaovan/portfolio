@@ -1,5 +1,22 @@
 [
   {
+    "name": "Material Horse",
+    "medium": "Animation, Print",
+    "slug": "material-horse",
+    "thumbnail": "material-horse.mp4",
+    "tag": "animation",
+    "year": 2025,
+    "organization": "Personal Project",
+    "colSpan": 2,
+    "rowSpan": 2,
+    "collaborators": [
+      {
+        "name": "Isabel Li",
+        "website": "https://isabel.li/"
+      }
+    ]
+  },
+  {
     "name": "At the end of the earth, I find {}",
     "medium": "Multimedia Installation",
     "slug": "end-of-earth",

@@ -1,0 +1,3 @@
+Exhibited during Fidget Camp 2025, Material Horse is a contemporary revision of the piece _Horse In Motion_. Made with 14 frames across different materials (riso, beads, marker, tape, paint, pencil, photo, and others), it was exhibited during the end of Fidget Camp in the Mission in SF as a series of prints and an animation. Part horse, part amorphous medium, it's a statement on the power of collaboration, and the range of the human skillset.
+
+Material horse is a rebellion against the optimization of artificial intelligence, and a desire to automate the materiality of the human hand. Who are we, to remove the materiality of our existence, and to extract ourselves out of the process of creation?
