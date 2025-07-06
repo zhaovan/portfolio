@@ -4,11 +4,11 @@ import { Metadata } from "next";
 import projects from "@/app/data/projects.json";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
 
   const project = projects.find((project) => project.slug === slug);
 
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage() {
   return (
     <div>
       <PageContent />
