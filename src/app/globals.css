@@ -1,10 +1,10 @@
 :root {
-  --background-primary: 245, 245, 245;
+  --background-primary: 239, 207, 207;
 
   --background-dark: 20, 20, 20;
 
   --background-accent-red: 245, 131, 97;
-  --background-dark-red: 122, 30, 20;
+  --background-dark-red: 169, 32, 62;
 
   --text-primary: 30, 30, 30;
   --text-secondary: 40, 40, 40;
@@ -12,7 +12,7 @@
   --text-dark: 20, 20, 20;
 
   --color-gold: 246, 209, 8;
-  --text-red: 197, 42, 42;
+  --text-red: 176, 10, 50;
 
   --gap-1: 0.5rem;
   --gap-2: 1rem;

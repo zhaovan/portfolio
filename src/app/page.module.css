@@ -38,10 +38,12 @@
   color: rgb(var(--text-dark));
   cursor: pointer;
   transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
+  background: none;
 }
 
 .chineseName {
-  background-color: rgb(var(--background-accent-red));
+  background-color: rgb(var(--background-dark-red));
+  text-shadow: 12px 4px 0 rgb(var(--text-secondary));
 }
 
 .chineseNameDark {
@@ -75,7 +77,6 @@
 
 .firstName {
   grid-column: 2 / span 2;
-
   grid-row: 1;
 }
 
@@ -84,7 +85,6 @@
   font-size: clamp(8rem, -1.5573rem + 15.0573vw, 13.5rem);
   color: rgb(var(--text-red));
   -webkit-text-stroke: 0.125rem rgb(var(--color-gold));
-  border-radius: 0.5rem;
   background-color: rgb(var(--background-primary));
   position: relative;
   text-transform: uppercase;
@@ -136,7 +136,8 @@
 
 [data-theme="light"] .firstName > span,
 [data-theme="light"] .lastName > span {
-  text-shadow: none !important;
+  color: rgb(var(--text-dark));
+  text-shadow: 4px 4px 0 rgb(var(--text-red));
   animation: none !important;
   -webkit-text-stroke: 0.125rem transparent !important;
 }
@@ -146,7 +147,6 @@
   object-fit: cover;
   grid-row: 1 / span 2;
   grid-column: 4;
-  border-radius: 0.5rem;
 }
 
 @keyframes flicker {
@@ -230,12 +230,18 @@
 .door2 {
   flex: 1;
   background-color: rgb(var(--background-dark-red));
-  border: 1px solid rgb(var(--color-gold));
   font-size: 8rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   position: relative;
   z-index: 1;
+}
+
+.door1 {
+  border-right: 1px solid rgb(var(--color-gold));
+}
+.door2 {
+  border-left: 1px solid rgb(var(--color-gold));
 }
 
 .doorContainer {
@@ -251,7 +257,7 @@
 }
 
 html[data-theme="dark"] .doorIcon {
-  box-shadow: 0 0 10px rgb(var(--background-accent-red));
+  box-shadow: 0 0 10px rgb(var(--background-dark-red));
 }
 
 .doorBehindText {
