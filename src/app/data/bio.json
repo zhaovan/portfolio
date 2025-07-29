@@ -14,7 +14,7 @@
   "experiences": [
     {
       "organization": "Persona",
-      "title": "Frontend Engineer",
+      "title": "Design Engineer",
       "date": "2025",
       "endDate": "present",
       "website": "https://withpersona.com"
@@ -268,13 +268,13 @@
 
     {
       "date": "06-2022",
-      "title": "Engineering Fellow",
+      "title": "Fellow",
       "organization": "Kleiner Perkins",
       "website": "https://fellows.kleinerperkins.com/"
     },
     {
       "date": "06-2021",
-      "title": "Engineering Fellow",
+      "title": "Fellow",
       "organization": "8VC",
       "website": "https://www.8vc.com/fellowships"
     },
@@ -327,6 +327,12 @@
     }
   ],
   "appearances": [
+    {
+      "date": "06-2025",
+      "title": "Art on Computers",
+      "organization": "MutualArt",
+      "website": "https://www.mutualart.com/Article/Art-on-Computers--Emerging-Tech-and-The-/5E2DFCD7FFA568E8"
+    },
     {
       "date": "05-2025",
       "title": "Inside 'Small Batch'",
