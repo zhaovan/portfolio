@@ -265,6 +265,7 @@ html[data-theme="dark"] .doorIcon {
   position: absolute;
   inset: 0;
   z-index: 0;
+  padding: 2rem;
   font-size: clamp(2rem, 0.2085rem + 7.5829vw, 4rem);
   align-items: center;
   justify-content: center;

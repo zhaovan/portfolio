@@ -32,10 +32,33 @@ export default function Project({ project, idx }: IndividualProject) {
     ? calculateImageSize(ratio)
     : { newWidth: 400, newHeight: 300 };
 
+  // Intersection Observer for video lazy loading
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [videoVisible, setVideoVisible] = useState(false); // eager load first 12
+
+  useEffect(() => {
+    if (isImage || videoVisible) return;
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVideoVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+    return () => observer.disconnect();
+  }, [isImage, videoVisible]);
+
   return (
     <motion.div
-      initial={{ opacity: 0, skewY: "10deg" }}
-      whileInView={{ opacity: 1, skewY: "0deg" }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={styles.projectContainer}
       style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
@@ -54,12 +77,18 @@ export default function Project({ project, idx }: IndividualProject) {
               transition: "opacity 0.3s ease",
             }}
             className={styles.thumbnail}
+            placeholder="blur"
+            blurDataURL={`/posters/${project.thumbnail.replace(
+              /\.[\w]+$/,
+              "-blur.jpg"
+            )}`}
           />
         ) : (
           <video
-            src={formattedThumbnail}
+            ref={videoRef}
+            src={videoVisible ? formattedThumbnail : undefined}
             poster={`/posters/${project.thumbnail.replace(
-              /\.\w+$/,
+              /\.[\w]+$/,
               "-blur.jpg"
             )}`}
             className={styles.thumbnail}
@@ -67,9 +96,7 @@ export default function Project({ project, idx }: IndividualProject) {
               aspectRatio: ratio || "4:3",
               transition: "opacity 0.3s ease",
             }}
-            width={newWidth}
-            height={newHeight}
-            autoPlay
+            autoPlay={videoVisible}
             preload="metadata"
             playsInline
             muted
