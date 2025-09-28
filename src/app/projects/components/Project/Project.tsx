@@ -57,52 +57,76 @@ export default function Project({ project, idx }: IndividualProject) {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      variants={{
+        initial: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+      initial="initial"
+      whileInView="visible"
+      whileHover="hover"
+      transition={{ duration: 0.3 }}
       className={styles.projectContainer}
       style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
     >
+      <div className={styles.projectNameHover}>
+        <motion.p
+          variants={{
+            initial: { opacity: 0, y: 10 },
+            hover: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          {project.name}
+        </motion.p>
+      </div>
+
       <Link href={`/projects/${project.slug}`}>
-        {isImage ? (
-          <Image
-            src={formattedThumbnail}
-            alt={"thumbnail"}
-            width={newWidth}
-            height={newHeight}
-            priority={idx < 12}
-            loading={idx < 12 ? "eager" : "lazy"}
-            style={{
-              aspectRatio: ratio || "4:3",
-              transition: "opacity 0.3s ease",
-            }}
-            className={styles.thumbnail}
-            placeholder="blur"
-            blurDataURL={`/posters/${project.thumbnail.replace(
-              /\.[\w]+$/,
-              "-blur.jpg"
-            )}`}
-          />
-        ) : (
-          <video
-            ref={videoRef}
-            src={videoVisible ? formattedThumbnail : undefined}
-            poster={`/posters/${project.thumbnail.replace(
-              /\.[\w]+$/,
-              "-blur.jpg"
-            )}`}
-            className={styles.thumbnail}
-            style={{
-              aspectRatio: ratio || "4:3",
-              transition: "opacity 0.3s ease",
-            }}
-            autoPlay={videoVisible}
-            preload="metadata"
-            playsInline
-            muted
-            loop
-          />
-        )}
+        <motion.div
+          variants={{
+            hover: { filter: "blur(2px)" },
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          {isImage ? (
+            <Image
+              src={formattedThumbnail}
+              alt={"thumbnail"}
+              width={newWidth}
+              height={newHeight}
+              priority={idx < 12}
+              loading={idx < 12 ? "eager" : "lazy"}
+              style={{
+                aspectRatio: ratio || "4/3",
+                transition: "opacity 0.3s ease",
+              }}
+              className={styles.thumbnail}
+              placeholder="blur"
+              blurDataURL={`/posters/${project.thumbnail.replace(
+                /\.[\w]+$/,
+                "-blur.jpg"
+              )}`}
+            />
+          ) : (
+            <video
+              ref={videoRef}
+              src={videoVisible ? formattedThumbnail : undefined}
+              poster={`/posters/${project.thumbnail.replace(
+                /\.[\w]+$/,
+                "-blur.jpg"
+              )}`}
+              className={styles.thumbnail}
+              style={{
+                aspectRatio: ratio || "4/3",
+                transition: "opacity 0.3s ease",
+              }}
+              autoPlay={videoVisible}
+              preload="metadata"
+              playsInline
+              muted
+              loop
+            />
+          )}
+        </motion.div>
       </Link>
     </motion.div>
   );
