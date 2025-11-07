@@ -406,17 +406,6 @@
     ]
   },
   {
-    "name": "How To: Croissants",
-    "medium": "Digital Poster",
-    "slug": "croissants",
-    "thumbnail": "croissant.png",
-    "tag": "Infographic",
-    "year": 2022,
-    "organization": "Personal Project",
-    "rowSpan": 3,
-    "ratio": "12/3"
-  },
-  {
     "name": "Visiting Designer Talk",
     "medium": "Poster",
     "slug": "poster-designer",

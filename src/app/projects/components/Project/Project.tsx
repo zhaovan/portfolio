@@ -80,12 +80,13 @@ export default function Project({ project, idx }: IndividualProject) {
         </motion.p>
       </div>
 
-      <Link href={`/projects/${project.slug}`}>
+      <Link href={`/projects/${project.slug}`} className={styles.link}>
         <motion.div
           variants={{
-            hover: { filter: "blur(2px)" },
+            hover: { filter: "blur(3px)" },
           }}
-          transition={{ duration: 0.3 }}
+          style={{ width: "100%", height: "100%" }}
+          transition={{ duration: 0.2 }}
         >
           {isImage ? (
             <Image
@@ -97,7 +98,6 @@ export default function Project({ project, idx }: IndividualProject) {
               loading={idx < 12 ? "eager" : "lazy"}
               style={{
                 aspectRatio: ratio || "4/3",
-                transition: "opacity 0.3s ease",
               }}
               className={styles.thumbnail}
               placeholder="blur"
