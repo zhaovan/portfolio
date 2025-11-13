@@ -34,6 +34,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "og:logo": "https://ivanzhao.me/images/logo.png",
+  },
 };
 
 export default function RootLayout({
