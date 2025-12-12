@@ -59,15 +59,6 @@
   }
 }
 
-/* Apply the custom animation to the old and new page states */
-::view-transition-old(root) {
-  animation: 0.4s ease-in both move-out;
-}
-
-::view-transition-new(root) {
-  animation: 0.4s ease-in both move-in;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -79,7 +70,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s ease-out, color 0.4s ease-out;
   -ms-overflow-style: none; /* IE and Edge */
   min-height: 100vh;
   overflow-x: hidden;

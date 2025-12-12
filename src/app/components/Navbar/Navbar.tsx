@@ -20,12 +20,7 @@ export default function Navbar() {
   const [mobileNavbarOpen, setMobileNavbarOpen] = useState(false);
 
   return (
-    <motion.div
-      initial={{ y: "-10vh" }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={styles.navbarContainer}
-    >
+    <motion.div className={styles.navbarContainer}>
       <Link href="/">
         <h1 className={styles.navbarName}>zhaovan</h1>
       </Link>
