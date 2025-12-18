@@ -103,7 +103,7 @@ export default function Project({ project, idx }: IndividualProject) {
               placeholder="blur"
               blurDataURL={`/posters/${project.thumbnail.replace(
                 /\.[\w]+$/,
-                "-blur.jpg"
+                "-blur.webp"
               )}`}
             />
           ) : (
@@ -112,7 +112,7 @@ export default function Project({ project, idx }: IndividualProject) {
               src={videoVisible ? formattedThumbnail : undefined}
               poster={`/posters/${project.thumbnail.replace(
                 /\.[\w]+$/,
-                "-blur.jpg"
+                "-blur.webp"
               )}`}
               className={styles.thumbnail}
               style={{

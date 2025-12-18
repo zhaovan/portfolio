@@ -1,56 +1,7 @@
 {
-  "education": [
-    {
-      "date": "2024",
-      "organization": "Type West",
-      "title": "Type Design"
-    },
-    {
-      "date": "2022",
-      "organization": "Brown University",
-      "title": "Applied Math-Computer Science"
-    }
-  ],
-  "experiences": [
-    {
-      "organization": "Persona",
-      "title": "Design Engineer",
-      "date": "2025",
-      "endDate": "present",
-      "website": "https://withpersona.com"
-    },
-    {
-      "organization": "Freelance",
-      "title": "Designer",
-      "date": "2022",
-      "endDate": "present",
-      "website": "https://ivanzhao.me"
-    },
-    {
-      "organization": "Typeface",
-      "title": "Design Engineer",
-      "date": "2024",
-      "endDate": "2024",
-      "website": "https://typeface.ai/"
-    },
-    {
-      "organization": "Galileo AI",
-      "title": "Founding Design Engineer",
-      "date": "2023",
-      "endDate": "2024",
-      "website": "https://www.usegalileo.ai/"
-    },
-    {
-      "organization": "Reboot + Kernel",
-      "title": "Designer + Creative Director",
-      "date": "2021",
-      "endDate": "2023",
-      "website": "https://reboothq.substack.com/"
-    }
-  ],
   "exhibitions, shows, & readings": [
     {
-      "date": "forthcoming",
+      "date": "11-2025",
       "title": "Tong in Tongues",
       "organization": "Radical Characters",
       "website": "https://radicalcharacters.org/"
@@ -148,52 +99,24 @@
       "location": "Providence, RI"
     }
   ],
-  "webart": [
-    {
-      "organization": "Crawlspace",
-      "title": "at the end of the earth, i find {}",
-      "date": "04-2025",
-      "website": "https://crawlspace.cool/"
-    },
-    {
-      "organization": "The New River",
-      "title": "YOU JUST GOT LAID OFF",
-      "date": "05-2023",
-      "website": "https://thenewriver.us/youjustgotlaidoff/"
-    },
-    {
-      "organization": "Taper",
-      "title": "ten (sky)",
-      "date": "05-2023",
-      "website": "https://taper.badquar.to/10/ten_as_in_sky.html"
-    },
-
-    {
-      "organization": "thehtml.review",
-      "title": "a world of space",
-      "website": "https://aworldof.space",
-      "date": "04-2023"
-    }
-  ],
-
   "poetry": [
-    {
-      "organization": "Frozen Sea",
-      "title": "The offering",
-      "date": "forthcoming",
-      "website": "https://frozensea.org/"
-    },
-    {
-      "organization": "Michigan Quarterly Review",
-      "title": "The boy at the end of the world, features along a river",
-      "date": "forthcoming",
-      "website": "https://sites.lsa.umich.edu/mqr/"
-    },
     {
       "organization": "Ensemble Park",
       "title": "Epistolary Letters",
       "date": "forthcoming",
       "website": "https://www.ensemblepark.com/"
+    },
+    {
+      "organization": "Michigan Quarterly Review",
+      "title": "The boy at the end of the world, features along a river",
+      "date": "11-2025",
+      "website": "https://sites.lsa.umich.edu/mqr/"
+    },
+    {
+      "organization": "Frozen Sea",
+      "title": "The offering",
+      "date": "10-2025",
+      "website": "https://frozensea.org/"
     },
     {
       "organization": "Yalobusha Review",
@@ -252,13 +175,34 @@
       "date": "03-2021"
     }
   ],
-  "fellowships": [
+  "webart": [
     {
-      "date": "forthcoming",
-      "title": "Resident",
-      "organization": "Welcome to My Homepage",
-      "website": "https://www.welcometomyhomepage.net/"
+      "organization": "Crawlspace",
+      "title": "at the end of the earth, i find {}",
+      "date": "04-2025",
+      "website": "https://crawlspace.cool/"
     },
+    {
+      "organization": "The New River",
+      "title": "YOU JUST GOT LAID OFF",
+      "date": "05-2023",
+      "website": "https://thenewriver.us/youjustgotlaidoff/"
+    },
+    {
+      "organization": "Taper",
+      "title": "ten (sky)",
+      "date": "05-2023",
+      "website": "https://taper.badquar.to/10/ten_as_in_sky.html"
+    },
+
+    {
+      "organization": "thehtml.review",
+      "title": "a world of space",
+      "website": "https://aworldof.space",
+      "date": "04-2023"
+    }
+  ],
+  "fellowships": [
     {
       "date": "01-2025",
       "title": "Mentorship Program",
@@ -295,6 +239,38 @@
       "title": "Fellow",
       "organization": "IDEO Colab",
       "website": "https://ideocolab.com/"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "06-2025",
+      "title": "Art on Computers",
+      "organization": "MutualArt",
+      "website": "https://www.mutualart.com/Article/Art-on-Computers--Emerging-Tech-and-The-/5E2DFCD7FFA568E8"
+    },
+    {
+      "date": "05-2025",
+      "title": "Inside 'Small Batch'",
+      "organization": "Phone Time",
+      "website": "https://www.phonetime.news/p/inside-small-batch-a-farmers-market"
+    },
+    {
+      "date": "06-2023",
+      "title": "Naive Weekly",
+      "organization": "Kristoffer Tjalve",
+      "website": "https://www.naiveweekly.com/p/syros"
+    },
+    {
+      "date": "06-2022",
+      "title": "Pride in STEM",
+      "organization": "IEEE Computing Society",
+      "website": "https://www.computer.org/publications/tech-news/build-your-career/pride-in-stem-ivan-zhao"
+    },
+    {
+      "date": "04-2022",
+      "title": "Guest",
+      "organization": "DRF Office Hours",
+      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
     }
   ],
   "awards": [
@@ -338,39 +314,14 @@
       "website": "https://fission.codes/blog/causal-islands-la-community-edition/"
     }
   ],
-  "appearances": [
+
+  "retreats & residencies": [
     {
-      "date": "06-2025",
-      "title": "Art on Computers",
-      "organization": "MutualArt",
-      "website": "https://www.mutualart.com/Article/Art-on-Computers--Emerging-Tech-and-The-/5E2DFCD7FFA568E8"
+      "date": "11-2025",
+      "title": "Resident",
+      "organization": "Welcome to My Homepage",
+      "website": "https://www.welcometomyhomepage.net/"
     },
-    {
-      "date": "05-2025",
-      "title": "Inside 'Small Batch'",
-      "organization": "Phone Time",
-      "website": "https://www.phonetime.news/p/inside-small-batch-a-farmers-market"
-    },
-    {
-      "date": "06-2023",
-      "title": "Naive Weekly",
-      "organization": "Kristoffer Tjalve",
-      "website": "https://www.naiveweekly.com/p/syros"
-    },
-    {
-      "date": "06-2022",
-      "title": "Pride in STEM",
-      "organization": "IEEE Computing Society",
-      "website": "https://www.computer.org/publications/tech-news/build-your-career/pride-in-stem-ivan-zhao"
-    },
-    {
-      "date": "04-2022",
-      "title": "Guest",
-      "organization": "DRF Office Hours",
-      "website": "https://open.spotify.com/episode/0vfu3wX4tv4nXPGybauKbT?si=b136ca50f0094323"
-    }
-  ],
-  "retreats": [
     {
       "date": "07-2025",
       "title": "Poetry",
@@ -402,6 +353,56 @@
       "title": "Venturing Toward Progress",
       "website": "https://joinreboot.org/p/venture",
       "date": "06-2021"
+    }
+  ],
+
+  "experiences": [
+    {
+      "organization": "Persona",
+      "title": "Design Engineer",
+      "date": "2025",
+      "endDate": "present",
+      "website": "https://withpersona.com"
+    },
+    {
+      "organization": "Freelance",
+      "title": "Designer",
+      "date": "2022",
+      "endDate": "present",
+      "website": "https://ivanzhao.me"
+    },
+    {
+      "organization": "Typeface",
+      "title": "Design Engineer",
+      "date": "2024",
+      "endDate": "2024",
+      "website": "https://typeface.ai/"
+    },
+    {
+      "organization": "Galileo AI",
+      "title": "Founding Design Engineer",
+      "date": "2023",
+      "endDate": "2024",
+      "website": "https://www.usegalileo.ai/"
+    },
+    {
+      "organization": "Reboot + Kernel",
+      "title": "Designer + Creative Director",
+      "date": "2021",
+      "endDate": "2023",
+      "website": "https://reboothq.substack.com/"
+    }
+  ],
+  "education": [
+    {
+      "date": "2024",
+      "organization": "Type West",
+      "title": "Type Design"
+    },
+    {
+      "date": "2022",
+      "organization": "Brown University",
+      "title": "Applied Math-Computer Science"
     }
   ],
   "research": [
