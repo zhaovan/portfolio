@@ -47,7 +47,7 @@ export default function AboutClient() {
       <div className={styles.container} data-scroll-section>
         <div className={styles.titleContainer}>
           <Heading className={styles.title}>
-            Ivan Zhao is a designer, programmer, & text artist with a love of
+            Ivan Zhao is a designer, programmer, & letters artist with a love of
             animations, comics, games, & type.
           </Heading>
         </div>
