@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ReactLenis } from "lenis/react";
 
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -47,9 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ReactLenis root>
-          <ThemeProvider>{children}</ThemeProvider>
-        </ReactLenis>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
