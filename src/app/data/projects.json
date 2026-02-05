@@ -1,5 +1,22 @@
 [
   {
+    "name": "Hand Gestures",
+    "medium": "Physical Activation",
+    "slug": "hand-experiment",
+    "thumbnail": "hand-experiment.webm",
+    "tag": "activation",
+    "year": 2026,
+    "organization": "Persona",
+    "colSpan": 1,
+    "rowSpan": 2,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://editor.p5js.org/zhaovan/full/hWW4GK4GH"
+      }
+    ]
+  },
+  {
     "name": "THE INFINITE ALMANAC",
     "medium": "Interactive Website",
     "slug": "the-infinite-almanac",
@@ -23,7 +40,7 @@
     "thumbnail": "particle-sphere.webm",
     "tag": "website",
     "year": 2025,
-    "organization": "Personal Project",
+    "organization": "Persona",
     "colSpan": 1,
     "rowSpan": 2,
     "links": [
