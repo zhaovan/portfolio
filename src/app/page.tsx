@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Marquee from "./components/Marquee/Marquee";
 import Symbol from "./components/Symbol/Symbol";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Loader from "./components/Loader/Loader";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";

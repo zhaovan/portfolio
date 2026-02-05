@@ -1,5 +1,40 @@
 [
   {
+    "name": "THE INFINITE ALMANAC",
+    "medium": "Interactive Website",
+    "slug": "the-infinite-almanac",
+    "thumbnail": "the-infinite-almanac.webm",
+    "tag": "website",
+    "year": 2025,
+    "organization": "Personal Project",
+    "colSpan": 1,
+    "rowSpan": 2,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://particle-sphere-tawny.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "Particle Sphere Tool",
+    "medium": "Digital Tool",
+    "slug": "particle-sphere",
+    "thumbnail": "particle-sphere.webm",
+    "tag": "website",
+    "year": 2025,
+    "organization": "Personal Project",
+    "colSpan": 1,
+    "rowSpan": 2,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://www.infinitealmanac.com/"
+      }
+    ]
+  },
+
+  {
     "name": "A Little Game of Forms",
     "medium": "Interactive Website",
     "slug": "a-little-game-of-forms",
@@ -7,7 +42,7 @@
     "tag": "website",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 2,
+    "colSpan": 3,
     "rowSpan": 2,
     "links": [
       {
@@ -63,7 +98,7 @@
     "year": 2025,
     "organization": "Personal Project",
     "colSpan": 2,
-    "rowSpan": 2,
+    "rowSpan": 3,
     "links": [
       {
         "name": "Website",
@@ -79,8 +114,8 @@
     "tag": "website",
     "year": 2025,
     "organization": "Personal Project",
-    "rowSpan": 2,
-    "colSpan": 2,
+    "rowSpan": 1,
+    "colSpan": 1,
     "links": [
       {
         "name": "Website",
@@ -130,8 +165,8 @@
     "medium": "Letterpress Card",
     "thumbnail": "say.jpg",
     "tag": "card",
-    "rowSpan": 2,
-    "colSpan": 2,
+    "rowSpan": 1,
+    "colSpan": 1,
     "year": 2025,
     "organization": "Personal Project"
   },
@@ -502,7 +537,7 @@
     "thumbnail": "qa.mp4",
     "organization": "Personal Project",
     "colSpan": 2,
-    "rowSpan": 2,
+    "rowSpan": 1,
     "links": [
       { "name": "Website", "website": "https://www.questionsandanswers.app/" }
     ]
