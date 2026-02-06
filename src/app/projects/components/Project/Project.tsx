@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import styles from "./index.module.css";
 import { ProjectProps } from "@/app/projects/page";
 import Link from "next/link";
 import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
 import { motion } from "framer-motion";
+import { useVideoVisibility } from "@/app/hooks/useVideoVisibility";
 
 interface IndividualProject {
   project: ProjectProps;
@@ -32,31 +33,10 @@ export default function Project({ project, idx }: IndividualProject) {
     ? calculateImageSize(ratio)
     : { newWidth: 400, newHeight: 300 };
 
-  // Intersection Observer for video lazy loading
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [videoVisible, setVideoVisible] = useState(idx < 6); // eager load first 6
-
-  useEffect(() => {
-    if (isImage || videoVisible) return;
-    const observer = new window.IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVideoVisible(true);
-            observer.disconnect();
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px", // Start loading when video is 50px away from viewport
-      },
-    );
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-    return () => observer.disconnect();
-  }, [isImage, videoVisible]);
+  // Use shared Intersection Observer for video lazy loading
+  const { elementRef: videoRef, isVisible: videoVisible } = useVideoVisibility(
+    idx < 6,
+  );
 
   return (
     <motion.div
@@ -121,7 +101,7 @@ export default function Project({ project, idx }: IndividualProject) {
                 transition: "opacity 0.3s ease",
               }}
               autoPlay={videoVisible}
-              preload="metadata"
+              preload="none"
               playsInline
               muted
               loop
