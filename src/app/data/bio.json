@@ -108,7 +108,7 @@
     },
     {
       "organization": "Michigan Quarterly Review",
-      "title": "The boy at the end of the world, features along a river",
+      "title": "The boy at the end of the world",
       "date": "11-2025",
       "website": "https://sites.lsa.umich.edu/mqr/"
     },
@@ -177,6 +177,12 @@
   ],
   "webart": [
     {
+      "organization": "New Delta Review",
+      "title": "A Little Game of Forms",
+      "date": "02-2026",
+      "website": "https://ndrmag.org/"
+    },
+    {
       "organization": "Crawlspace",
       "title": "at the end of the earth, i find {}",
       "date": "04-2025",
@@ -241,6 +247,26 @@
       "website": "https://ideocolab.com/"
     }
   ],
+  "crits, teaching, & workshops": [
+    {
+      "date": "04-2026",
+      "title": "Digital Decay And Afterlives",
+      "organization": "SFPC",
+      "website": "https://sfpc.study/sessions/spring-26/digital-decay"
+    },
+    {
+      "date": "11-2025",
+      "title": "Kinetic Type",
+      "organization": "tiat",
+      "website": "https://luma.com/rq7gufiw"
+    },
+    {
+      "date": "06-2025",
+      "title": "Lettering for Type Lovers - Guest Crit",
+      "organization": "SVA",
+      "website": "https://sva.edu/"
+    }
+  ],
   "appearances": [
     {
       "date": "06-2025",
@@ -274,6 +300,12 @@
     }
   ],
   "awards": [
+    {
+      "date": "01-2026",
+      "title": "Experimental Forms Finalist",
+      "organization": "Black Warrior Review",
+      "website": "https://bwr.ua.edu/"
+    },
     {
       "date": "06-2024",
       "title": "Galway Kinnell Scholarship",

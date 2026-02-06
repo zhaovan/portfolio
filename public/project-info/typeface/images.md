@@ -1,6 +1,6 @@
-<video src="/project-info/typeface/images/product.mov" autoplay muted loop></video>
+<video src="/project-info/typeface/images/product.mov" autoplay muted loop playsInline></video>
 
-<video src="/project-info/typeface/images/loading.mov" autoplay muted loop></video>
+<video src="/project-info/typeface/images/loading.mov" autoplay muted loop playsInline></video>
 
 <div class="columns">
 <div>

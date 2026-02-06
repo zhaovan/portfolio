@@ -19,6 +19,9 @@ type BioItem = {
   endDate?: string;
 };
 
+const TITLE =
+  "Ivan Zhao is a designer and programmer at Persona working on websites, installations, and interactive experiences.";
+
 export default function AboutClient() {
   const bio = aboutData as Record<string, BioItem[]>;
   const [aboutText, setAboutText] = useState<string>("");
@@ -46,10 +49,7 @@ export default function AboutClient() {
       </Head>
       <div className={styles.container} data-scroll-section>
         <div className={styles.titleContainer}>
-          <Heading className={styles.title}>
-            Ivan Zhao is a designer, programmer, & letters artist with a love of
-            animations, comics, games, & type.
-          </Heading>
+          <Heading className={styles.title}>{TITLE}</Heading>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,10 +58,7 @@ export default function AboutClient() {
           transition={{ delay: 0.375, duration: 0.5, ease: "easeOut" }}
           className={styles.mobileTitleContainer}
         >
-          <h1 className={styles.mobileTitle}>
-            Ivan Zhao is a designer, programmer, & text artist with a love of
-            animations, comics, games, & type.
-          </h1>
+          <h1 className={styles.mobileTitle}>{TITLE}</h1>
         </motion.div>
 
         <div className={styles.imageTextContainer}>

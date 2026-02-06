@@ -41,12 +41,12 @@
 .headerImage {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 .additionalImages * {
   width: 100%;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 .additionalImages {
@@ -93,7 +93,7 @@
 
 .mobileAdditionalImages * {
   width: 100%;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 .backButton {
@@ -121,5 +121,12 @@
 
   .title {
     padding-top: 0;
+  }
+
+  .container {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }

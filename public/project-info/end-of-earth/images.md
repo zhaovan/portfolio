@@ -10,12 +10,12 @@
 <img src="/project-info/end-of-earth/images/9.png">
 <div>
 
-<video src="/project-info/end-of-earth/images/1.mp4" autoplay muted loop />
+<video src="/project-info/end-of-earth/images/1.mp4" autoplay muted loop playsInline />
 
 </div>
 
 <div>
-<video src="/project-info/end-of-earth/images/2.mp4" autoplay muted loop />
+<video src="/project-info/end-of-earth/images/2.mp4" autoplay muted loop playsInline />
 </div>
 
 </div>

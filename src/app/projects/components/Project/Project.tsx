@@ -26,7 +26,7 @@ export default function Project({ project, idx }: IndividualProject) {
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
   const ratio = project?.ratio;
   const rowSpan = project.rowSpan ?? 1;
-  const colSpan = project?.ratio === "2/3" ? 2 : project.colSpan ?? 1;
+  const colSpan = project?.ratio === "2/3" ? 2 : (project.colSpan ?? 1);
 
   const { newWidth, newHeight } = ratio
     ? calculateImageSize(ratio)
@@ -34,7 +34,7 @@ export default function Project({ project, idx }: IndividualProject) {
 
   // Intersection Observer for video lazy loading
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [videoVisible, setVideoVisible] = useState(false); // eager load first 12
+  const [videoVisible, setVideoVisible] = useState(idx < 6); // eager load first 6
 
   useEffect(() => {
     if (isImage || videoVisible) return;
@@ -47,7 +47,10 @@ export default function Project({ project, idx }: IndividualProject) {
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.1,
+        rootMargin: "50px", // Start loading when video is 50px away from viewport
+      },
     );
     if (videoRef.current) {
       observer.observe(videoRef.current);
@@ -69,23 +72,21 @@ export default function Project({ project, idx }: IndividualProject) {
       style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
     >
       <div className={styles.projectNameHover}>
-        <motion.p
+        <motion.div
           variants={{
             initial: { opacity: 0, y: 10 },
             hover: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.3 }}
         >
-          {project.name}
-        </motion.p>
+          <p>{project.name}</p>
+          <p style={{ textTransform: "capitalize" }}>[{project.tag}]</p>
+        </motion.div>
       </div>
 
       <Link href={`/projects/${project.slug}`} className={styles.link}>
         <motion.div
-          variants={{
-            hover: { filter: "blur(3px)" },
-          }}
-          style={{ width: "100%", height: "100%" }}
+          className={styles.thumbnailContainer}
           transition={{ duration: 0.2 }}
         >
           {isImage ? (
@@ -94,8 +95,8 @@ export default function Project({ project, idx }: IndividualProject) {
               alt={"thumbnail"}
               width={newWidth}
               height={newHeight}
-              priority={idx < 12}
-              loading={idx < 12 ? "eager" : "lazy"}
+              priority={idx < 6}
+              loading={idx < 6 ? "eager" : "lazy"}
               style={{
                 aspectRatio: ratio || "4/3",
               }}
@@ -103,7 +104,7 @@ export default function Project({ project, idx }: IndividualProject) {
               placeholder="blur"
               blurDataURL={`/posters/${project.thumbnail.replace(
                 /\.[\w]+$/,
-                "-blur.webp"
+                "-blur.webp",
               )}`}
             />
           ) : (
@@ -112,7 +113,7 @@ export default function Project({ project, idx }: IndividualProject) {
               src={videoVisible ? formattedThumbnail : undefined}
               poster={`/posters/${project.thumbnail.replace(
                 /\.[\w]+$/,
-                "-blur.webp"
+                "-blur.webp",
               )}`}
               className={styles.thumbnail}
               style={{

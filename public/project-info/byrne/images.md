@@ -1,5 +1,5 @@
-<video src="/project-info/byrne/images/promo.mov" autoplay muted loop> </video>
-<video src="/project-info/byrne/images/p5.mov" autoplay muted loop> </video>
+<video src="/project-info/byrne/images/promo.mov" autoplay muted loop playsInline> </video>
+<video src="/project-info/byrne/images/p5.mov" autoplay muted loop playsInline> </video>
 
 <img src="/project-info/byrne/images/0.png">
 <img src="/project-info/byrne/images/1.png">

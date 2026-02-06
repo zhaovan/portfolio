@@ -1,5 +1,5 @@
 <div>
-<video src="/project-info/reboot-merch/images/website.mov" autoplay muted loop></video>
+<video src="/project-info/reboot-merch/images/website.mov" autoplay muted loop playsInline></video>
 </div>
 
 <img src="/project-info/reboot-merch/images/sketch.png" >

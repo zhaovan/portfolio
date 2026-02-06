@@ -1,4 +1,4 @@
-<video src="/project-info/kernel/images/clouds.mov" autoplay loop muted ></video>
+<video src="/project-info/kernel/images/clouds.mov" autoplay loop muted playsInline></video>
 
 <img src="/project-info/kernel/images/exploration2.png">
 <div class="columns">

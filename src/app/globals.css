@@ -70,7 +70,9 @@ body::-webkit-scrollbar {
 }
 
 body {
-  transition: background-color 0.4s ease-out, color 0.4s ease-out;
+  transition:
+    background-color 0.4s ease-out,
+    color 0.4s ease-out;
   -ms-overflow-style: none; /* IE and Edge */
   min-height: 100vh;
   overflow-x: hidden;
@@ -86,7 +88,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 html,
@@ -237,21 +239,19 @@ button {
   gap: 1rem;
 }
 
-.columns > div > * {
-  border-radius: 8px;
-}
-
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: Tiempos;
-  letter-spacing: 1px;
+  letter-spacing: -0.2px;
   font-feature-settings: "liga";
 }
 
 body,
+button,
 p {
   font-family: VG;
 }

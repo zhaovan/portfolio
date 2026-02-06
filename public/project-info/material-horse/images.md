@@ -1,7 +1,7 @@
 <img src="/project-info/material-horse/images/title.png">
 
 <div>
-<video src="/project-info/material-horse/images/1.mov" autoplay muted loop />
+<video src="/project-info/material-horse/images/1.mov" autoplay muted loop playsInline />
 </div>
 <img src="/project-info/material-horse/images/exhibit_1.png" >
 <div class="columns">

@@ -4,7 +4,7 @@ const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -13,14 +13,14 @@ const wordVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.03,
+      staggerChildren: 0.05,
     },
   },
 };
 
 const charVariants = {
-  hidden: { opacity: 0, y: "0.25em" },
-  show: { opacity: 1, y: "0em" },
+  hidden: { opacity: 0, y: "-0.25em" },
+  show: { opacity: 1, y: 0 },
 };
 
 // known ligatures — you can extend this list

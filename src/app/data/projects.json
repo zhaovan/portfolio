@@ -1,10 +1,40 @@
 [
   {
+    "name": "Persona Design System Site",
+    "medium": "Website",
+    "slug": "pds-site",
+    "thumbnail": "pds-site.mp4",
+    "tag": "website",
+    "year": 2026,
+    "organization": "Persona",
+    "colSpan": 1,
+    "rowSpan": 2,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://design.withpersona.com/"
+      }
+    ]
+  },
+
+  {
+    "name": "Typeface",
+    "medium": "Marketing Website",
+    "slug": "typeface",
+    "thumbnail": "typeface.mp4",
+    "tag": "marketing website",
+    "rowSpan": 2,
+    "colSpan": 1,
+    "year": 2024,
+    "organization": "Typeface",
+    "links": [{ "name": "Website", "website": "https://typeface.ai/" }]
+  },
+  {
     "name": "Hand Gestures",
-    "medium": "Physical Activation",
+    "medium": "Physical Installation",
     "slug": "hand-experiment",
     "thumbnail": "hand-experiment.webm",
-    "tag": "activation",
+    "tag": "installation",
     "year": 2026,
     "organization": "Persona",
     "colSpan": 1,
@@ -21,7 +51,7 @@
     "medium": "Interactive Website",
     "slug": "the-infinite-almanac",
     "thumbnail": "the-infinite-almanac.webm",
-    "tag": "website",
+    "tag": "webart",
     "year": 2025,
     "organization": "Personal Project",
     "colSpan": 1,
@@ -38,10 +68,10 @@
     "medium": "Digital Tool",
     "slug": "particle-sphere",
     "thumbnail": "particle-sphere.webm",
-    "tag": "website",
+    "tag": "tool",
     "year": 2025,
     "organization": "Persona",
-    "colSpan": 1,
+    "colSpan": 2,
     "rowSpan": 2,
     "links": [
       {
@@ -56,10 +86,10 @@
     "medium": "Interactive Website",
     "slug": "a-little-game-of-forms",
     "thumbnail": "forms.mp4",
-    "tag": "website",
+    "tag": "webart",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 3,
+    "colSpan": 2,
     "rowSpan": 2,
     "links": [
       {
@@ -107,15 +137,26 @@
     ]
   },
   {
+    "name": "Listen to the flowers breathe along the riverside",
+    "medium": "Animation",
+    "slug": "river",
+    "thumbnail": "river.mp4",
+    "tag": "animation",
+    "year": 2025,
+    "organization": "Personal Project",
+    "colSpan": 3,
+    "rowSpan": 1
+  },
+  {
     "name": "Clock Sketch",
     "medium": "Animation",
     "slug": "clock-sketch",
     "thumbnail": "clock.mp4",
-    "tag": "website",
+    "tag": "animation",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 2,
-    "rowSpan": 3,
+    "colSpan": 1,
+    "rowSpan": 1,
     "links": [
       {
         "name": "Website",
@@ -153,8 +194,8 @@
     "thumbnail": "wildbeast.mp4",
     "tag": "poster",
     "year": 2025,
-    "rowSpan": 2,
-    "colSpan": 2,
+    "rowSpan": 1,
+    "colSpan": 1,
     "organization": "Personal Project"
   },
   {
@@ -163,13 +204,15 @@
     "medium": "Letterpress Broadside",
     "thumbnail": "scherezade.jpg",
     "tag": "poster",
+    "rowSpan": 1,
+    "colSpan": 1,
     "year": 2025,
     "organization": "Personal Project"
   },
   {
     "name": "Dickinson Card Set",
     "slug": "letterpress-cardset",
-    "medium": "Lettperess Card, Sheet, Envelope",
+    "medium": "Letterpress Card, Sheet, Envelope",
     "thumbnail": "Hope.jpg",
     "tag": "poster",
     "year": 2025,
@@ -188,18 +231,6 @@
     "organization": "Personal Project"
   },
 
-  {
-    "name": "Typeface",
-    "medium": "Marketing Website",
-    "slug": "typeface",
-    "thumbnail": "typeface.mp4",
-    "tag": "marketing website",
-    "rowSpan": 2,
-    "colSpan": 2,
-    "year": 2024,
-    "organization": "Typeface",
-    "links": [{ "name": "Website", "website": "https://typeface.ai/" }]
-  },
   {
     "name": "The Type Fella",
     "medium": "Shopify Website",
@@ -235,7 +266,7 @@
     "slug": "galileo",
     "thumbnail": "galileo.mp4",
     "medium": "Product",
-    "tag": "Job",
+    "tag": "product, website",
     "year": 2023,
     "colSpan": 2,
     "rowSpan": 2,
@@ -443,7 +474,7 @@
     "medium": "Website",
     "slug": "watcher",
     "thumbnail": "watcher.png",
-    "tag": "App Development",
+    "tag": "Personal tool",
     "year": 2021,
     "organization": "Personal Project",
     "links": [
@@ -513,7 +544,7 @@
     "medium": "DL model",
     "slug": "omr",
     "thumbnail": "omr.png",
-    "tag": "Old Project",
+    "tag": "Class Project",
     "year": 2020,
     "colSpan": 2,
     "rowSpan": 2,
@@ -524,7 +555,7 @@
     "medium": "AI Model",
     "slug": "rhyme-time",
     "thumbnail": "rhymetime.png",
-    "tag": "Old Project",
+    "tag": "Class Project",
     "year": 2020,
     "organization": "Personal Project"
   },

@@ -48,7 +48,7 @@ export default function Navbar() {
         className={styles.mobileNavbar}
         onClick={() => setMobileNavbarOpen(true)}
       >
-        <ListIcon size={24} />
+        MENU
       </button>
       <AnimatePresence>
         {mobileNavbarOpen && (
