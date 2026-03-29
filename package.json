@@ -21,7 +21,7 @@
     "markdown-loader": "^8.0.0",
     "marked": "^12.0.0",
     "next": "^15.5.7",
-    "next-mdx-remote": "^4.4.1",
+    "next-mdx-remote": "^6.0.0",
     "next-themes": "^0.3.0",
     "raw-loader": "^4.0.2",
     "react": "^18",
