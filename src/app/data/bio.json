@@ -1,6 +1,24 @@
 {
   "exhibitions, shows, & readings": [
     {
+      "date": "forthcoming",
+      "organization": "Kitchen Table",
+      "title": "Poetry Reading",
+      "website": "https://www.instagram.com/kitchentable.sf/"
+    },
+    {
+      "date": "04-2026",
+      "title": "Browser History",
+      "organization": "The Museum of Human Achievement",
+      "website": "https://moha.wiki/Browser_History"
+    },
+    {
+      "date": "03-2026",
+      "title": "time.place",
+      "organization": "tiat",
+      "website": "https://www.tiat.place/exhibitions/time-place"
+    },
+    {
       "date": "11-2025",
       "title": "Tong in Tongues",
       "organization": "Radical Characters",
@@ -321,6 +339,12 @@
     }
   ],
   "talks": [
+    {
+      "date": "04-2026",
+      "title": "Browser History - Artist Talks",
+      "organization": "The Museum of Human Achievement",
+      "website": "https://moha.wiki/Browser_History_Virtual_Artist_Talks"
+    },
     {
       "date": "08-2024",
       "organization": "!!con",
