@@ -20,7 +20,7 @@ type BioItem = {
 };
 
 const TITLE =
-  "Ivan Zhao is a designer and programmer at Persona working on websites, installations, and interactive experiences.";
+  "Ivan Zhao is a designer, writer, and words artist with a passion for typography, games, animation, and print";
 
 export default function AboutClient() {
   const bio = aboutData as Record<string, BioItem[]>;

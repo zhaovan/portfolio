@@ -25,13 +25,11 @@ function calculateImageSize(ratio: string) {
 export default function Project({ project, idx }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
-  const ratio = project?.ratio;
+  const ratio = project?.ratio || "4/3";
   const rowSpan = project.rowSpan ?? 1;
-  const colSpan = project?.ratio === "2/3" ? 2 : (project.colSpan ?? 1);
+  const colSpan = project.colSpan ?? 1;
 
-  const { newWidth, newHeight } = ratio
-    ? calculateImageSize(ratio)
-    : { newWidth: 400, newHeight: 300 };
+  const { newWidth, newHeight } = calculateImageSize(ratio);
 
   // Use shared Intersection Observer for video lazy loading
   const { elementRef: videoRef, isVisible: videoVisible } = useVideoVisibility(
@@ -49,7 +47,7 @@ export default function Project({ project, idx }: IndividualProject) {
       whileHover="hover"
       transition={{ duration: 0.3 }}
       className={styles.projectContainer}
-      style={{ gridRow: `span ${colSpan}`, gridColumn: `span ${rowSpan}` }}
+      style={{ gridRow: `span ${rowSpan}`, gridColumn: `span ${colSpan}` }}
     >
       <div className={styles.projectNameHover}>
         <motion.div
@@ -60,7 +58,6 @@ export default function Project({ project, idx }: IndividualProject) {
           transition={{ duration: 0.3 }}
         >
           <p>{project.name}</p>
-          <p style={{ textTransform: "capitalize" }}>[{project.tag}]</p>
         </motion.div>
       </div>
 
@@ -78,7 +75,9 @@ export default function Project({ project, idx }: IndividualProject) {
               priority={idx < 6}
               loading={idx < 6 ? "eager" : "lazy"}
               style={{
-                aspectRatio: ratio || "4/3",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
               className={styles.thumbnail}
               placeholder="blur"
@@ -97,8 +96,9 @@ export default function Project({ project, idx }: IndividualProject) {
               )}`}
               className={styles.thumbnail}
               style={{
-                aspectRatio: ratio || "4/3",
-                transition: "opacity 0.3s ease",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
               autoPlay={videoVisible}
               preload="none"

@@ -1,5 +1,16 @@
 [
   {
+    "name": "Redacted Typeface",
+    "medium": "Typography",
+    "slug": "redacted-typeface",
+    "thumbnail": "redacted-typeface.mp4",
+    "tag": "typography",
+    "year": 2026,
+    "organization": "Persona",
+    "colSpan": 2,
+    "rowSpan": 1
+  },
+  {
     "name": "Persona Design System Site",
     "medium": "Website",
     "slug": "pds-site",
@@ -7,8 +18,8 @@
     "tag": "website",
     "year": 2026,
     "organization": "Persona",
-    "colSpan": 1,
-    "rowSpan": 2,
+    "colSpan": 2,
+    "rowSpan": 1,
     "links": [
       {
         "name": "Website",
@@ -23,8 +34,8 @@
     "slug": "typeface",
     "thumbnail": "typeface.mp4",
     "tag": "marketing website",
-    "rowSpan": 2,
-    "colSpan": 1,
+    "rowSpan": 1,
+    "colSpan": 2,
     "year": 2024,
     "organization": "Typeface",
     "links": [{ "name": "Website", "website": "https://typeface.ai/" }]
@@ -37,8 +48,8 @@
     "tag": "installation",
     "year": 2026,
     "organization": "Persona",
-    "colSpan": 1,
-    "rowSpan": 2,
+    "colSpan": 2,
+    "rowSpan": 1,
     "links": [
       {
         "name": "Website",
@@ -54,8 +65,8 @@
     "tag": "webart",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 1,
-    "rowSpan": 2,
+    "colSpan": 2,
+    "rowSpan": 1,
     "links": [
       {
         "name": "Website",
@@ -144,8 +155,8 @@
     "tag": "animation",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 3,
-    "rowSpan": 1
+    "colSpan": 1,
+    "rowSpan": 3
   },
   {
     "name": "Clock Sketch",
@@ -435,8 +446,8 @@
     "thumbnail": "mod.png",
     "tag": "typeface",
     "year": 2023,
-    "rowSpan": 2,
-    "colSpan": 2,
+    "rowSpan": 1,
+    "colSpan": 1,
     "organization": "Type West"
   },
 
@@ -458,7 +469,8 @@
     "tag": "Infographic",
     "year": 2022,
     "organization": "Personal Project",
-    "ratio": "2/3"
+    "colSpan": 2,
+    "rowSpan": 3
   },
   {
     "name": "Holotable",
@@ -496,7 +508,8 @@
     "tag": "Poster",
     "year": 2022,
     "organization": "RISD Graphic Design",
-    "ratio": "2/3"
+    "colSpan": 2,
+    "rowSpan": 3
   },
   {
     "name": "Tea Time",
@@ -521,8 +534,10 @@
     "tag": "Data Visualization",
     "medium": "Digital Poster",
     "year": 2022,
-    "organization": "Personal Project",
-    "ratio": "2/3"
+    "colSpan": 2,
+    "rowSpan": 3,
+
+    "organization": "Personal Project"
   },
   {
     "name": "Tarrey Town",

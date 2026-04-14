@@ -4,27 +4,22 @@
 
 .projectContainer {
   display: grid;
-
-  grid-template-columns: repeat(6, minmax(0px, 1fr));
-  /* gap: 0.125rem; */
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
   gap: 1rem;
   padding-bottom: 4rem;
 }
 
-.projectContainer > a {
-  /* transition: filter 0.25s ease-in-out; */
-  opacity: 1;
-}
-
 @media (max-width: 768px) {
   .projectContainer {
-    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .projectContainer {
     padding-top: 1rem;
-    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
