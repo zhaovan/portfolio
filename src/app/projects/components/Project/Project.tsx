@@ -12,24 +12,14 @@ interface IndividualProject {
   idx: number;
 }
 
-const BASE_IMAGE_SIZE = 100;
-
-function calculateImageSize(ratio: string) {
-  const [width, height] = ratio.split("/").map(Number);
-  return {
-    newWidth: width * BASE_IMAGE_SIZE,
-    newHeight: height * BASE_IMAGE_SIZE,
-  };
-}
+const BASE_IMAGE_SIZE = 400;
 
 export default function Project({ project, idx }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
-  const ratio = project?.ratio || "4/3";
+
   const rowSpan = project.rowSpan ?? 1;
   const colSpan = project.colSpan ?? 1;
-
-  const { newWidth, newHeight } = calculateImageSize(ratio);
 
   // Use shared Intersection Observer for video lazy loading
   const { elementRef: videoRef, isVisible: videoVisible } = useVideoVisibility(
@@ -70,8 +60,8 @@ export default function Project({ project, idx }: IndividualProject) {
             <Image
               src={formattedThumbnail}
               alt={"thumbnail"}
-              width={newWidth}
-              height={newHeight}
+              width={BASE_IMAGE_SIZE}
+              height={BASE_IMAGE_SIZE}
               priority={idx < 6}
               loading={idx < 6 ? "eager" : "lazy"}
               style={{

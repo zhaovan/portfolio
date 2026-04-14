@@ -13,7 +13,7 @@ import SectionHeader from "./components/SectionHeader/SectionHeader";
 import { useParams } from "next/navigation";
 import Heading from "@/app/components/Heading/Heading";
 import { motion } from "framer-motion";
-import { ArrowLeftIcon } from "@phosphor-icons/react";
+
 import Head from "next/head";
 
 export default function PageContent() {
@@ -75,10 +75,6 @@ export default function PageContent() {
               width={1600}
               height={1200}
               priority
-              style={{
-                objectFit: project.ratio ? "scale-down" : undefined,
-                height: project.ratio ? "fit-content" : "",
-              }}
               className={styles.headerImage}
               alt={`thumbnail image for ${project.name}`}
             />

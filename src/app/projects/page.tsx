@@ -10,7 +10,6 @@ export type ProjectProps = {
   name: string;
   slug: string;
   thumbnail: string;
-  ratio?: string;
   tag: string;
   year: number;
   medium?: string;
@@ -36,7 +35,7 @@ export default function Projects() {
       <div className={styles.container} data-scroll-section>
         <div className={styles.projectContainer}>
           {allProjects
-            // .sort((projectA, projectB) => projectB.year - projectA.year)
+            .sort((projectA, projectB) => projectB.year - projectA.year)
             .map((project, idx) => {
               return <Project key={idx} idx={idx} project={project} />;
             })}
