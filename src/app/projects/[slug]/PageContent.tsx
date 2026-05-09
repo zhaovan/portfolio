@@ -13,6 +13,7 @@ import SectionHeader from "./components/SectionHeader/SectionHeader";
 import { useParams } from "next/navigation";
 import Heading from "@/app/components/Heading/Heading";
 import { motion } from "framer-motion";
+import matter from "gray-matter";
 
 import Head from "next/head";
 
@@ -21,6 +22,7 @@ export default function PageContent() {
 
   const project = projects.find((project) => project.slug === slug)!;
   const [mdx, setMdx] = useState<any>("");
+  const [metadata, setMetadata] = useState<any>(null);
 
   const [imageMdx, setImageMdx] = useState<any>("");
 
@@ -31,8 +33,10 @@ export default function PageContent() {
         if (!response.ok) {
           throw new Error(`Failed to fetch index.md: ${response.statusText}`);
         }
-        const data = await response.text();
-        setMdx(data);
+        const rawData = await response.text();
+        const { data, content } = matter(rawData);
+        setMetadata(data);
+        setMdx(content);
       } catch (error) {
         console.error("Error fetching the post:", error);
       }
@@ -56,92 +60,181 @@ export default function PageContent() {
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
 
+  const isHorizontal = metadata?.layout === "horizontal";
+
   return (
     <Layout>
       <Head>
         <title>{`Ivan Zhao | ${project.name}`}</title>
       </Head>
-      <div className={styles.container}>
-        <Heading className={styles.title}>{project.name}</Heading>
+      {isHorizontal ? (
+        <div className={styles.horizontalContainer}>
+          <Heading className={styles.title}>{project.name}</Heading>
 
-        <motion.div
-          initial={{ opacity: 0, y: "50px" }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
-        >
-          {isImage ? (
-            <Image
-              src={formattedThumbnail}
-              width={1600}
-              height={1200}
-              priority
-              className={styles.headerImage}
-              alt={`thumbnail image for ${project.name}`}
-            />
-          ) : (
-            <video
-              src={formattedThumbnail}
-              className={styles.headerImage}
-              loop
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-            />
-          )}
-        </motion.div>
+          <div className={styles.horizontalContentContainer}>
+            <motion.div
+              className={styles.content}
+              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <div className={styles.textContent}>
+                <div className={styles.overviewContainer}>
+                  <SectionHeader title="Medium" description={project.medium} />
 
-        <motion.div
-          className={styles.content}
-          whileInView={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-        >
-          <div className={styles.textContent}>
-            <div className={styles.overviewContainer}>
-              <SectionHeader title="Medium" description={project.medium} />
+                  <SectionHeader title="Year" description={project.year} />
+                  {project.links && (
+                    <SectionHeader title="Links" links={project.links} />
+                  )}
+                  {project.client && (
+                    <SectionHeader title="Client" links={project.client} />
+                  )}
+                  {project.collaborators && (
+                    <SectionHeader
+                      title="Collaborators"
+                      links={project.collaborators}
+                    />
+                  )}
+                  {imageMdx.length > 0 && (
+                    <Markdown
+                      rehypePlugins={[rehypeRaw]}
+                      className={styles.additionalImages}
+                    >
+                      {imageMdx}
+                    </Markdown>
+                  )}
+                </div>
 
-              <SectionHeader title="Year" description={project.year} />
-              {project.links && (
-                <SectionHeader title="Links" links={project.links} />
-              )}
-              {project.client && (
-                <SectionHeader title="Client" links={project.client} />
-              )}
-              {project.collaborators && (
-                <SectionHeader
-                  title="Collaborators"
-                  links={project.collaborators}
-                />
-              )}
-              {imageMdx.length > 0 && (
                 <Markdown
                   rehypePlugins={[rehypeRaw]}
-                  className={styles.additionalImages}
+                  className={styles.projectText}
                 >
-                  {imageMdx}
+                  {mdx}
                 </Markdown>
-              )}
-            </div>
+              </div>
+            </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, y: "50px" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+            >
+              {isImage ? (
+                <Image
+                  src={formattedThumbnail}
+                  width={1600}
+                  height={1200}
+                  priority
+                  className={styles.headerImage}
+                  alt={`thumbnail image for ${project.name}`}
+                />
+              ) : (
+                <video
+                  src={formattedThumbnail}
+                  className={styles.headerImage}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="auto"
+                />
+              )}
+            </motion.div>
+
+            {imageMdx.length > 0 && (
+              <Markdown
+                rehypePlugins={[rehypeRaw]}
+                className={styles.mobileAdditionalImages}
+              >
+                {imageMdx}
+              </Markdown>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className={styles.container}>
+          <Heading className={styles.title}>{project.name}</Heading>
+
+          <motion.div
+            initial={{ opacity: 0, y: "50px" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+          >
+            {isImage ? (
+              <Image
+                src={formattedThumbnail}
+                width={1600}
+                height={1200}
+                priority
+                className={styles.headerImage}
+                alt={`thumbnail image for ${project.name}`}
+              />
+            ) : (
+              <video
+                src={formattedThumbnail}
+                className={styles.headerImage}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="auto"
+              />
+            )}
+          </motion.div>
+
+          <motion.div
+            className={styles.content}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            <div className={styles.textContent}>
+              <div className={styles.overviewContainer}>
+                <SectionHeader title="Medium" description={project.medium} />
+
+                <SectionHeader title="Year" description={project.year} />
+                {project.links && (
+                  <SectionHeader title="Links" links={project.links} />
+                )}
+                {project.client && (
+                  <SectionHeader title="Client" links={project.client} />
+                )}
+                {project.collaborators && (
+                  <SectionHeader
+                    title="Collaborators"
+                    links={project.collaborators}
+                  />
+                )}
+                {imageMdx.length > 0 && (
+                  <Markdown
+                    rehypePlugins={[rehypeRaw]}
+                    className={styles.additionalImages}
+                  >
+                    {imageMdx}
+                  </Markdown>
+                )}
+              </div>
+
+              <Markdown
+                rehypePlugins={[rehypeRaw]}
+                className={styles.projectText}
+              >
+                {mdx}
+              </Markdown>
+            </div>
+          </motion.div>
+          {imageMdx.length > 0 && (
             <Markdown
               rehypePlugins={[rehypeRaw]}
-              className={styles.projectText}
+              className={styles.mobileAdditionalImages}
             >
-              {mdx}
+              {imageMdx}
             </Markdown>
-          </div>
-        </motion.div>
-        {imageMdx.length > 0 && (
-          <Markdown
-            rehypePlugins={[rehypeRaw]}
-            className={styles.mobileAdditionalImages}
-          >
-            {imageMdx}
-          </Markdown>
-        )}
-      </div>
+          )}
+        </div>
+      )}
     </Layout>
   );
 }

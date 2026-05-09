@@ -1,5 +1,27 @@
 [
   {
+    "name": "Chinese Type Sketch",
+    "medium": "Typography",
+    "slug": "chinese-type",
+    "thumbnail": "chinese-type.png",
+    "tag": "typography",
+    "year": 2026,
+    "organization": "Personal Project",
+    "colSpan": 4,
+    "rowSpan": 1
+  },
+  {
+    "name": "New Year's Poster",
+    "medium": "Poster",
+    "slug": "cny-poster",
+    "thumbnail": "cny-poster.png",
+    "tag": "poster",
+    "year": 2026,
+    "organization": "Personal Project",
+    "colSpan": 2,
+    "rowSpan": 3
+  },
+  {
     "name": "Redacted Typeface",
     "medium": "Typography",
     "slug": "redacted-typeface",

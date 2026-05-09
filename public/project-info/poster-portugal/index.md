@@ -1,1 +1,5 @@
+---
+layout: horizontal
+---
+
 Data visualization poster on Portgual. Created during a class at RISD on information visualization, to display at least 30 bits of information in various graphs, charts, and graphics about a specific country.

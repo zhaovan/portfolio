@@ -93,7 +93,6 @@
 
 .mobileAdditionalImages * {
   width: 100%;
-  /* border-radius: 0.5rem; */
 }
 
 .backButton {
@@ -129,4 +128,22 @@
     flex-direction: column;
     gap: 2rem;
   }
+}
+
+.horizontalContainer {
+  padding: 0 2rem 8rem 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.horizontalTitle {
+  font-size: clamp(3rem, -0.4746rem + 10.4746vw, 8rem);
+  line-height: 90%;
+  padding-top: 5rem;
+}
+
+.horizontalContentContainer {
+  display: flex;
+  gap: 2rem;
 }

@@ -18,9 +18,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function ProjectPage() {
-  return (
-    <div>
-      <PageContent />
-    </div>
-  );
+  return <PageContent />;
 }
