@@ -1,5 +1,16 @@
 [
   {
+    "name": "Persona Research",
+    "medium": "brand",
+    "slug": "persona-research",
+    "thumbnail": "persona-research.png",
+    "tag": "brand",
+    "year": 2026,
+    "organization": "Persona",
+    "colSpan": 3,
+    "rowSpan": 2
+  },
+  {
     "name": "Chinese Type Sketch",
     "medium": "Typography",
     "slug": "chinese-type",
@@ -7,7 +18,7 @@
     "tag": "typography",
     "year": 2026,
     "organization": "Personal Project",
-    "colSpan": 4,
+    "colSpan": 3,
     "rowSpan": 1
   },
   {
@@ -41,7 +52,7 @@
     "year": 2026,
     "organization": "Persona",
     "colSpan": 2,
-    "rowSpan": 1,
+    "rowSpan": 2,
     "links": [
       {
         "name": "Website",
@@ -56,7 +67,7 @@
     "slug": "typeface",
     "thumbnail": "typeface.mp4",
     "tag": "marketing website",
-    "rowSpan": 1,
+    "rowSpan": 2,
     "colSpan": 2,
     "year": 2024,
     "organization": "Typeface",
@@ -70,8 +81,8 @@
     "tag": "installation",
     "year": 2026,
     "organization": "Persona",
-    "colSpan": 2,
-    "rowSpan": 1,
+    "colSpan": 3,
+    "rowSpan": 2,
     "links": [
       {
         "name": "Website",
@@ -87,8 +98,8 @@
     "tag": "webart",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 2,
-    "rowSpan": 1,
+    "colSpan": 3,
+    "rowSpan": 2,
     "links": [
       {
         "name": "Website",
@@ -468,8 +479,8 @@
     "thumbnail": "mod.png",
     "tag": "typeface",
     "year": 2023,
-    "rowSpan": 1,
-    "colSpan": 1,
+    "rowSpan": 2,
+    "colSpan": 2,
     "organization": "Type West"
   },
 
@@ -492,7 +503,7 @@
     "year": 2022,
     "organization": "Personal Project",
     "colSpan": 2,
-    "rowSpan": 3
+    "rowSpan": 4
   },
   {
     "name": "Holotable",
@@ -622,7 +633,7 @@
     "thumbnail": "qa.mp4",
     "organization": "Personal Project",
     "colSpan": 2,
-    "rowSpan": 1,
+    "rowSpan": 2,
     "links": [
       { "name": "Website", "website": "https://www.questionsandanswers.app/" }
     ]
