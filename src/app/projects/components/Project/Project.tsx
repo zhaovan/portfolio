@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./index.module.css";
 import { ProjectProps } from "@/app/projects/page";
 import Link from "next/link";
@@ -12,7 +12,6 @@ interface IndividualProject {
   idx: number;
 }
 
-const BASE_IMAGE_SIZE = 400;
 
 export default function Project({ project, idx }: IndividualProject) {
   const isImage = checkURLIsImage(project.thumbnail);
@@ -60,13 +59,11 @@ export default function Project({ project, idx }: IndividualProject) {
             <Image
               src={formattedThumbnail}
               alt={"thumbnail"}
-              width={BASE_IMAGE_SIZE}
-              height={BASE_IMAGE_SIZE}
+              fill
               priority={idx < 6}
               loading={idx < 6 ? "eager" : "lazy"}
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{
-                width: "100%",
-                height: "100%",
                 objectFit: "cover",
               }}
               className={styles.thumbnail}

@@ -1,0 +1,1 @@
+Persona research is a sub brand identity based under Persona, the parent company. Built with the concept of a physical binder, this identity is focused around the notion of layers, textures, and items stacking on top of each other to represent the communal aspect of research, and the ways in which academics, individuals, scientists, and technologists work together in harmony.
