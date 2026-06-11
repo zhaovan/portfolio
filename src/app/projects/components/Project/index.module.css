@@ -80,6 +80,19 @@
   padding: 0.25rem 0.5rem;
 }
 
+@media (max-width: 768px) {
+  /* On mobile the grid rows collapse to height:auto, so a fill image
+     (absolutely positioned, no intrinsic height) renders at height 0.
+     Give the container a real aspect ratio so it has height to fill. */
+  .projectContainer,
+  .thumbnailContainer {
+    height: auto;
+  }
+  .thumbnailContainer {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (max-width: 480px) {
   .thumbnailContainer:hover {
     filter: none;
