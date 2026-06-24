@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./index.module.css";
 import { ProjectProps } from "@/app/projects/page";
 import Link from "next/link";
@@ -10,20 +10,31 @@ import { useVideoVisibility } from "@/app/hooks/useVideoVisibility";
 interface IndividualProject {
   project: ProjectProps;
   idx: number;
+  placementStyle?: React.CSSProperties;
 }
 
-
-export default function Project({ project, idx }: IndividualProject) {
+export default function Project({
+  project,
+  idx,
+  placementStyle,
+}: IndividualProject) {
+  const BASE_IMAGE_SIZE = 400;
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
 
   const rowSpan = project.rowSpan ?? 1;
   const colSpan = project.colSpan ?? 1;
+  const computedRowSpan = rowSpan;
 
-  // Use shared Intersection Observer for video lazy loading
   const { elementRef: videoRef, isVisible: videoVisible } = useVideoVisibility(
     idx < 6,
   );
+
+  const imgStyle: React.CSSProperties = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  };
 
   return (
     <motion.div
@@ -36,7 +47,12 @@ export default function Project({ project, idx }: IndividualProject) {
       whileHover="hover"
       transition={{ duration: 0.3 }}
       className={styles.projectContainer}
-      style={{ gridRow: `span ${rowSpan}`, gridColumn: `span ${colSpan}` }}
+      style={
+        placementStyle ?? {
+          gridRow: `span ${computedRowSpan}`,
+          gridColumn: `span ${colSpan}`,
+        }
+      }
     >
       <div className={styles.projectNameHover}>
         <motion.div
@@ -59,34 +75,22 @@ export default function Project({ project, idx }: IndividualProject) {
             <Image
               src={formattedThumbnail}
               alt={"thumbnail"}
-              fill
+              width={BASE_IMAGE_SIZE}
+              height={BASE_IMAGE_SIZE}
               priority={idx < 6}
               loading={idx < 6 ? "eager" : "lazy"}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{
-                objectFit: "cover",
-              }}
+              style={imgStyle}
               className={styles.thumbnail}
               placeholder="blur"
-              blurDataURL={`/posters/${project.thumbnail.replace(
-                /\.[\w]+$/,
-                "-blur.webp",
-              )}`}
+              blurDataURL={`/posters/${project.thumbnail.replace(/\.[\w]+$/, "-blur.webp")}`}
             />
           ) : (
             <video
               ref={videoRef}
               src={videoVisible ? formattedThumbnail : undefined}
-              poster={`/posters/${project.thumbnail.replace(
-                /\.[\w]+$/,
-                "-blur.webp",
-              )}`}
+              poster={`/posters/${project.thumbnail.replace(/\.[\w]+$/, "-blur.webp")}`}
               className={styles.thumbnail}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
+              style={imgStyle}
               autoPlay={videoVisible}
               preload="none"
               playsInline

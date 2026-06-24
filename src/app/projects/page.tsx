@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import ProjectList from "../data/projects.json";
 import Project from "./components/Project/Project";
 import styles from "./index.module.css";
@@ -25,7 +25,32 @@ enum LayoutType {
 export default function Projects() {
   const [layout, setLayout] = useState(LayoutType.GRID);
 
-  const allProjects: ProjectProps[] = ProjectList;
+  // Start with projects sorted by span (larger first) and year
+  const initialSorted = useMemo(() => {
+    return [...ProjectList].sort((a, b) => {
+      const aSpan = (a.colSpan ?? 1) * (a.rowSpan ?? 1);
+      const bSpan = (b.colSpan ?? 1) * (b.rowSpan ?? 1);
+      if (bSpan !== aSpan) return bSpan - aSpan; // larger spans first
+      return (b.year ?? 0) - (a.year ?? 0); // then newer first
+    });
+  }, []);
+
+  // Determine current expected number of columns client-side so we can distribute items
+  const [columns, setColumns] = useState<number>(6);
+  useEffect(() => {
+    function updateColumns() {
+      const w = window.innerWidth;
+      if (w <= 768) setColumns(1);
+      else if (w <= 1024) setColumns(4);
+      else setColumns(6);
+    }
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
+
+  // Simple sorted list for rendering (no explicit placement)
+  const allProjects = initialSorted;
 
   return (
     <Layout>
@@ -34,11 +59,9 @@ export default function Projects() {
       </Head>
       <div className={styles.container} data-scroll-section>
         <div className={styles.projectContainer}>
-          {allProjects
-            .sort((projectA, projectB) => projectB.year - projectA.year)
-            .map((project, idx) => {
-              return <Project key={idx} idx={idx} project={project} />;
-            })}
+          {allProjects.map((project, idx) => {
+            return <Project key={idx} idx={idx} project={project} />;
+          })}
         </div>
       </div>
     </Layout>

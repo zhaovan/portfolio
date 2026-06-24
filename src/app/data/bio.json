@@ -2,7 +2,9 @@
   "exhibitions, shows, & readings": [
     {
       "date": "07-2026",
-      "organization": "Rosebud SF"
+      "organization": "Rosebud SF",
+      "title": "Themeless Art Show",
+      "website": "https://www.rosebudgallery.com/"
     },
     {
       "date": "05-2026",
@@ -391,8 +393,14 @@
     {
       "date": "01-2027",
       "title": "Resident",
-      "organization": "Sitake Center",
+      "organization": "Sitka Center",
       "website": "https://sitkacenter.org/"
+    },
+    {
+      "date": "07-2026",
+      "title": "Workshop Resident",
+      "organization": "The Seventh Wave",
+      "website": "https://theseventhwave.org/programs/digital-residencies/the-workshop/"
     },
     {
       "date": "07-2026",
@@ -403,7 +411,7 @@
     {
       "date": "06-2026",
       "title": "Image Text Resident",
-      "organization": "Cornell",
+      "organization": "Cornell MFA",
       "website": "https://mccormackwritingcenter.org/"
     },
     {
