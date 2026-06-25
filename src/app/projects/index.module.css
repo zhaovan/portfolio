@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 2rem;
 }
 
 .projectContainer {
@@ -28,6 +28,9 @@
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     padding-top: 1rem;
+  }
+  .container {
+    padding: 0 2rem;
   }
 
   .projectContainer > * {

@@ -1,5 +1,22 @@
 [
   {
+    "name": "Digital Decay Class Website",
+    "medium": "website",
+    "slug": "digital-archive",
+    "thumbnail": "digital-archive.mov",
+    "tag": "website",
+    "year": 2026,
+    "organization": "SFPC",
+    "colSpan": 2,
+    "rowSpan": 1,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://digitaldecay.alexaann.net/archive-of-archives/"
+      }
+    ]
+  },
+  {
     "name": "Type Sketch",
     "medium": "Motion",
     "slug": "type-motion",
