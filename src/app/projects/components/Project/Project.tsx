@@ -38,15 +38,23 @@ export default function Project({
 
   return (
     <motion.div
+      custom={idx}
       variants={{
         initial: { opacity: 0 },
-        visible: { opacity: 1 },
+        visible: (index: number) => ({
+          opacity: 1,
+          transition: {
+            duration: 0.35,
+            delay: (index % 6) * 0.1,
+            ease: "easeOut",
+          },
+        }),
       }}
       initial="initial"
       whileInView="visible"
-      whileHover="hover"
-      transition={{ duration: 0.3 }}
+      viewport={{ once: true, amount: 0.2, margin: "100px 0px" }}
       className={styles.projectContainer}
+      whileHover="hover"
       style={
         placementStyle ?? {
           gridRow: `span ${computedRowSpan}`,
@@ -57,7 +65,7 @@ export default function Project({
       <div className={styles.projectNameHover}>
         <motion.div
           variants={{
-            initial: { opacity: 0, y: 10 },
+            initial: { opacity: 0, y: -12 },
             hover: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.3 }}

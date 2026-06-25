@@ -25,7 +25,6 @@ enum LayoutType {
 export default function Projects() {
   // const [layout, setLayout] = useState(LayoutType.GRID);
 
-  // Simple sorted list for rendering (no explicit placement)
   const allProjects = ProjectList;
 
   return (
