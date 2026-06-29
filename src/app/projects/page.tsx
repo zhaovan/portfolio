@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import ProjectList from "../data/projects.json";
 import Project from "./components/Project/Project";
 import styles from "./index.module.css";
@@ -23,9 +23,9 @@ enum LayoutType {
 }
 
 export default function Projects() {
-  const [layout, setLayout] = useState(LayoutType.GRID);
+  // const [layout, setLayout] = useState(LayoutType.GRID);
 
-  const allProjects: ProjectProps[] = ProjectList;
+  const allProjects = ProjectList;
 
   return (
     <Layout>
@@ -34,11 +34,9 @@ export default function Projects() {
       </Head>
       <div className={styles.container} data-scroll-section>
         <div className={styles.projectContainer}>
-          {allProjects
-            .sort((projectA, projectB) => projectB.year - projectA.year)
-            .map((project, idx) => {
-              return <Project key={idx} idx={idx} project={project} />;
-            })}
+          {allProjects.map((project, idx) => {
+            return <Project key={idx} idx={idx} project={project} />;
+          })}
         </div>
       </div>
     </Layout>

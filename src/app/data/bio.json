@@ -1,7 +1,19 @@
 {
   "exhibitions, shows, & readings": [
     {
-      "date": "forthcoming",
+      "date": "07-2026",
+      "organization": "Rosebud SF",
+      "title": "Themeless Art Show",
+      "website": "https://www.rosebudgallery.com/"
+    },
+    {
+      "date": "05-2026",
+      "organization": "Computational Poetry Reading Group",
+      "title": "Ensemble Park Launch Reading",
+      "website": "https://luma.com/ltycbp0n?tk=AqhQZN"
+    },
+    {
+      "date": "05-2026",
       "organization": "Kitchen Table",
       "title": "Poetry Reading",
       "website": "https://www.instagram.com/kitchentable.sf/"
@@ -373,6 +385,36 @@
 
   "retreats & residencies": [
     {
+      "date": "02-2027",
+      "title": "Resident",
+      "organization": "Vermont Studio Center",
+      "website": "https://vermontstudiocenter.org/"
+    },
+    {
+      "date": "01-2027",
+      "title": "Resident",
+      "organization": "Sitka Center",
+      "website": "https://sitkacenter.org/"
+    },
+    {
+      "date": "07-2026",
+      "title": "Workshop Resident",
+      "organization": "The Seventh Wave",
+      "website": "https://theseventhwave.org/programs/digital-residencies/the-workshop/"
+    },
+    {
+      "date": "07-2026",
+      "title": "Poetry Participant",
+      "organization": "McCormack Writing Center (Tin House)",
+      "website": "https://mccormackwritingcenter.org/"
+    },
+    {
+      "date": "06-2026",
+      "title": "Image Text Resident",
+      "organization": "Cornell MFA",
+      "website": "https://mccormackwritingcenter.org/"
+    },
+    {
       "date": "11-2025",
       "title": "Resident",
       "organization": "Welcome to My Homepage",
@@ -380,25 +422,25 @@
     },
     {
       "date": "07-2025",
-      "title": "Poetry",
+      "title": "Poetry Participant",
       "organization": "Napa Writers Conference",
       "website": "https://www.napawritersconference.org/"
     },
     {
       "date": "06-2025",
-      "title": "Poetry",
+      "title": "Poetry Participant",
       "organization": "Abode Retreat",
       "website": "https://www.abodepress.com/summer-retreat"
     },
     {
       "date": "06-2024",
-      "title": "Poetry",
+      "title": "Poetry Participant",
       "organization": "Community of Writers",
       "website": "https://communityofwriters.org"
     },
     {
       "date": "08-2023",
-      "title": "Poetry",
+      "title": "Poetry Participant",
       "organization": "MCWC",
       "website": "https://mcwc.org/"
     }

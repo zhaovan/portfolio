@@ -1,5 +1,22 @@
 [
   {
+    "name": "Digital Decay Class Website",
+    "medium": "website",
+    "slug": "digital-archive",
+    "thumbnail": "digital-archive.mov",
+    "tag": "website",
+    "year": 2026,
+    "organization": "SFPC",
+    "colSpan": 2,
+    "rowSpan": 1,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://digitaldecay.alexaann.net/archive-of-archives/"
+      }
+    ]
+  },
+  {
     "name": "Type Sketch",
     "medium": "Motion",
     "slug": "type-motion",
@@ -144,7 +161,7 @@
     "tag": "webart",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 2,
+    "colSpan": 3,
     "rowSpan": 2,
     "links": [
       {
@@ -161,7 +178,7 @@
     "tag": "animation",
     "year": 2025,
     "organization": "Personal Project",
-    "colSpan": 2,
+    "colSpan": 3,
     "rowSpan": 2,
     "collaborators": [
       {
@@ -293,8 +310,8 @@
     "thumbnail": "type-fella.mp4",
     "tag": "website",
     "year": 2024,
-    "rowSpan": 2,
-    "colSpan": 2,
+    "rowSpan": 1,
+    "colSpan": 1,
     "organization": "The Type Fella",
     "links": [{ "name": "Website", "website": "https://thetypefella.com/" }],
     "client": [
@@ -311,8 +328,8 @@
     "thumbnail": "convo.mp4",
     "tag": "typeface",
     "year": 2024,
-    "rowSpan": 2,
-    "colSpan": 2,
+    "rowSpan": 1,
+    "colSpan": 1,
     "organization": "Type West",
     "links": [{ "name": "Specimen", "website": "https://convo.design" }]
   },
@@ -323,8 +340,8 @@
     "medium": "Product",
     "tag": "product, website",
     "year": 2023,
-    "colSpan": 2,
-    "rowSpan": 2,
+    "colSpan": 1,
+    "rowSpan": 1,
     "organization": "Galileo AI",
     "links": [{ "name": "Product", "website": "https://www.usegalileo.ai/" }]
   },
@@ -335,8 +352,7 @@
     "medium": "Website",
     "tag": "webart",
     "year": 2023,
-    "colSpan": 2,
-    "rowSpan": 2,
+
     "organization": "Personal Project",
     "links": [
       { "name": "Website", "website": "https://layoff-site.vercel.app/" }
@@ -451,6 +467,8 @@
     "tag": "writing tools",
     "year": 2023,
     "organization": "Personal Project",
+    "rowSpan": 2,
+    "colSpan": 2,
     "links": [
       {
         "name": "Website",
@@ -513,8 +531,8 @@
     "tag": "Infographic",
     "year": 2022,
     "organization": "Personal Project",
-    "colSpan": 2,
-    "rowSpan": 4
+    "colSpan": 1,
+    "rowSpan": 2
   },
   {
     "name": "Holotable",
@@ -572,18 +590,6 @@
     ]
   },
   {
-    "name": "Wicked Poster",
-    "slug": "poster-wicked",
-    "thumbnail": "wicked.png",
-    "tag": "Data Visualization",
-    "medium": "Digital Poster",
-    "year": 2022,
-    "colSpan": 2,
-    "rowSpan": 3,
-
-    "organization": "Personal Project"
-  },
-  {
     "name": "Tarrey Town",
     "medium": "Website",
     "slug": "tarrey-town",
@@ -605,8 +611,8 @@
     "thumbnail": "omr.png",
     "tag": "Class Project",
     "year": 2020,
-    "colSpan": 2,
-    "rowSpan": 2,
+    "colSpan": 1,
+    "rowSpan": 1,
     "organization": "Personal Project"
   },
   {
@@ -626,8 +632,8 @@
     "medium": "Animated Website",
     "thumbnail": "ten-sky.mp4",
     "organization": "Personal Project",
-    "colSpan": 2,
-    "rowSpan": 2,
+    "colSpan": 1,
+    "rowSpan": 1,
     "links": [
       {
         "name": "Website",
@@ -643,8 +649,8 @@
     "slug": "qa",
     "thumbnail": "qa.mp4",
     "organization": "Personal Project",
-    "colSpan": 2,
-    "rowSpan": 2,
+    "colSpan": 1,
+    "rowSpan": 1,
     "links": [
       { "name": "Website", "website": "https://www.questionsandanswers.app/" }
     ]

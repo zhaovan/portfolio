@@ -128,6 +128,14 @@
     flex-direction: column;
     gap: 2rem;
   }
+
+  .horizontalContentContainer {
+    flex-direction: column-reverse;
+  }
+
+  .horizontalContainer {
+    padding: 2rem 2rem 8rem 2rem !important;
+  }
 }
 
 .horizontalContainer {
