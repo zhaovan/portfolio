@@ -1,5 +1,29 @@
 [
   {
+    "name": "Persona Homepage Refresh",
+    "medium": "website",
+    "slug": "persona-homepage",
+    "thumbnail": "persona-homepage.mov",
+    "tag": "website",
+    "organization": "Persona",
+    "year": 2026,
+    "links": [
+      {
+        "name": "Website",
+        "website": "https://withpersona.com"
+      }
+    ]
+  },
+  {
+    "name": "Relay Launch Video",
+    "medium": "video",
+    "slug": "relay",
+    "thumbnail": "relay.mp4",
+    "tag": "website",
+    "organization": "Persona",
+    "year": 2026
+  },
+  {
     "name": "Digital Decay Class Website",
     "medium": "website",
     "slug": "digital-archive",
@@ -412,21 +436,6 @@
     "colSpan": 2,
     "year": 2023,
     "links": [{ "name": "Website", "website": "https://sunflowercapital.co/" }]
-  },
-  {
-    "name": "Prism Summer Program",
-    "medium": "Speaker Series",
-    "slug": "prism",
-    "thumbnail": "prism.mov",
-    "tag": "Community",
-    "year": 2022,
-    "organization": "Dorm Room Fund",
-    "links": [
-      {
-        "name": "Github",
-        "website": "https://github.com/zhaovan/prism-landing-page"
-      }
-    ]
   },
   {
     "name": "Byrne",
