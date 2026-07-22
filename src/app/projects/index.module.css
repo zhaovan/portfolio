@@ -4,30 +4,22 @@
 
 .projectContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 200px;
-  /* gap: 1rem; */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding-bottom: 4rem;
-}
-
-/* Force every project tile to be a single 1x1 block */
-.projectContainer > * {
-  grid-column: auto / span 1 !important;
-  grid-row: auto / span 1 !important;
-  height: 100%;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .projectContainer {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .projectContainer {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    /* grid-template-columns: 1fr; */
+    /* grid-auto-rows: auto; */
     padding-top: 1rem;
+    /* gap: 1rem; */
   }
   .container {
     padding: 0 2rem;
@@ -42,8 +34,10 @@
 
 @media (max-width: 480px) {
   .projectContainer {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    padding-top: 1rem; */
+    gap: 1rem;
   }
 }
 
@@ -51,5 +45,5 @@
 .projectContainer > * {
   grid-column: auto / span 1 !important;
   grid-row: auto / span 1 !important;
-  height: 100% !important;
+  aspect-ratio: 4/3;
 }
