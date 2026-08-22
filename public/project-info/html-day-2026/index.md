@@ -1,0 +1,1 @@
+3 color riso (fluorescent pink, aqua, yellow) card series printed for html day 2026. Back of the card was printed with prompts from Brian Eno's Oblique Strategies. Designed to randomly give participants a different series of prompts depending on when they arrived.

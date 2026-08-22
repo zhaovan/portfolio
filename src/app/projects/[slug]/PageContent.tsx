@@ -80,6 +80,12 @@ export default function PageContent() {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <div className={styles.textContent}>
+                <Markdown
+                  rehypePlugins={[rehypeRaw]}
+                  className={styles.projectText}
+                >
+                  {mdx}
+                </Markdown>
                 <div className={styles.overviewContainer}>
                   <SectionHeader title="Medium" description={project.medium} />
 
@@ -105,13 +111,6 @@ export default function PageContent() {
                     </Markdown>
                   )}
                 </div>
-
-                <Markdown
-                  rehypePlugins={[rehypeRaw]}
-                  className={styles.projectText}
-                >
-                  {mdx}
-                </Markdown>
               </div>
             </motion.div>
 
@@ -191,6 +190,12 @@ export default function PageContent() {
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             <div className={styles.textContent}>
+              <Markdown
+                rehypePlugins={[rehypeRaw]}
+                className={styles.projectText}
+              >
+                {mdx}
+              </Markdown>
               <div className={styles.overviewContainer}>
                 <SectionHeader title="Medium" description={project.medium} />
 
@@ -216,13 +221,6 @@ export default function PageContent() {
                   </Markdown>
                 )}
               </div>
-
-              <Markdown
-                rehypePlugins={[rehypeRaw]}
-                className={styles.projectText}
-              >
-                {mdx}
-              </Markdown>
             </div>
           </motion.div>
           {imageMdx.length > 0 && (

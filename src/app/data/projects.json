@@ -1,5 +1,32 @@
 [
   {
+    "name": "Sigil",
+    "medium": "branding",
+    "slug": "sigil",
+    "thumbnail": "sigil.png",
+    "tag": "branding",
+    "organization": "Sigil",
+    "year": 2026
+  },
+  {
+    "name": "HTML Day 2026 Card Series",
+    "medium": "print",
+    "slug": "html-day-2026",
+    "thumbnail": "html-day-2026.gif",
+    "tag": "print",
+    "organization": "HTML Energy",
+    "year": 2026
+  },
+  {
+    "name": "Khiara Personal Website",
+    "medium": "website",
+    "slug": "khiara-website",
+    "thumbnail": "khiara-website.mp4",
+    "tag": "website",
+    "organization": "Personal",
+    "year": 2026
+  },
+  {
     "name": "Persona Homepage Refresh",
     "medium": "website",
     "slug": "persona-homepage",
@@ -41,7 +68,7 @@
     ]
   },
   {
-    "name": "Type Sketch",
+    "name": "Motion Sketch",
     "medium": "Motion",
     "slug": "type-motion",
     "thumbnail": "type-motion.mp4",
@@ -74,7 +101,7 @@
     "rowSpan": 1
   },
   {
-    "name": "New Year's Poster",
+    "name": "2026 CNY Poster",
     "medium": "Poster",
     "slug": "cny-poster",
     "thumbnail": "cny-poster.png",
