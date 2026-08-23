@@ -25,7 +25,7 @@ enum LayoutType {
 export default function Projects() {
   // const [layout, setLayout] = useState(LayoutType.GRID);
 
-  const allProjects = ProjectList;
+  const allProjects = ProjectList.sort((a, b) => b.year - a.year);
 
   return (
     <Layout>

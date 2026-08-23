@@ -1,5 +1,50 @@
 [
   {
+    "name": "Chicken Poster",
+    "medium": "poster",
+    "slug": "chicken-poster",
+    "thumbnail": "chicken-poster.png",
+    "tag": "poster",
+    "organization": "Personal",
+    "year": 2025
+  },
+  {
+    "name": "Grandmother Poster",
+    "medium": "poster",
+    "slug": "grandmother-poster",
+    "thumbnail": "grandmother-poster.png",
+    "tag": "poster",
+    "organization": "Personal",
+    "year": 2026
+  },
+  {
+    "name": "Alphabet Poster",
+    "medium": "poster",
+    "slug": "alphabet",
+    "thumbnail": "alphabet.png",
+    "tag": "poster",
+    "organization": "Personal",
+    "year": 2026
+  },
+  {
+    "name": "Experimental Letterpress",
+    "medium": "Letterpress Print",
+    "slug": "experimental-letterpress",
+    "thumbnail": "experimental-letterpress.png",
+    "tag": "print",
+    "organization": "Personal Project",
+    "year": 2025
+  },
+  {
+    "name": "Letterpress Calendar",
+    "medium": "Letterpress Print",
+    "slug": "letterpress-calendar",
+    "thumbnail": "letterpress-calendar.png",
+    "tag": "print",
+    "organization": "Personal Project",
+    "year": 2026
+  },
+  {
     "name": "Sigil",
     "medium": "branding",
     "slug": "sigil",
@@ -41,15 +86,7 @@
       }
     ]
   },
-  {
-    "name": "Relay Launch Video",
-    "medium": "video",
-    "slug": "relay",
-    "thumbnail": "relay.mp4",
-    "tag": "website",
-    "organization": "Persona",
-    "year": 2026
-  },
+
   {
     "name": "Digital Decay Class Website",
     "medium": "website",
@@ -88,6 +125,15 @@
     "organization": "Persona",
     "colSpan": 3,
     "rowSpan": 2
+  },
+  {
+    "name": "Relay Launch Video",
+    "medium": "video",
+    "slug": "relay",
+    "thumbnail": "relay.mp4",
+    "tag": "website",
+    "organization": "Persona",
+    "year": 2026
   },
   {
     "name": "Chinese Type Sketch",
