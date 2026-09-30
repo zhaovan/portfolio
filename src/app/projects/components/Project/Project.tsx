@@ -40,12 +40,14 @@ export default function Project({
     <motion.div
       custom={idx}
       variants={{
-        initial: { opacity: 0 },
+        initial: { opacity: 0, scale: 0.4 },
         visible: (index: number) => ({
           opacity: 1,
+          scale: 1,
           transition: {
-            duration: 0.35,
+            duration: 0.5,
             delay: (index % 6) * 0.1,
+
             ease: "easeOut",
           },
         }),
