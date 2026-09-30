@@ -47,7 +47,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider>
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+        >
           <CellularPageTransition>{children}</CellularPageTransition>
         </ThemeProvider>
       </body>

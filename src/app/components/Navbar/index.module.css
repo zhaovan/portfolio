@@ -20,8 +20,11 @@
   padding: 1rem 2rem;
   z-index: 10;
   position: sticky;
-  transition: background-color 0.4s ease-out;
   background-color: rgb(var(--background-primary));
+}
+
+:global(html[data-theme-ready="true"]) .navbarContainer {
+  transition: background-color 0.4s ease-out;
 }
 
 .navbarLinksContainer {

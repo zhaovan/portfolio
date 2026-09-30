@@ -57,6 +57,7 @@ export default function CellularPageTransition({
   const phaseRef = useRef<TransitionPhase>(null);
   const sourcePath = useRef(pathname);
   const coverTimeout = useRef<number | null>(null);
+  const hasMounted = useRef(false);
 
   const handleClickCapture = (event: ReactMouseEvent<HTMLDivElement>) => {
     if (
@@ -104,6 +105,12 @@ export default function CellularPageTransition({
   };
 
   useLayoutEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      sourcePath.current = pathname;
+      return;
+    }
+
     if (!pathname || pathname === sourcePath.current) return;
     const previousPath = sourcePath.current;
     sourcePath.current = pathname;

@@ -70,9 +70,6 @@ body::-webkit-scrollbar {
 }
 
 body {
-  transition:
-    background-color 0.4s ease-out,
-    color 0.4s ease-out;
   -ms-overflow-style: none; /* IE and Edge */
   min-height: 100vh;
   overflow-x: hidden;
@@ -95,6 +92,12 @@ html,
 body {
   background-color: rgb(var(--background-primary));
   color: rgb(var(--text-primary));
+}
+
+html[data-theme-ready="true"] body {
+  transition:
+    background-color 0.4s ease-out,
+    color 0.4s ease-out;
 }
 
 @font-face {

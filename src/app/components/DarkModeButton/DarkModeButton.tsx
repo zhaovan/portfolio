@@ -28,6 +28,7 @@ export default function DarkModeButton() {
   }
 
   useEffect(() => {
+    document.documentElement.dataset.themeReady = "true";
     setMounted(true);
   }, []);
 

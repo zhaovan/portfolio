@@ -46,9 +46,9 @@ export default function Project({
           scale: 1,
           transition: {
             duration: 0.5,
-            delay: (index % 6) * 0.1,
+            delay: (index % 4) * 0.15,
 
-            ease: "easeOut",
+            ease: [0.22, 1, 0.36, 1],
           },
         }),
       }}
