@@ -1,0 +1,66 @@
+.pageStack {
+  display: grid;
+  min-width: 0;
+}
+
+.pageFrame {
+  grid-area: 1 / 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: repeat(var(--cell-columns), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--cell-rows), minmax(0, 1fr));
+  pointer-events: auto;
+  /* background: rgb(var(--background-dark)); */
+}
+
+.cell {
+  background: rgb(var(--background-accent-red));
+  opacity: 0;
+  margin: -1px;
+  transform: scale(0.05);
+  transform-origin: center;
+}
+
+.transition[data-phase="cover"] .cell {
+  animation: cellFill 150ms cubic-bezier(0.76, 0, 0.24, 1) var(--enter-delay)
+    forwards;
+}
+
+.transition[data-phase="hold"] .cell {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.transition[data-phase="reveal"] .cell {
+  opacity: 1;
+  transform: scale(1.02);
+  animation: cellClear 150ms cubic-bezier(0.76, 0, 0.24, 1) var(--exit-delay)
+    forwards;
+}
+
+@keyframes cellFill {
+  to {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes cellClear {
+  to {
+    opacity: 0;
+    transform: scale(0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition {
+    display: none;
+  }
+}

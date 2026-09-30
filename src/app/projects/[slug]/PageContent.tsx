@@ -77,7 +77,7 @@ export default function PageContent() {
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5 }}
             >
               <div className={styles.textContent}>
                 <Markdown
@@ -117,7 +117,7 @@ export default function PageContent() {
             <motion.div
               initial={{ opacity: 0, y: "50px" }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               {isImage ? (
                 <Image
@@ -158,7 +158,7 @@ export default function PageContent() {
           <motion.div
             initial={{ opacity: 0, y: "50px" }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             {isImage ? (
               <Image
@@ -187,7 +187,7 @@ export default function PageContent() {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25 }}
+            transition={{ duration: 0.5 }}
           >
             <div className={styles.textContent}>
               <Markdown
