@@ -21,6 +21,8 @@ export default function Project({
   const BASE_IMAGE_SIZE = 400;
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
+  const blurThumbnail = `/posters/${project.thumbnail.replace(/\.[\w]+$/, "-blur.webp")}`;
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const rowSpan = project.rowSpan ?? 1;
   const colSpan = project.colSpan ?? 1;
@@ -82,18 +84,29 @@ export default function Project({
           transition={{ duration: 0.2 }}
         >
           {isImage ? (
-            <Image
-              src={formattedThumbnail}
-              alt={"thumbnail"}
-              width={BASE_IMAGE_SIZE}
-              height={BASE_IMAGE_SIZE}
-              priority={idx < 6}
-              loading={idx < 6 ? "eager" : "lazy"}
-              style={imgStyle}
-              className={styles.thumbnail}
-              placeholder="blur"
-              blurDataURL={`/posters/${project.thumbnail.replace(/\.[\w]+$/, "-blur.webp")}`}
-            />
+            <>
+              <Image
+                src={blurThumbnail}
+                alt=""
+                aria-hidden="true"
+                fill
+                unoptimized
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className={`${styles.thumbnail} ${styles.thumbnailPlaceholder}`}
+              />
+              <Image
+                src={formattedThumbnail}
+                alt={project.name}
+                width={BASE_IMAGE_SIZE}
+                height={BASE_IMAGE_SIZE}
+                unoptimized
+                priority={idx < 6}
+                loading={idx < 6 ? "eager" : "lazy"}
+                onLoad={() => setImageLoaded(true)}
+                style={imgStyle}
+                className={`${styles.thumbnail} ${styles.thumbnailImage} ${imageLoaded ? styles.thumbnailLoaded : ""}`}
+              />
+            </>
           ) : (
             <video
               ref={videoRef}

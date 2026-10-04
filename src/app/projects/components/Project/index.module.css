@@ -21,6 +21,22 @@
   object-fit: cover;
 }
 
+.thumbnailPlaceholder,
+.thumbnailImage {
+  position: absolute;
+  inset: 0;
+}
+
+.thumbnailImage {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 350ms ease-out;
+}
+
+.thumbnailLoaded {
+  opacity: 1;
+}
+
 .thumbnailContainer {
   width: 100%;
   height: 100%;

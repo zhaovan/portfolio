@@ -279,6 +279,18 @@
   ],
   "crits, teaching, & workshops": [
     {
+      "date": "10-2026",
+      "title": "Variable Typography in p5.js",
+      "organization": "Gray Area",
+      "website": "https://luma.com/cr46cjp7?tk=RJCbAK"
+    },
+    {
+      "date": "08-2026",
+      "title": "Variable Typography",
+      "organization": "Bather's Library Summer Symposium",
+      "website": "https://batherslibrary.cargo.site/summer-symposium-schedule-2026"
+    },
+    {
       "date": "04-2026",
       "title": "Digital Decay And Afterlives",
       "organization": "SFPC",
@@ -353,7 +365,7 @@
   "talks": [
     {
       "date": "04-2026",
-      "title": "Browser History - Artist Talks",
+      "title": "Browser History",
       "organization": "The Museum of Human Achievement",
       "website": "https://moha.wiki/Browser_History_Virtual_Artist_Talks"
     },
@@ -447,6 +459,12 @@
   ],
   "longform": [
     {
+      "organization": "SFPC",
+      "title": "In Favor of the Small Archive",
+      "website": "https://sfpc.study/blog/the-small-archive",
+      "date": "09-2026"
+    },
+    {
       "organization": "reboot",
       "title": "Venturing Toward Progress",
       "website": "https://joinreboot.org/p/venture",
@@ -456,18 +474,18 @@
 
   "experiences": [
     {
-      "organization": "Persona",
-      "title": "Design Engineer",
-      "date": "2025",
-      "endDate": "present",
-      "website": "https://withpersona.com"
-    },
-    {
       "organization": "Freelance",
       "title": "Designer",
       "date": "2022",
       "endDate": "present",
       "website": "https://ivanzhao.me"
+    },
+    {
+      "organization": "Persona",
+      "title": "Design Engineer",
+      "date": "2025",
+      "endDate": "2026",
+      "website": "https://withpersona.com"
     },
     {
       "organization": "Reboot + Kernel",

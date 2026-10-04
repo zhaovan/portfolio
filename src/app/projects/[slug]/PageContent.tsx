@@ -125,6 +125,7 @@ export default function PageContent() {
                   width={1600}
                   height={1200}
                   priority
+                  unoptimized
                   className={styles.headerImage}
                   alt={`thumbnail image for ${project.name}`}
                 />
@@ -166,6 +167,7 @@ export default function PageContent() {
                 width={1600}
                 height={1200}
                 priority
+                unoptimized
                 className={styles.headerImage}
                 alt={`thumbnail image for ${project.name}`}
               />

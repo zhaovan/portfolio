@@ -84,6 +84,7 @@ export default function AboutClient() {
                 width="1200"
                 height="800"
                 priority
+                unoptimized
                 className={styles.portrait}
               />
             </motion.div>
