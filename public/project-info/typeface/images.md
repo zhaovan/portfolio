@@ -1,4 +1,4 @@
-<video src="/project-info/typeface/images/product.mov" autoplay muted loop playsInline></video>
+<video src="/project-info/typeface/images/product.mp4" autoplay muted loop playsInline></video>
 
 <video src="/project-info/typeface/images/loading.mov" autoplay muted loop playsInline></video>
 
