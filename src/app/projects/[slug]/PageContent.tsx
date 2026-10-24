@@ -2,7 +2,7 @@
 import styles from "./index.module.css";
 import Layout from "@/app/components/Layout/Layout";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ComponentProps } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import projects from "@/app/data/projects.json";
@@ -16,6 +16,53 @@ import { motion } from "framer-motion";
 import matter from "gray-matter";
 
 import Head from "next/head";
+import type { Components } from "react-markdown";
+import { useVideoVisibility } from "@/app/hooks/useVideoVisibility";
+
+const GALLERY_SIZES = "(max-width: 480px) 100vw, 50vw";
+
+// Gallery videos only fetch once scrolled near. The gallery is rendered twice
+// (desktop + mobile, one hidden with display: none) and a hidden element never
+// intersects, so the hidden copy never downloads.
+function GalleryVideo({
+  node,
+  src,
+  autoPlay,
+  ...rest
+}: ComponentProps<"video"> & { node?: unknown }) {
+  const { elementRef, isVisible } = useVideoVisibility();
+  return (
+    <video
+      {...rest}
+      ref={elementRef}
+      src={isVisible ? src : undefined}
+      autoPlay={isVisible && autoPlay}
+      preload="metadata"
+    />
+  );
+}
+
+// Serve local gallery images through next/image (resized, AVIF/WebP, lazy).
+// Remote URLs (e.g. old Medium embeds) fall back to a plain lazy <img>.
+const galleryComponents: Components = {
+  img: ({ node, src, alt, ...rest }) => {
+    if (typeof src !== "string" || !src.startsWith("/")) {
+      // eslint-disable-next-line @next/next/no-img-element
+      return <img src={src} alt={alt ?? ""} loading="lazy" {...rest} />;
+    }
+    return (
+      <Image
+        src={src}
+        alt={alt ?? ""}
+        width={0}
+        height={0}
+        sizes={GALLERY_SIZES}
+        style={{ width: "100%", height: "auto" }}
+      />
+    );
+  },
+  video: GalleryVideo,
+};
 
 export default function PageContent() {
   const { slug } = useParams<{ slug: string }>();
@@ -105,6 +152,7 @@ export default function PageContent() {
                   {imageMdx.length > 0 && (
                     <Markdown
                       rehypePlugins={[rehypeRaw]}
+                      components={galleryComponents}
                       className={styles.additionalImages}
                     >
                       {imageMdx}
@@ -124,8 +172,8 @@ export default function PageContent() {
                   src={formattedThumbnail}
                   width={1600}
                   height={1200}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
-                  unoptimized
                   className={styles.headerImage}
                   alt={`thumbnail image for ${project.name}`}
                 />
@@ -145,6 +193,7 @@ export default function PageContent() {
             {imageMdx.length > 0 && (
               <Markdown
                 rehypePlugins={[rehypeRaw]}
+                components={galleryComponents}
                 className={styles.mobileAdditionalImages}
               >
                 {imageMdx}
@@ -166,8 +215,8 @@ export default function PageContent() {
                 src={formattedThumbnail}
                 width={1600}
                 height={1200}
+                sizes="100vw"
                 priority
-                unoptimized
                 className={styles.headerImage}
                 alt={`thumbnail image for ${project.name}`}
               />
@@ -217,6 +266,7 @@ export default function PageContent() {
                 {imageMdx.length > 0 && (
                   <Markdown
                     rehypePlugins={[rehypeRaw]}
+                    components={galleryComponents}
                     className={styles.additionalImages}
                   >
                     {imageMdx}
@@ -228,6 +278,7 @@ export default function PageContent() {
           {imageMdx.length > 0 && (
             <Markdown
               rehypePlugins={[rehypeRaw]}
+              components={galleryComponents}
               className={styles.mobileAdditionalImages}
             >
               {imageMdx}

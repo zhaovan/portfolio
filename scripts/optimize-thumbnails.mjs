@@ -6,6 +6,11 @@
  *             (png->png, jpg->jpg) so projects.json image refs need no changes.
  *   .mov / .webm thumbnails -> .mp4, and src/app/data/projects.json is updated.
  *
+ * Also optimizes project page media in public/project-info/ (files > 1.5MB):
+ *   Images  -> long edge <= 2000px (PNG lossless, JPEG q85), in place
+ *   Videos  -> H.264 MP4 <= 1280px wide; .mov -> .mp4 with images.md updated.
+ *             Alpha-channel .webm stays VP9 webm so transparency is kept.
+ *
  * Originals are backed up to public/thumbnails_original/ and never overwritten,
  * so the script is safe to re-run (it re-derives outputs from the backups).
  *
@@ -31,6 +36,16 @@ const VIDEO_MAX_WIDTH = 960;
 const IMAGE_MAX_DIM = 1600;
 const IMAGE_QUALITY = 80;
 
+// Project page media (public/project-info/<slug>/images). Optimized in place —
+// originals stay recoverable from git history, so no backup folder (it would
+// double an already ~600MB directory). Only files over the size threshold are
+// touched, so re-running won't keep re-encoding already-optimized media.
+const PROJECT_INFO = path.join(ROOT, "public/project-info");
+const PROJECT_IMAGE_MAX_DIM = 2000;
+const PROJECT_JPEG_QUALITY = 85;
+const PROJECT_VIDEO_MAX_WIDTH = 1280;
+const PROJECT_MIN_BYTES = 1.5 * 1024 * 1024;
+
 const VIDEO_EXTS = new Set([".mp4", ".mov", ".webm", ".gif", ".m4v", ".avi"]);
 const IMAGE_EXTS = new Set([".png", ".jpg", ".jpeg", ".webp"]);
 
@@ -44,28 +59,123 @@ async function sizeOf(p) {
   }
 }
 
-async function optimizeVideo(input, output) {
+async function optimizeVideo(input, output, maxWidth = VIDEO_MAX_WIDTH, crf = 28) {
   await execFileP("ffmpeg", [
     "-y", "-loglevel", "error", "-i", input,
-    "-vf", `scale='min(${VIDEO_MAX_WIDTH},iw)':-2`,
+    "-vf", `scale='min(${maxWidth},iw)':-2`,
     "-c:v", "libx264", "-profile:v", "high", "-pix_fmt", "yuv420p",
-    "-crf", "28", "-preset", "slow", "-an",
+    "-crf", String(crf), "-preset", "slow", "-an",
     "-movflags", "+faststart",
     output,
   ]);
 }
 
-async function optimizeImage(input, output, ext) {
-  let pipeline = sharp(input).resize(IMAGE_MAX_DIM, IMAGE_MAX_DIM, {
+async function optimizeImage(input, output, ext, maxDim = IMAGE_MAX_DIM, jpegQuality = IMAGE_QUALITY) {
+  // .rotate() applies EXIF orientation before metadata is stripped.
+  let pipeline = sharp(input).rotate().resize(maxDim, maxDim, {
     fit: "inside",
     withoutEnlargement: true,
   });
   if (ext === ".png") {
-    pipeline = pipeline.png({ quality: IMAGE_QUALITY, compressionLevel: 9, effort: 8 });
+    // Lossless: no palette quantization, so gradients and print textures keep full colour.
+    pipeline = pipeline.png({ compressionLevel: 9 });
+  } else if (ext === ".webp") {
+    pipeline = pipeline.webp({ quality: IMAGE_QUALITY });
   } else {
-    pipeline = pipeline.jpeg({ quality: IMAGE_QUALITY, mozjpeg: true });
+    pipeline = pipeline.jpeg({ quality: jpegQuality, mozjpeg: true });
   }
   await pipeline.toFile(output);
+}
+
+// VP9 webm with an alpha channel: keep it webm so transparency survives.
+async function optimizeAlphaWebm(input, output) {
+  await execFileP("ffmpeg", [
+    "-y", "-loglevel", "error", "-c:v", "libvpx-vp9", "-i", input,
+    "-vf", `scale='min(${PROJECT_VIDEO_MAX_WIDTH},iw)':-2`,
+    "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-b:v", "0", "-crf", "34",
+    "-row-mt", "1", "-an",
+    output,
+  ]);
+}
+
+async function walk(dir) {
+  const out = [];
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    if (entry.name.startsWith(".")) continue;
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...(await walk(p)));
+    else out.push(p);
+  }
+  return out;
+}
+
+async function optimizeProjectInfo() {
+  console.log(`==> Optimizing project page media in ${path.relative(ROOT, PROJECT_INFO)}`);
+  const files = await walk(PROJECT_INFO);
+  const renames = {}; // "/project-info/x/images/1.mov" -> "/project-info/x/images/1.mp4"
+  const publicPath = (p) => "/" + path.relative(path.join(ROOT, "public"), p).split(path.sep).join("/");
+
+  for (const file of files) {
+    const ext = path.extname(file).toLowerCase();
+    const before = await sizeOf(file);
+    const rel = path.relative(PROJECT_INFO, file);
+    if (before < PROJECT_MIN_BYTES) continue;
+    if (!IMAGE_EXTS.has(ext) && !VIDEO_EXTS.has(ext)) continue;
+    if (ext === ".gif") continue; // animated; converting would change how it's embedded
+
+    const dir = path.dirname(file);
+    const name = path.basename(file, path.extname(file));
+    const tmp = path.join(dir, `.${name}.tmp${ext === ".webm" ? ".webm" : VIDEO_EXTS.has(ext) ? ".mp4" : ext}`);
+
+    try {
+      if (IMAGE_EXTS.has(ext)) {
+        await optimizeImage(file, tmp, ext, PROJECT_IMAGE_MAX_DIM, PROJECT_JPEG_QUALITY);
+      } else if (ext === ".webm") {
+        await optimizeAlphaWebm(file, tmp);
+      } else {
+        await optimizeVideo(file, tmp, PROJECT_VIDEO_MAX_WIDTH, 24);
+      }
+    } catch (err) {
+      await rm(tmp, { force: true });
+      console.log(`  !! ${rel} failed: ${err.message.split("\n")[0]}`);
+      continue;
+    }
+
+    const after = await sizeOf(tmp);
+    if (after === 0 || after >= before) {
+      await rm(tmp, { force: true });
+      console.log(`  keep  ${rel.padEnd(48)} ${mb(before)} (re-encode wasn't smaller)`);
+      continue;
+    }
+
+    // .mov/.m4v/etc become .mp4; images and webm/mp4 keep their name.
+    const outExt = IMAGE_EXTS.has(ext) || ext === ".webm" ? path.extname(file) : ".mp4";
+    const out = path.join(dir, name + outExt);
+    if (out !== file && (await sizeOf(out)) > 0) {
+      await rm(tmp, { force: true });
+      console.log(`  !! ${rel}: ${path.basename(out)} already exists — skipping`);
+      continue;
+    }
+    await rm(file, { force: true });
+    await execFileP("mv", [tmp, out]);
+    if (out !== file) renames[publicPath(file)] = publicPath(out);
+    console.log(`  ${(IMAGE_EXTS.has(ext) ? "image" : "video").padEnd(5)} ${rel.padEnd(48)} ${mb(before)} -> ${mb(after)}`);
+  }
+
+  // Point images.md / index.md at renamed videos.
+  if (Object.keys(renames).length) {
+    for (const md of files.filter((f) => f.endsWith(".md"))) {
+      const text = await readFile(md, "utf8");
+      let next = text;
+      for (const [oldPath, newPath] of Object.entries(renames)) {
+        next = next.split(`"${oldPath}"`).join(`"${newPath}"`);
+      }
+      if (next !== text) {
+        await writeFile(md, next);
+        console.log(`  updated ${path.relative(ROOT, md)}`);
+      }
+    }
+  }
 }
 
 async function main() {
@@ -131,6 +241,8 @@ async function main() {
     await writeFile(DATA, json);
     console.log(`==> Updated projects.json: ${Object.entries(renames).map(([a, b]) => `${a} -> ${b}`).join(", ")}`);
   }
+
+  await optimizeProjectInfo();
 
   console.log("==> Done.");
 }
