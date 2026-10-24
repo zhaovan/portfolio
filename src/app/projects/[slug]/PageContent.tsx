@@ -2,7 +2,7 @@
 import styles from "./index.module.css";
 import Layout from "@/app/components/Layout/Layout";
 
-import { useEffect, useState, type ComponentProps } from "react";
+import { useEffect, useState, type ComponentProps, type SyntheticEvent } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import projects from "@/app/data/projects.json";
@@ -106,6 +106,13 @@ export default function PageContent() {
 
   const isImage = checkURLIsImage(project.thumbnail);
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
+  // High-quality copy for the full-width header (see optimize-thumbnails.mjs);
+  // falls back to the small grid video if it hasn't been generated.
+  const largeVideo = `/thumbnails-large/${project.thumbnail.replace(/\.[\w]+$/, ".mp4")}`;
+  const fallBackToSmallVideo = (event: SyntheticEvent<HTMLVideoElement>) => {
+    const video = event.currentTarget;
+    if (!video.src.endsWith(formattedThumbnail)) video.src = formattedThumbnail;
+  };
 
   const isHorizontal = metadata?.layout === "horizontal";
 
@@ -179,7 +186,8 @@ export default function PageContent() {
                 />
               ) : (
                 <video
-                  src={formattedThumbnail}
+                  src={largeVideo}
+                  onError={fallBackToSmallVideo}
                   className={styles.headerImage}
                   loop
                   autoPlay
@@ -222,7 +230,8 @@ export default function PageContent() {
               />
             ) : (
               <video
-                src={formattedThumbnail}
+                src={largeVideo}
+                onError={fallBackToSmallVideo}
                 className={styles.headerImage}
                 loop
                 autoPlay

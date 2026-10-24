@@ -10,6 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import styles from "./index.module.css";
+import { wasBackForwardNavigation } from "@/app/navigation";
 
 const columns = 4;
 const rows = 6;
@@ -130,7 +131,10 @@ export default function CellularPageTransition({
       setPhase(null);
     };
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      wasBackForwardNavigation()
+    ) {
       finishTransition();
       return;
     }

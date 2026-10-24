@@ -5,6 +5,9 @@
  *   Images  -> resized (long edge <= 1600px), re-encoded; format preserved
  *             (png->png, jpg->jpg) so projects.json image refs need no changes.
  *   .mov / .webm thumbnails -> .mp4, and src/app/data/projects.json is updated.
+ *   Videos also get a high-quality copy (<= 1920px, CRF 22) in
+ *   public/thumbnails-large/ for the project page header. Existing copies are
+ *   kept; delete one to regenerate it.
  *
  * Also optimizes project page media in public/project-info/ (files > 1.5MB):
  *   Images  -> long edge <= 2000px (PNG lossless, JPEG q85), in place
@@ -31,8 +34,13 @@ const ROOT = path.resolve(__dirname, "..");
 const SRC = path.join(ROOT, "public/thumbnails");
 const BACKUP = path.join(ROOT, "public/thumbnails_original");
 const DATA = path.join(ROOT, "src/app/data/projects.json");
+// Full-width header video on each project page; the grid copy in SRC is too
+// small to show that large.
+const LARGE = path.join(ROOT, "public/thumbnails-large");
 
 const VIDEO_MAX_WIDTH = 960;
+const LARGE_VIDEO_MAX_WIDTH = 1920;
+const LARGE_VIDEO_CRF = 22;
 const IMAGE_MAX_DIM = 1600;
 const IMAGE_QUALITY = 80;
 
@@ -180,6 +188,7 @@ async function optimizeProjectInfo() {
 
 async function main() {
   await mkdir(BACKUP, { recursive: true });
+  await mkdir(LARGE, { recursive: true });
 
   // 1. Back up originals (skip files already backed up).
   console.log(`==> Backing up originals to ${path.relative(ROOT, BACKUP)}`);
@@ -214,6 +223,11 @@ async function main() {
         await rm(path.join(SRC, base), { force: true }); // drop stale .mov/.webm/.gif
       }
       console.log(`  video ${base.padEnd(34)} ${mb(before)} -> ${mb(await sizeOf(out))}`);
+      const largeOut = path.join(LARGE, outName);
+      if ((await sizeOf(largeOut)) === 0) {
+        await optimizeVideo(orig, largeOut, LARGE_VIDEO_MAX_WIDTH, LARGE_VIDEO_CRF);
+        console.log(`  large ${outName.padEnd(34)} -> ${mb(await sizeOf(largeOut))}`);
+      }
     } else if (IMAGE_EXTS.has(ext)) {
       const out = path.join(SRC, base);
       const tmp = path.join(SRC, `.${base}.tmp${ext}`);
