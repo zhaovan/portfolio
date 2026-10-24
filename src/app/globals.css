@@ -120,7 +120,7 @@ html[data-theme-ready="true"] body {
 
 @font-face {
   font-family: Mod;
-  src: url("/fonts/Mod.ttf");
+  src: url("/fonts/Mod-Regular.otf");
 }
 
 @font-face {
@@ -130,37 +130,43 @@ html[data-theme-ready="true"] body {
 
 @font-face {
   font-family: Convo;
-  weight: 700;
+  font-weight: 700;
+  font-style: normal;
   src: url("/fonts/Convo-Bold.otf");
 }
 
 @font-face {
   font-family: Convo;
-  weight: 700;
-  src: url("/fonts/Convo-Bold-Italic.otf");
+  font-weight: 700;
+  font-style: italic;
+  src: url("/fonts/Convo-BoldItalic.otf");
 }
 
 @font-face {
   font-family: Convo;
-  weight: 400;
+  font-weight: 400;
+  font-style: italic;
   src: url("/fonts/Convo-Italic.otf");
 }
 
 @font-face {
   font-family: Convo;
-  weight: 400;
+  font-weight: 400;
+  font-style: normal;
   src: url("/fonts/Convo-Regular.otf");
 }
 
 @font-face {
   font-family: Convo;
-  weight: 300;
+  font-weight: 300;
+  font-style: italic;
   src: url("/fonts/Convo-LightItalic.otf");
 }
 
 @font-face {
   font-family: Convo;
-  weight: 300;
+  font-weight: 300;
+  font-style: normal;
   src: url("/fonts/Convo-Light.otf");
 }
 
@@ -220,10 +226,10 @@ html[data-theme-ready="true"] body {
 }
 
 .convo-light {
-  font-weight: 200;
+  font-weight: 300;
 }
 .convo-light-italic {
-  font-weight: 200;
+  font-weight: 300;
   font-style: italic;
 }
 
