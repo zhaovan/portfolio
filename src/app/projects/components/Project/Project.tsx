@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 import { ProjectProps } from "@/app/projects/page";
 import Link from "next/link";
 import Image from "next/image";
 import { checkURLIsImage } from "@/app/helpers";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useVideoVisibility } from "@/app/hooks/useVideoVisibility";
 
 interface IndividualProject {
@@ -23,6 +23,25 @@ export default function Project({
   const formattedThumbnail = `/thumbnails/${project.thumbnail}`;
   const blurThumbnail = `/posters/${project.thumbnail.replace(/\.[\w]+$/, "-blur.webp")}`;
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const mediaLoaded = isImage ? imageLoaded : videoLoaded;
+
+  // Pop the tile in once its media has loaded, so the entrance animation plays
+  // over the real image instead of the blur placeholder. If loading is slow,
+  // fall back to animating in anyway after a short wait.
+  const containerRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(containerRef, {
+    once: true,
+    amount: 0.2,
+    margin: "100px 0px",
+  });
+  const [waitedTooLong, setWaitedTooLong] = useState(false);
+  useEffect(() => {
+    if (!inView || mediaLoaded) return;
+    const timeout = setTimeout(() => setWaitedTooLong(true), 1500);
+    return () => clearTimeout(timeout);
+  }, [inView, mediaLoaded]);
+  const showTile = inView && (mediaLoaded || waitedTooLong);
 
   const rowSpan = project.rowSpan ?? 1;
   const colSpan = project.colSpan ?? 1;
@@ -54,9 +73,9 @@ export default function Project({
           },
         }),
       }}
+      ref={containerRef}
       initial="initial"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2, margin: "100px 0px" }}
+      animate={showTile ? "visible" : "initial"}
       className={styles.projectContainer}
       whileHover="hover"
       style={
@@ -117,6 +136,7 @@ export default function Project({
               style={imgStyle}
               autoPlay={videoVisible}
               preload="none"
+              onLoadedData={() => setVideoLoaded(true)}
               playsInline
               muted
               loop

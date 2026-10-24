@@ -4,7 +4,7 @@ const withMDX = require("@next/mdx")();
 const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   images: {
-    formats: ["image/avif", "image/webp"],
+    formats: ["image/webp"],
   },
   webpack: (config) => {
     config.module.rules.push({
