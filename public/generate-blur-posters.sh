@@ -28,19 +28,19 @@ for input in thumbnails/*; do
     mp4|webm|mov)
       tmp="/tmp/poster-frame-$$.jpg"
       ffmpeg -i "$input" -vframes 1 "$tmp" -y 2>/dev/null
-      magick "$tmp" -resize 1200x -blur 0x20 -quality 85 "$output" 2>/dev/null
+      magick "$tmp" -resize 32x -blur 0x1 -quality 70 "$output" 2>/dev/null
       result=$?
       rm -f "$tmp"
       ;;
     gif)
       tmp="/tmp/poster-frame-$$.jpg"
       ffmpeg -i "$input" -vframes 1 "$tmp" -y 2>/dev/null
-      magick "$tmp" -resize 1200x -blur 0x20 -quality 85 "$output" 2>/dev/null
+      magick "$tmp" -resize 32x -blur 0x1 -quality 70 "$output" 2>/dev/null
       result=$?
       rm -f "$tmp"
       ;;
     jpg|jpeg|png|webp)
-      magick "$input" -resize 1200x -blur 0x20 -quality 85 "$output" 2>/dev/null
+      magick "$input" -resize 32x -blur 0x1 -quality 70 "$output" 2>/dev/null
       result=$?
       ;;
     *)

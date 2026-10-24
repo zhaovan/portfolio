@@ -99,7 +99,8 @@ export default function Project({
                 alt={project.name}
                 width={BASE_IMAGE_SIZE}
                 height={BASE_IMAGE_SIZE}
-                unoptimized
+                sizes="(max-width: 768px) 100vw, 25vw"
+                quality={80}
                 priority={idx < 6}
                 loading={idx < 6 ? "eager" : "lazy"}
                 onLoad={() => setImageLoaded(true)}
